@@ -23,5 +23,6 @@ def getJsonData(label, url):
     with open(path, 'w') as output:
         output.write(json.dumps(data, indent=4))
 
+
 if __name__ == "__main__":
     print("You are doing great! :)")
