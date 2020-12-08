@@ -1,1 +1,3 @@
-storage/
+storage/*
+database.ini
+src/__pycache__
