@@ -3,6 +3,7 @@ import os
 
 
 def data_germany():
+    print("formatting data...")
     output = []
     current_dir = os.path.dirname(os.path.abspath(__file__))
     path = current_dir + '/../storage/germany.json'

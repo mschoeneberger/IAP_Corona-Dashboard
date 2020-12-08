@@ -2,11 +2,13 @@ import psycopg2
 import os
 import json
 from config import config
-import retrieveData
+import retrieveData as rd
 from readCountryData import *
 
 
 def insertIntoTable(data, table):
+
+    print("postgreSQL: inserting data into table...")
 
     sql = "INSERT INTO {} VALUES{}"
 
@@ -31,6 +33,8 @@ def insertIntoTable(data, table):
 
 
 def clearTable(table):
+
+    print("postgreSQL: clearing existing data from table...")
 
     sql = "DELETE FROM {}"
 
@@ -57,6 +61,7 @@ def clearTable(table):
 def updateTables():
 
     # Germany
+    print("\n[GERMANY]")
     label = 'germany'
     rd.getJsonData(label, 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson')
     clearTable(label)
@@ -83,4 +88,4 @@ def updateTables():
 if __name__ == '__main__':
     updateTables()
     
-    print("You are doing great! :)")
+    print("You are doing great! :)") # motivational message

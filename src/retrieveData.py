@@ -16,12 +16,15 @@ def connect_to_endpoint(url):
 
 
 def getJsonData(label, url):
+    print("downloading data...")
     current_dir = os.path.dirname(os.path.abspath(__file__))
     path = current_dir + '/../storage/' + label + '.json'
     data = connect_to_endpoint(url)
 
     with open(path, 'w') as output:
         output.write(json.dumps(data, indent=4))
+    
+    print("data successfully saved in storage!")
 
 
 if __name__ == "__main__":
