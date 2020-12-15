@@ -34,18 +34,58 @@ def data_germany():
 
     return output
 
-def data_france():
+
+def format_denmark_csv():
+    with open(path + "Municipality_cases_time_series.csv", 'r+') as file:
+        result = file.read().replace(';', ',')
+        file.seek(0, os.SEEK_SET)
+        file.write(result)
+
+    with open(path + "Municipality_tested_persons_time_series.csv", 'r+') as file:
+        result = file.read().replace(';', ',')
+        file.seek(0, os.SEEK_SET)
+        file.write(result)
+
+
+def data_denmark():
+    print("formatting data...")
+    
+    output = []
+    path = CURRENT_DIR + '/../storage/denmark/'
+
+    # replace ';' in file with ',' for correct reading with pandas
+    format_denmark_csv()
+
+    cases_over_time = pd.read_csv(path + "Municipality_cases_time_series.csv")
+    tested_over_time = pd.read_csv(path + "Municipality_tested_persons_time_series.csv")
+
+    print(cases_over_time)
+    print(tested_over_time)
+
+
+def data_netherlands():
     ...
 
 
-"""date DATE,
-canton_abbr VARCHAR(255),
-tested INT,
-cases INT,
-new_hosp INT,
-current_hosp INT,
-current_icu INT,
-deceased INT"""
+def data_belgium():
+    print("formatting data...")
+
+    output = []
+    path = CURRENT_DIR + '/../storage/belgium/'
+
+    cases = pd.read_csv(path + "cases.csv")
+    deaths = pd.read_csv(path + "deaths.csv")
+    hospital = pd.read_csv(path + "hospital.csv")
+    tests = pd.read_csv(path + "tests.csv")
+
+
+def data_luxembourg():
+    ...
+
+
+def data_france():
+    ...
+
 
 def data_switzerland():
     print("formatting data...")
@@ -65,7 +105,6 @@ def data_switzerland():
     return output
     
 
-
 if __name__ == "__main__":
 
-    output = data_switzerland()
+    data_belgium()

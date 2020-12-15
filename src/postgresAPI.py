@@ -9,12 +9,11 @@ from readCountryData import *
 
 def create_tables():
 
-    # table vendors just for testing purposes
     commands = (
         """
         CREATE TABLE switzerland (
             date DATE,
-            canton_abbr VARCHAR(255),
+            region VARCHAR(255),
             tested INT,
             cases INT,
             new_hosp INT,
@@ -25,9 +24,13 @@ def create_tables():
         )
         """,
         """
-        CREATE TABLE vendors (
-            vendor_id SERIAL PRIMARY KEY,
-            vendor_name VARCHAR(255) NOT NULL
+        CREATE TABLE denmark (
+            date DATE,
+            region VARCHAR(255),
+            tested INT,
+            cases INT,
+            recovered INT,
+            deceased INT
         )
         """
     )
@@ -102,43 +105,53 @@ def clearTable(table):
 
 
 # url for german dataset: 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson'
-# url for france dataset: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.json'
 
 
 def updateTables():
-
-    # Germany
+"""
+# Germany
     print("\n[GERMANY]")
     label = 'germany'
     rd.getJsonData(label, 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson')
     clearTable(label)
     insertIntoTable(data_germany(), label)
 
-    # Denmark
+# Denmark TODO
+    print("\n[DENMARK]")
+    label = 'denmark'
+"""
+# Netherlands TODO
 
-    # Netherlands
+# Belgium   storage/belgium/ must exist!
+    print("\n[BELGIUM]")
+    label = 'belgium'
+    rd.getCsvData(label + "/cases", 'https://epistat.sciensano.be/Data/COVID19BE_CASES_MUNI.csv')
+    rd.getCsvData(label + "/deaths", 'https://epistat.sciensano.be/Data/COVID19BE_MORT.csv')
+    rd.getCsvData(label + "/hospital", 'https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv')
+    rd.getCsvData(label + "/tests", 'https://epistat.sciensano.be/Data/COVID19BE_tests.csv')
+    clearTable(label)
+    insertIntoTable(data_belgium(), label)
 
-    # Belgium
+# Luxembourg TODO
 
-    # Luxembourg
-
-    # France
+# France TODO
     # print("\n[FRANCE]")
     # label = 'france'
     # rd.getJsonData(label, 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.json')
-
-    # Switzerland
+"""
+# Switzerland
     print("\n[SWITZERLAND]")
     label = 'switzerland'
     rd.getCsvData(label, 'https://raw.github.com/openZH/covid_19/master/COVID19_Fallzahlen_CH_total_v2.csv')
     clearTable(label)
     insertIntoTable(data_switzerland(), label)
+"""
 
-    # Austria
+# Austria TODO
 
-    # Czech Republic
+# Czech Republic TODO
 
-    # Poland
+# Poland TODO
 
 if __name__ == '__main__':
     # create_tables()

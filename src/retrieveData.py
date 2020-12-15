@@ -2,6 +2,12 @@ import requests
 import json
 import os
 import pandas as pd
+from io import BytesIO
+from urllib.request import urlopen
+from zipfile import ZipFile
+
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def connect_to_endpoint(url):
@@ -18,8 +24,7 @@ def connect_to_endpoint(url):
 
 def getJsonData(label, url):
     print("downloading data...")
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    path = current_dir + '/../storage/' + label + '.json'
+    path = CURRENT_DIR + '/../storage/' + label + '.json'
     data = connect_to_endpoint(url).json()
 
     with open(path, 'w') as output:
@@ -30,15 +35,26 @@ def getJsonData(label, url):
 
 def getCsvData(label, url):
     print("downloading data...")
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    path = current_dir + '/../storage/' + label + '.csv'
+    path = CURRENT_DIR + '/../storage/' + label + '.csv'
     data = pd.read_csv(url)
 
     data.to_csv(path)
 
     print("data successfully saved in storage!")
 
+
+def getZippedCsvData(label, url):
+    print("downloading data...")
+    path = CURRENT_DIR + '/../storage/' + label
+
+    with urlopen(url) as zipresp:
+        with ZipFile(BytesIO(zipresp.read())) as zipfile:
+            zipfile.extractall(path)
+
+    print("data successfully saved in storage!")
+
+
 if __name__ == "__main__":
 
-    getCsvData('switzerland', 'https://raw.github.com/openZH/covid_19/master/COVID19_Fallzahlen_CH_total_v2.csv')
+    getZippedCsvData('denmark', 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologiske-rapport-08122020-asma')
     print("You are doing great! :)")

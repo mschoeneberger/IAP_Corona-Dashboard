@@ -1,0 +1,33 @@
+Germany
+    - new setup columns SQL
+    - table definition in create_tables()
+    - needs review
+
+Denmark
+    - 50 "regions"
+    - multible tables -> need to merge
+
+Netherlands
+    - TODO
+
+Belgium
+    - 581 "regions"
+    - multible tables -> need to merge
+
+Luxembourg
+    - TODO
+
+France
+    - TODO
+
+Switzerland
+    - needs review
+
+Austria
+    - TODO
+
+Czech Republic
+    - TODO
+    
+Poland
+    - TODO
