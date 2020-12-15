@@ -1,12 +1,14 @@
 import json
 import os
+import pandas as pd
+
+CURRENT_DIR = current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 def data_germany():
     print("formatting data...")
     output = []
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    path = current_dir + '/../storage/germany.json'
+    path = CURRENT_DIR + '/../storage/germany.json'
     data = open(path, 'r')
     json_iter = json.loads(data.read())["features"]
     
@@ -31,3 +33,39 @@ def data_germany():
         output.append(tuple(row))
 
     return output
+
+def data_france():
+    ...
+
+
+"""date DATE,
+canton_abbr VARCHAR(255),
+tested INT,
+cases INT,
+new_hosp INT,
+current_hosp INT,
+current_icu INT,
+deceased INT"""
+
+def data_switzerland():
+    print("formatting data...")
+    output = []
+    path = CURRENT_DIR + '/../storage/switzerland.csv'
+    data = pd.read_csv(path)
+
+    columns = ["date", "abbreviation_canton_and_fl", "ncumul_tested", "ncumul_conf", "new_hosp",
+     "current_hosp", "current_icu","ncumul_released", "ncumul_deceased"]
+
+    for index, dataframe_row in data.iterrows():
+        output_row = []
+        for column in columns:
+                output_row.append(dataframe_row[column])
+        output.append(tuple(output_row))
+
+    return output
+    
+
+
+if __name__ == "__main__":
+
+    output = data_switzerland()

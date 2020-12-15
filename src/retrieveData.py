@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import pandas as pd
 
 
 def connect_to_endpoint(url):
@@ -12,14 +13,14 @@ def connect_to_endpoint(url):
                 response.status_code, response.text
             )
         )
-    return response.json()
+    return response
 
 
 def getJsonData(label, url):
     print("downloading data...")
     current_dir = os.path.dirname(os.path.abspath(__file__))
     path = current_dir + '/../storage/' + label + '.json'
-    data = connect_to_endpoint(url)
+    data = connect_to_endpoint(url).json()
 
     with open(path, 'w') as output:
         output.write(json.dumps(data, indent=4))
@@ -27,5 +28,17 @@ def getJsonData(label, url):
     print("data successfully saved in storage!")
 
 
+def getCsvData(label, url):
+    print("downloading data...")
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    path = current_dir + '/../storage/' + label + '.csv'
+    data = pd.read_csv(url)
+
+    data.to_csv(path)
+
+    print("data successfully saved in storage!")
+
 if __name__ == "__main__":
+
+    getCsvData('switzerland', 'https://raw.github.com/openZH/covid_19/master/COVID19_Fallzahlen_CH_total_v2.csv')
     print("You are doing great! :)")
