@@ -4,18 +4,25 @@ Germany
     - needs review
 
 Denmark
-    - 50 "regions"
+    - 50 gemeinden
     - multible tables -> need to merge
 
 Netherlands
-    - TODO
+    - needs review
 
 Belgium
-    - 581 "regions"
+    - 581 gemeinden -> cases
+    - 11 provinces -> tests/hospital
+    - 3 regions -> deaths
+    - TX_ADM_DSTR_DESCR_FR zwischen gemeinde und province
+    - TX_DESCR_FR kleineste Einheit
+    - nicht nur kleinste ansicht ? wegen übersicht ?
+
     - multible tables -> need to merge
 
 Luxembourg
-    - TODO
+    - needs review
+    - link changes maybe
 
 France
     - TODO
@@ -31,3 +38,4 @@ Czech Republic
     
 Poland
     - TODO
+

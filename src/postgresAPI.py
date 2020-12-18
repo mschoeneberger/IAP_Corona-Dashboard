@@ -16,7 +16,6 @@ def create_tables():
             region VARCHAR(255),
             tested INT,
             cases INT,
-            new_hosp INT,
             current_hosp INT,
             current_icu INT,
             recovered INT,
@@ -24,12 +23,21 @@ def create_tables():
         )
         """,
         """
-        CREATE TABLE denmark (
+        CREATE TABLE netherlands (
             date DATE,
             region VARCHAR(255),
+            cases INT,
+            new_hosp INT,
+            deceased INT
+        )
+        """,
+        """
+        CREATE TABLE luxembourg (
+            date DATE,
             tested INT,
             cases INT,
-            recovered INT,
+            current_hosp INT,
+            current_icu INT,
             deceased INT
         )
         """
@@ -107,22 +115,29 @@ def clearTable(table):
 # url for german dataset: 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson'
 
 
-def updateTables():
-"""
-# Germany
+def update_germany():
     print("\n[GERMANY]")
     label = 'germany'
     rd.getJsonData(label, 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson')
     clearTable(label)
     insertIntoTable(data_germany(), label)
 
-# Denmark TODO
+
+def update_denmark():
     print("\n[DENMARK]")
     label = 'denmark'
-"""
-# Netherlands TODO
 
-# Belgium   storage/belgium/ must exist!
+
+def update_netherlands():
+    print("\n[NETHERLANDS]")
+    label = 'netherlands'
+    rd.getJsonData(label + "/data", 'https://raw.github.com/J535D165/CoronaWatchNL/master/data-json/data-provincial/RIVM_NL_provincial.json')
+    rd.getCsvData(label + "/tests", 'https://raw.github.com/J535D165/CoronaWatchNL/master/data-misc/data-test/RIVM_NL_test_latest.csv')
+    clearTable(label)
+    insertIntoTable(data_netherlands(), label)
+
+
+def update_belgium():
     print("\n[BELGIUM]")
     label = 'belgium'
     rd.getCsvData(label + "/cases", 'https://epistat.sciensano.be/Data/COVID19BE_CASES_MUNI.csv')
@@ -132,31 +147,56 @@ def updateTables():
     clearTable(label)
     insertIntoTable(data_belgium(), label)
 
-# Luxembourg TODO
 
-# France TODO
-    # print("\n[FRANCE]")
-    # label = 'france'
-    # rd.getJsonData(label, 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.json')
-"""
-# Switzerland
+def update_luxembourg():
+    print("\n[LUXEMBOURG]")
+    label = 'luxembourg'
+    rd.indirectLinkCsv(label, 'https://data.public.lu/fr/datasets/r/767f8091-0591-4b04-9a6f-a9d60cd57159')
+    clearTable(label)
+    insertIntoTable(data_luxembourg(), label)
+
+
+def update_france():
+    ...
+
+
+def update_switzerland():
     print("\n[SWITZERLAND]")
     label = 'switzerland'
     rd.getCsvData(label, 'https://raw.github.com/openZH/covid_19/master/COVID19_Fallzahlen_CH_total_v2.csv')
     clearTable(label)
     insertIntoTable(data_switzerland(), label)
-"""
 
-# Austria TODO
 
-# Czech Republic TODO
+def update_austria():
+    ...
 
-# Poland TODO
+
+def update_czech_rep():
+    ...
+
+
+def update_poland():
+    ...
+
+
+def updateTables():
+    
+    update_germany() # needs review
+    update_denmark() # TODO
+    update_netherlands() # needs review
+    update_belgium()  # storage/belgium/ must exist! # TODO
+    update_luxembourg()  # needs review, link changes maybe
+    update_france()  # TODO
+    update_switzerland()  # needs review
+    update_austria()  # TODO
+    update_czech_rep()  # TODO
+    update_poland()  # TODO
 
 if __name__ == '__main__':
-    # create_tables()
-    updateTables()
-
+    create_tables()
+    # updateTables()
+    update_luxembourg()
 
     
     print("You are doing great! :)") # motivational message

@@ -54,6 +54,15 @@ def getZippedCsvData(label, url):
     print("data successfully saved in storage!")
 
 
+def indirectLinkCsv(label, url):
+    print("downloading data...")
+    path = CURRENT_DIR + '/../storage/' + label
+
+    r = requests.get(url, allow_redirects=True)
+    open(path + ".csv", 'wb').write(r.content)
+
+    print("data successfully saved in storage!")
+
 if __name__ == "__main__":
 
     getZippedCsvData('denmark', 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologiske-rapport-08122020-asma')

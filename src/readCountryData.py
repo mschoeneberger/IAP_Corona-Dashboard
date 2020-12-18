@@ -1,6 +1,7 @@
 import json
 import os
 import pandas as pd
+from datetime import datetime
 
 CURRENT_DIR = current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -35,7 +36,7 @@ def data_germany():
     return output
 
 
-def format_denmark_csv():
+def format_denmark_csv(path):
     with open(path + "Municipality_cases_time_series.csv", 'r+') as file:
         result = file.read().replace(';', ',')
         file.seek(0, os.SEEK_SET)
@@ -54,7 +55,7 @@ def data_denmark():
     path = CURRENT_DIR + '/../storage/denmark/'
 
     # replace ';' in file with ',' for correct reading with pandas
-    format_denmark_csv()
+    format_denmark_csv(path)
 
     cases_over_time = pd.read_csv(path + "Municipality_cases_time_series.csv")
     tested_over_time = pd.read_csv(path + "Municipality_tested_persons_time_series.csv")
@@ -64,7 +65,26 @@ def data_denmark():
 
 
 def data_netherlands():
-    ...
+    print("formatting data...")
+
+    output = []
+    path = CURRENT_DIR + '/../storage/netherlands/'
+    data = open(path + "/data.json", 'r')
+    # tests = open(path + "/tests.csv", 'r') # TODO: TBD
+
+    json_iter = json.loads(data.read())["data"]
+
+    for element in json_iter:
+        row = []
+        row.append(element["Datum"])
+        row.append(element["Provincienaam"])  # region
+        row.append(element["totaalAantal"])  # cases
+        row.append(element["ziekenhuisopnameAantal"])  # hospital
+        row.append(element["overledenAantal"])  # deaths
+        row = [float("nan") if e == None else e for e in row]
+        output.append(tuple(row))
+
+    return output
 
 
 def data_belgium():
@@ -78,9 +98,40 @@ def data_belgium():
     hospital = pd.read_csv(path + "hospital.csv")
     tests = pd.read_csv(path + "tests.csv")
 
+    cases = cases.drop(columns=["NIS5", "TX_DESCR_NL", "TX_ADM_DSTR_DESCR_NL", "TX_ADM_DSTR_DESCR_FR", "Unnamed: 0"])
+    tests = tests.drop(columns=["Unnamed: 0"])
+    merged = pd.merge(cases, tests, on=["DATE", "PROVINCE", "REGION"])
+
+    merged.to_csv(path + "output.csv")
+
+    print(cases)
+    print(tests)
+    print(merged)
+
 
 def data_luxembourg():
-    ...
+    print("formatting data...")
+
+    output = []
+    path = CURRENT_DIR + '/../storage/luxembourg.csv'
+
+    data = pd.read_csv(path, encoding='latin-1')
+
+    columns = ["Date", "Nb de tests effectués", "Nb de positifs", "Soins normaux",
+     "Soins intensifs", "[1.NbMorts]"]
+
+    for index, dataframe_row in data.iterrows():
+        row = []
+        for column in columns:
+            if column == "Date":
+                row.append(datetime.strptime(dataframe_row[column], '%d/%m/%Y').strftime('%Y-%m-%d'))
+            else:
+                row.append(dataframe_row[column])
+
+        row = [float("nan") if e == "-" else e for e in row]
+        output.append(tuple(row))
+
+    return output
 
 
 def data_france():
@@ -93,7 +144,7 @@ def data_switzerland():
     path = CURRENT_DIR + '/../storage/switzerland.csv'
     data = pd.read_csv(path)
 
-    columns = ["date", "abbreviation_canton_and_fl", "ncumul_tested", "ncumul_conf", "new_hosp",
+    columns = ["date", "abbreviation_canton_and_fl", "ncumul_tested", "ncumul_conf",
      "current_hosp", "current_icu","ncumul_released", "ncumul_deceased"]
 
     for index, dataframe_row in data.iterrows():
@@ -107,4 +158,4 @@ def data_switzerland():
 
 if __name__ == "__main__":
 
-    data_belgium()
+    data_luxembourg()
