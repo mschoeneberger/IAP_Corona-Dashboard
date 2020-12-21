@@ -266,6 +266,46 @@ def data_switzerland():
     return output
     
 
+def data_austria():
+    print("formatting data...")
+    output = []
+    path = CURRENT_DIR + '/../storage/austria'
+    data = pd.read_csv(path + "_fz.csv", sep=';')
+    data_hosp = pd.read_csv(path + "_hosp.csv", sep=';')
+    olddate = "1970-01-01"
+    olddate_value = 0
+
+    
+    for index, df_row in data.iterrows():
+        if df_row["BundeslandID"] == 10:
+            continue 
+        row = [None] * 8
+        row[0] = datetime.strptime(df_row["Time"], '%d.%m.%Y %X').strftime('%Y-%m-%d')
+        row[1] = df_row["Bundesland"]
+        if row[0] != olddate:
+            try:
+                new_value = int(data_hosp.loc[(data_hosp["Meldedat"] == df_row["Time"][:10]) & (data_hosp["Bundesland"] == "Alle")]["TestGesamt"])
+                row[2] = new_value - olddate_value
+                olddate_value = new_value
+            except:
+                row[2] = float("nan")
+        row[3] = df_row["AnzahlFaelle"]
+        try:
+            row[4] = int(data_hosp.loc[(data_hosp["Meldedat"] == df_row["Time"][:10]) & (data_hosp["Bundesland"] == df_row["Bundesland"])]["FZHosp"])
+            row[5] = int(data_hosp.loc[(data_hosp["Meldedat"] == df_row["Time"][:10]) & (data_hosp["Bundesland"] == df_row["Bundesland"])]["FZICU"])
+        except:
+            row[4] = float("nan")
+            row[5] = float("nan")
+        row[6] = df_row["AnzahlGeheiltTaeglich"]
+        row[7] = df_row["AnzahlTotTaeglich"]
+
+
+
+        output.append(tuple(row))
+
+    return output
+
+
 if __name__ == "__main__":
 
-    data_france()
+    data_austria()

@@ -31,6 +31,7 @@ def create_tables():
         """DROP TABLE switzerland""",
         """DROP TABLE belgium""",
         """DROP TABLE france""",
+        """DROP TABLE austria""",
         """
         CREATE TABLE denmark (
             date DATE,
@@ -90,6 +91,18 @@ def create_tables():
             tested INT,
             cases INT
         )
+        """,
+        """
+        CREATE TABLE austria (
+            data DATE,
+            region VARCHAR(255),
+            tested INT,
+            cases INT,
+            current_hosp INT,
+            current_icu INT,
+            recovered INT,
+            deceased INT
+        )
         """
 
     )
@@ -112,7 +125,6 @@ def create_tables():
     finally:
         if conn is not None:
             conn.close()
-
 def insertIntoTable(data, table):
 
     print("postgreSQL: inserting data into table...")
@@ -161,9 +173,6 @@ def clearTable(table):
     finally:
         if conn is not None:
             conn.close()
-
-
-# url for german dataset: 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson'
 
 
 def update_germany():
@@ -239,9 +248,10 @@ def update_switzerland():
 def update_austria():
     print("\n[AUSTRIA]")
     label = 'austria'
-    rd.getCsvData(label, 'https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv')
-    #clearTable(label)
-    #insertIntoTable(data_austria(), label)
+    rd.indirectLinkCsv(label + "_fz", 'https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv')
+    rd.indirectLinkCsv(label + "_hosp", "https://covid19-dashboard.ages.at/data/CovidFallzahlen.csv")
+    clearTable(label)
+    insertIntoTable(data_austria(), label)
 
 
 def update_czech_rep():
@@ -261,7 +271,7 @@ def updateTables():
     update_luxembourg()  # needs review, link changes maybe
     update_france()  # needs review
     update_switzerland()  # needs review
-    #update_austria()  # TODO
+    update_austria()  # needs review
     #update_czech_rep()  # TODO
     #update_poland()  # TODO
 
