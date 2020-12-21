@@ -29,6 +29,8 @@ def create_tables():
         """DROP TABLE luxembourg""",
         """DROP TABLE netherlands""",
         """DROP TABLE switzerland""",
+        """DROP TABLE belgium""",
+        """DROP TABLE france""",
         """
         CREATE TABLE denmark (
             date DATE,
@@ -68,7 +70,28 @@ def create_tables():
             current_icu INT,
             deceased INT
         )
+        """,
         """
+        CREATE TABLE belgium (
+            date DATE,
+            region VARCHAR(255),
+            tested INT,
+            cases INT,
+            new_hosp INT,
+            current_hosp INT,
+            current_icu INT,
+            deceased INT
+        )
+        """,
+        """
+        CREATE TABLE france (
+            date DATE,
+            region VARCHAR(255),
+            tested INT,
+            cases INT
+        )
+        """
+
     )
 
     conn = None
@@ -154,7 +177,8 @@ def update_germany():
 def update_germany_its():
     print("\n[GERMANY ITS]")
     label = 'germany_its'
-    rd.getCsvData(label, 'https://diviexchange.blob.core.windows.net/%24web/DIVI_Intensivregister_Auszug_pro_Landkreis.csv')
+    rd.getCsvData('ger_its/current', 'https://diviexchange.blob.core.windows.net/%24web/DIVI_Intensivregister_Auszug_pro_Landkreis.csv')
+    clearTable(label)
     insertIntoTable(data_germany_its(), label)
 
 
@@ -165,6 +189,7 @@ def update_denmark():
     format_denmark_csv()
     clearTable(label)
     insertIntoTable(data_denmark(), label)
+
 
 def update_netherlands():
     print("\n[NETHERLANDS]")
@@ -178,7 +203,7 @@ def update_netherlands():
 def update_belgium():
     print("\n[BELGIUM]")
     label = 'belgium'
-    rd.getCsvData(label + "/cases", 'https://epistat.sciensano.be/Data/COVID19BE_CASES_MUNI.csv')
+    rd.getCsvData(label + "/cases", 'https://epistat.sciensano.be/Data/COVID19BE_CASES_AGESEX.csv')
     rd.getCsvData(label + "/deaths", 'https://epistat.sciensano.be/Data/COVID19BE_MORT.csv')
     rd.getCsvData(label + "/hospital", 'https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv')
     rd.getCsvData(label + "/tests", 'https://epistat.sciensano.be/Data/COVID19BE_tests.csv')
@@ -195,7 +220,12 @@ def update_luxembourg():
 
 
 def update_france():
-    ...
+    print("\n[FRANCE]")
+    label = 'france'
+    rd.indirectLinkCsv(label, 'https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675')
+    format_france_csv()
+    clearTable(label)
+    insertIntoTable(data_france(), label)
 
 
 def update_switzerland():
@@ -227,18 +257,18 @@ def updateTables():
     update_germany() # needs review
     update_denmark() # needs review
     update_netherlands() # needs review
-    update_belgium()  # storage/belgium/ must exist! # TODO
+    update_belgium()  # needs review, storage/belgium/ must exist! 
     update_luxembourg()  # needs review, link changes maybe
-    update_france()  # TODO
+    update_france()  # needs review
     update_switzerland()  # needs review
-    update_austria()  # TODO
-    update_czech_rep()  # TODO
-    update_poland()  # TODO
+    #update_austria()  # TODO
+    #update_czech_rep()  # TODO
+    #update_poland()  # TODO
 
 if __name__ == '__main__':
-    #create_tables()
-    # updateTables()
-    update_germany_its()
+    create_tables()
+    #updateTables()
+    update_austria()
 
     
     print("You are doing great! :)") # motivational message

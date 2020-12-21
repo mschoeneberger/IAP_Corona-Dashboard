@@ -40,22 +40,27 @@ def data_germany_its():
     print("formating ITS-data...")
 
     output = []
-    path = CURRENT_DIR + '/../storage/germany_its.csv'
+    path = CURRENT_DIR + '/../storage/ger_its/'
     
-    data = pd.read_csv(path)
     columns = ["daten_stand", "bundesland", "gemeindeschluessel", "faelle_covid_aktuell",
         "faelle_covid_aktuell_beatmet", "betten_frei", "betten_belegt"]
 
-    for index, df_row in data.iterrows():
-        row = []
-        for column in columns:
-            row.append(df_row[column])
-        output.append(tuple(row))
+    for filename in os.listdir(path):
+        try:
+            data = pd.read_csv(path + filename)
+        except:
+            print(filename)
+            continue
+        for index, df_row in data.iterrows():
+            row = []
+            for column in columns:
+                row.append(df_row[column])
+            output.append(tuple(row))
     
     return output
 
 
-def format_denmark_csv():
+def format_denmark_csv(): # could be done with load_csv(path, sep=',')
     path = CURRENT_DIR + '/../storage/denmark/'
 
     with open(path + "Municipality_cases_time_series.csv", 'r+') as file:
@@ -138,17 +143,47 @@ def data_belgium():
     cases = pd.read_csv(path + "cases.csv")
     deaths = pd.read_csv(path + "deaths.csv")
     hospital = pd.read_csv(path + "hospital.csv")
-    tests = pd.read_csv(path + "tests.csv")
+    tested = pd.read_csv(path + "tests.csv")
 
-    cases = cases.drop(columns=["NIS5", "TX_DESCR_NL", "TX_ADM_DSTR_DESCR_NL", "TX_ADM_DSTR_DESCR_FR", "Unnamed: 0"])
-    tests = tests.drop(columns=["Unnamed: 0"])
-    merged = pd.merge(cases, tests, on=["DATE", "PROVINCE", "REGION"])
+    row = [None] * 8
+    olddate = '1970-01-01'
 
-    merged.to_csv(path + "output.csv")
 
-    print(cases)
-    print(tests)
-    print(merged)
+    for index, df_row in cases.iterrows():
+        if index != 0:
+            if (df_row["DATE"] == row[0]) and (df_row["PROVINCE"] == row[1]):
+                row[3] += df_row["CASES"]
+                continue
+            else:
+                #row = [float("nan") if e is None for e in row]
+                output.append(tuple(row))
+        
+        row = [None] * 8
+        row[0] = df_row["DATE"]
+        row[1] = df_row["PROVINCE"]
+        row[3] = df_row["CASES"]
+        try:
+            row[2] = int(tested.loc[(tested["DATE"] == row[0]) & (tested["PROVINCE"] == row[1])]["TESTS_ALL"])
+        except:
+            row[2] = float("nan")
+        try:
+            row[4] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["NEW_IN"])
+            row[5] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["TOTAL_IN"])
+            row[6] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["TOTAL_IN_ICU"])
+        except:
+            row[4] = float("nan")
+            row[5] = float("nan")
+            row[6] = float("nan")
+        if row[0] != olddate:
+            row[7] = deaths.loc[deaths["DATE"] == row[0]]["DEATHS"].sum()
+            olddate = row[0]
+        else:
+            row[7] = float("nan")
+
+    #row = [float("nan") if e is None for e in row]
+    output.append(tuple(row))
+    
+    return output
 
 
 def data_luxembourg():
@@ -176,8 +211,41 @@ def data_luxembourg():
     return output
 
 
+def format_france_csv():# could be done with load_csv(path, sep=',')
+    path = CURRENT_DIR + '/../storage/france.csv'
+
+    with open(path, 'r+') as file:
+        result = file.read().replace(';', ',')
+        file.seek(0, os.SEEK_SET)
+        file.write(result)
+
+
 def data_france():
-    ...
+    print("formatting data...")
+
+    output = []
+    path = CURRENT_DIR + '/../storage/france.csv'
+    format_france_csv()
+
+    data = pd.read_csv(path, dtype={'dep': str})
+
+    dateold = '1970-01-01'
+
+    row = [None] * 3
+
+    for index, df_row in data.iterrows():
+        if df_row["jour"] != dateold and index > 0:
+            output.append(tuple(row))
+        row = [None] * 4
+        row[0] = df_row["jour"]
+        dateold = row[0]
+        row[1] = df_row["dep"]
+        row[2] = df_row["T"]
+        row[3] = df_row["P"]
+
+    output.append(tuple(row))
+
+    return output
 
 
 def data_switzerland():
@@ -200,4 +268,4 @@ def data_switzerland():
 
 if __name__ == "__main__":
 
-    data_denmark()
+    data_france()
