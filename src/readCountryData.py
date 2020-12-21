@@ -36,13 +36,39 @@ def data_germany():
     return output
 
 
-def format_denmark_csv(path):
+def data_germany_its():
+    print("formating ITS-data...")
+
+    output = []
+    path = CURRENT_DIR + '/../storage/germany_its.csv'
+    
+    data = pd.read_csv(path)
+    columns = ["daten_stand", "bundesland", "gemeindeschluessel", "faelle_covid_aktuell",
+        "faelle_covid_aktuell_beatmet", "betten_frei", "betten_belegt"]
+
+    for index, df_row in data.iterrows():
+        row = []
+        for column in columns:
+            row.append(df_row[column])
+        output.append(tuple(row))
+    
+    return output
+
+
+def format_denmark_csv():
+    path = CURRENT_DIR + '/../storage/denmark/'
+
     with open(path + "Municipality_cases_time_series.csv", 'r+') as file:
         result = file.read().replace(';', ',')
         file.seek(0, os.SEEK_SET)
         file.write(result)
 
-    with open(path + "Municipality_tested_persons_time_series.csv", 'r+') as file:
+    with open(path + "Test_pos_over_time.csv", 'r+') as file:
+        result = file.read().replace(',', '.').replace(';', ',').replace('.', '')
+        file.seek(0, os.SEEK_SET)
+        file.write(result)
+
+    with open(path + "Deaths_over_time.csv", 'r+') as file:
         result = file.read().replace(';', ',')
         file.seek(0, os.SEEK_SET)
         file.write(result)
@@ -54,14 +80,30 @@ def data_denmark():
     output = []
     path = CURRENT_DIR + '/../storage/denmark/'
 
-    # replace ';' in file with ',' for correct reading with pandas
-    format_denmark_csv(path)
+    cases = pd.read_csv(path + "Municipality_cases_time_series.csv")
+    tested = pd.read_csv(path + "Test_pos_over_time.csv")
+    deaths = pd.read_csv(path + "Deaths_over_time.csv")
 
-    cases_over_time = pd.read_csv(path + "Municipality_cases_time_series.csv")
-    tested_over_time = pd.read_csv(path + "Municipality_tested_persons_time_series.csv")
-
-    print(cases_over_time)
-    print(tested_over_time)
+    for index, df_row in cases.iterrows():
+        row = [None] * 5
+        row[0] = df_row["date_sample"]  # Date
+        for column in cases.columns:
+            if column == "date_sample":
+                continue
+            if column == "NA":
+                row[2] = int(tested.loc[tested["Date"] == row[0]]["Tested"])
+                try: 
+                    row[4] = int(deaths.loc[deaths["Dato"] == row[0]]["Antal_døde"]) # deaths
+                except:
+                    row[4] = 0
+            else:
+                row[2] = float("nan")
+                row[4] = float("nan")
+            row[1] = column # region
+            row[3] = df_row[column] # cases
+            output.append(tuple(row))
+    
+    return output
 
 
 def data_netherlands():
@@ -158,4 +200,4 @@ def data_switzerland():
 
 if __name__ == "__main__":
 
-    data_luxembourg()
+    data_denmark()

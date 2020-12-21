@@ -1,11 +1,11 @@
 Germany
     - new setup columns SQL
     - table definition in create_tables()
+    - ITS einmalig downloaden
     - needs review
 
 Denmark
-    - 50 gemeinden
-    - multible tables -> need to merge
+    - needs review
 
 Netherlands
     - needs review

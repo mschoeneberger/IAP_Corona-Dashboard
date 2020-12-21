@@ -7,9 +7,37 @@ import retrieveData as rd
 from readCountryData import *
 
 
+
+"""
+CREATE TABLE germany_its (
+    date DATE,
+    bundesland INT,
+    gemeinde INT,
+    faelle INT,
+    faelle_beatmet INT,
+    betten_frei INT,
+    betten_belegt INT
+)
+"""
+
+
+
 def create_tables():
 
     commands = (
+        """DROP TABLE denmark""",
+        """DROP TABLE luxembourg""",
+        """DROP TABLE netherlands""",
+        """DROP TABLE switzerland""",
+        """
+        CREATE TABLE denmark (
+            date DATE,
+            region VARCHAR(255),
+            tested INT,
+            cases INT,
+            deceased INT
+        )
+        """,
         """
         CREATE TABLE switzerland (
             date DATE,
@@ -123,10 +151,20 @@ def update_germany():
     insertIntoTable(data_germany(), label)
 
 
+def update_germany_its():
+    print("\n[GERMANY ITS]")
+    label = 'germany_its'
+    rd.getCsvData(label, 'https://diviexchange.blob.core.windows.net/%24web/DIVI_Intensivregister_Auszug_pro_Landkreis.csv')
+    insertIntoTable(data_germany_its(), label)
+
+
 def update_denmark():
     print("\n[DENMARK]")
     label = 'denmark'
-
+    rd.getZippedCsvData(label, 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologiske-rapport-18122020-py43')
+    format_denmark_csv()
+    clearTable(label)
+    insertIntoTable(data_denmark(), label)
 
 def update_netherlands():
     print("\n[NETHERLANDS]")
@@ -169,7 +207,11 @@ def update_switzerland():
 
 
 def update_austria():
-    ...
+    print("\n[AUSTRIA]")
+    label = 'austria'
+    rd.getCsvData(label, 'https://covid19-dashboard.ages.at/data/CovidFaelle_Timeline.csv')
+    #clearTable(label)
+    #insertIntoTable(data_austria(), label)
 
 
 def update_czech_rep():
@@ -183,7 +225,7 @@ def update_poland():
 def updateTables():
     
     update_germany() # needs review
-    update_denmark() # TODO
+    update_denmark() # needs review
     update_netherlands() # needs review
     update_belgium()  # storage/belgium/ must exist! # TODO
     update_luxembourg()  # needs review, link changes maybe
@@ -194,9 +236,9 @@ def updateTables():
     update_poland()  # TODO
 
 if __name__ == '__main__':
-    create_tables()
+    #create_tables()
     # updateTables()
-    update_luxembourg()
+    update_germany_its()
 
     
     print("You are doing great! :)") # motivational message
