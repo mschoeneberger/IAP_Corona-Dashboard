@@ -306,6 +306,40 @@ def data_austria():
     return output
 
 
+def data_czech_rep():
+    
+    "datum" # Date
+    "kraj_nuts_kod" # region
+    "prirustkovy_pocet_testu_kraj" # tests
+    
+
+
+def data_poland():
+    ...
+    
+
+def data_world():
+    print("formatting data...")
+    output = []
+    path = CURRENT_DIR + '/../storage/world.csv'
+    data = pd.read_csv(path)
+
+
+    columns = ["Name", "Cases - cumulative total", "Cases - cumulative total per 1 million population", "Cases - newly reported in last 7 days",
+     "Cases - newly reported in last 24 hours", "Deaths - cumulative total", "Deaths - cumulative total per 1 million population", "Deaths - newly reported in last 7 days", "Deaths - newly reported in last 24 hours"]
+
+    for index, df_row in data.iterrows():
+        row = []
+        for column in columns:
+            if column == "Name":
+                df_row[column] = df_row[column].replace("'", "")
+                print(df_row[column])
+            row.append(df_row[column])
+
+        output.append(tuple(row))
+
+    return output
+
 if __name__ == "__main__":
 
-    data_austria()
+    data_world()

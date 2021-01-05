@@ -32,6 +32,7 @@ def create_tables():
         """DROP TABLE belgium""",
         """DROP TABLE france""",
         """DROP TABLE austria""",
+        """DROP TABLE world"""
         """
         CREATE TABLE denmark (
             date DATE,
@@ -102,6 +103,19 @@ def create_tables():
             current_icu INT,
             recovered INT,
             deceased INT
+        )
+        """,
+        """
+        CREATE TABLE world (
+            country VARCHAR(255),
+            cases INT,
+            cases_per1mio INT,
+            cases_last7days INT,
+            cases_last24hours INT,
+            deaths INT,
+            deaths_per1mio INT,
+            deaths_last7days INT,
+            deaths_last25hours INT
         )
         """
 
@@ -255,11 +269,23 @@ def update_austria():
 
 
 def update_czech_rep():
-    ...
+    print(["\n[CZECH REPUBLIC]"])
+    label = 'czech_rep'
+    rd.getCsvData(label, 'https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/kraj-okres-testy.csv')
+    #clearTable(label)
+    #insertIntoTable(data_czech_rep(), label)
 
 
 def update_poland():
     ...
+
+
+def update_world():
+    print("\n[WORLD]")
+    label = 'world'
+    rd.getCsvData(label , 'https://covid19.who.int/WHO-COVID-19-global-table-data.csv')
+    clearTable(label)
+    insertIntoTable(data_world(), label)
 
 
 def updateTables():
@@ -274,11 +300,12 @@ def updateTables():
     update_austria()  # needs review
     #update_czech_rep()  # TODO
     #update_poland()  # TODO
+    update_world()
 
 if __name__ == '__main__':
-    create_tables()
+    #create_tables()
     #updateTables()
-    update_austria()
+    update_world()
 
     
     print("You are doing great! :)") # motivational message
