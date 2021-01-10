@@ -15,22 +15,15 @@ def data_germany():
     
     for element in json_iter:
         element_dict = element["properties"]
-        row = [None] * 15
-        row[0] = element_dict["IdBundesland"]
+        row = [None] * 8
+        row[0] = element_dict["Meldedatum"]
         row[1] = element_dict["Bundesland"]
-        row[2] = element_dict["IdLandkreis"]
-        row[3] = element_dict["Landkreis"]
-        row[4] = element_dict["Geschlecht"]
-        row[5] = element_dict["Altersgruppe"]
-        row[6] = element_dict["AnzahlFall"]
-        row[7] = element_dict["AnzahlTodesfall"]
-        row[8] = element_dict["Meldedatum"]
-        row[9] = element_dict["NeuerFall"]
-        row[10] = element_dict["Refdatum"]
-        row[11] = element_dict["AnzahlGenesen"]
-        row[12] = element_dict["NeuGenesen"]
-        row[13] = bool(element_dict["IstErkrankungsbeginn"])
-        row[14] = element_dict["ObjectId"]
+        row[2] = element_dict["Landkreis"]
+        row[3] = element_dict["Geschlecht"]
+        row[4] = element_dict["Altersgruppe"]
+        row[5] = element_dict["AnzahlFall"]
+        row[6] = element_dict["AnzahlTodesfall"]
+        row[7] = element_dict["AnzahlGenesen"]
         output.append(tuple(row))
 
     return output
@@ -307,10 +300,7 @@ def data_austria():
 
 
 def data_czech_rep():
-    
-    "datum" # Date
-    "kraj_nuts_kod" # region
-    "prirustkovy_pocet_testu_kraj" # tests
+    ...
     
 
 
@@ -333,13 +323,51 @@ def data_world():
         for column in columns:
             if column == "Name":
                 df_row[column] = df_row[column].replace("'", "")
-                print(df_row[column])
             row.append(df_row[column])
 
         output.append(tuple(row))
 
     return output
 
+def data_vaccination():
+    print("formatting data...")
+    output = []
+    path = CURRENT_DIR + '/../storage/vaccination.xlsx'
+
+    xlsx = pd.ExcelFile(path , engine='openpyxl')
+    data_region = pd.read_excel(xlsx, 1)
+    data_daily = pd.read_excel(xlsx, 2)
+
+    columns = ["Bundesland", "Impfungen kumulativ", "Differenz zum Vortag", "", ""]
+
+    for index, df_row in data_region.iterrows():
+        row = []
+        for column in columns:
+            if column == "":
+                row.append(float("nan"))
+            else:
+                row.append(df_row[column])
+
+        output.append(tuple(row))
+
+    columns = ["", "", "", "Datum", "Gesamtzahl Impfungen"]
+
+    data_daily.dropna(inplace=True)
+    data_daily.drop(data_daily.tail(1).index,inplace=True)
+
+    for index, df_row in data_daily.iterrows():
+        row = []
+        for column in columns:
+            if column == "":
+                row.append(float("nan"))
+            elif column == "Datum":
+                row.append(str(df_row[column]))
+            else:
+                row.append(df_row[column])
+        output.append(tuple(row))
+
+    return output
+
 if __name__ == "__main__":
 
-    data_world()
+    data_vaccination()

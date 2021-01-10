@@ -25,6 +25,7 @@ CREATE TABLE germany_its (
 def create_tables():
 
     commands = (
+        """DROP TABLE germany""",
         """DROP TABLE denmark""",
         """DROP TABLE luxembourg""",
         """DROP TABLE netherlands""",
@@ -32,7 +33,19 @@ def create_tables():
         """DROP TABLE belgium""",
         """DROP TABLE france""",
         """DROP TABLE austria""",
-        """DROP TABLE world"""
+        """DROP TABLE world""",
+        """
+        CREATE TABLE germany (
+            date DATE,
+            bundesland VARCHAR(255),
+            landkreis VARCHAR(255),
+            geschlecht VARCHAR(255),
+            altersgruppe VARCHAR(255),
+            cases INT,
+            deaths INT,
+            recovered INT
+        )
+        """,
         """
         CREATE TABLE denmark (
             date DATE,
@@ -117,6 +130,15 @@ def create_tables():
             deaths_last7days INT,
             deaths_last25hours INT
         )
+        """,
+        """
+        CREATE TABLE vaccination (
+            bundesland VARCHAR(255),
+            impfungen_bl INT,
+            vortag_diff INT,
+            date DATE,
+            impfungen_ges INT
+        )
         """
 
     )
@@ -139,6 +161,8 @@ def create_tables():
     finally:
         if conn is not None:
             conn.close()
+
+
 def insertIntoTable(data, table):
 
     print("postgreSQL: inserting data into table...")
@@ -283,10 +307,16 @@ def update_poland():
 def update_world():
     print("\n[WORLD]")
     label = 'world'
-    rd.getCsvData(label , 'https://covid19.who.int/WHO-COVID-19-global-table-data.csv')
+    rd.getCsvData(label, 'https://covid19.who.int/WHO-COVID-19-global-table-data.csv')
     clearTable(label)
     insertIntoTable(data_world(), label)
 
+def update_vaccination():
+    print("\n[VACCINATION GERMANY]")
+    label = 'vaccination'
+    rd.indirectLinkXlsx(label, "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile")
+    clearTable(label)
+    insertIntoTable(data_vaccination(), label)
 
 def updateTables():
     
@@ -301,11 +331,11 @@ def updateTables():
     #update_czech_rep()  # TODO
     #update_poland()  # TODO
     update_world()
+    update_vaccination()
 
 if __name__ == '__main__':
     #create_tables()
     #updateTables()
-    update_world()
-
+    update_vaccination()
     
     print("You are doing great! :)") # motivational message

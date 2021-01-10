@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import io
 import pandas as pd
 from io import BytesIO
 from urllib.request import urlopen
@@ -63,7 +64,16 @@ def indirectLinkCsv(label, url):
 
     print("data successfully saved in storage!")
 
+def indirectLinkXlsx(label, url):
+    print("downloading data...")
+    path = CURRENT_DIR + '/../storage/' + label
+
+    r = requests.get(url, allow_redirects=True)
+    open(path + ".xlsx", 'wb').write(r.content)
+
+    print("data successfully saved in storage!")
+
 if __name__ == "__main__":
 
-    getZippedCsvData('denmark', 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologiske-rapport-08122020-asma')
+    indirectLinkXlsx("vaccination", "https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile")
     print("You are doing great! :)")
