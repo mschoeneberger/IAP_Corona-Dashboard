@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/IAP_Corona-Dashboard/static/css/main.06fd64bf.chunk.css",
+    "main.js": "/IAP_Corona-Dashboard/static/js/main.9d147a37.chunk.js",
+    "main.js.map": "/IAP_Corona-Dashboard/static/js/main.9d147a37.chunk.js.map",
+    "runtime-main.js": "/IAP_Corona-Dashboard/static/js/runtime-main.44761b2b.js",
+    "runtime-main.js.map": "/IAP_Corona-Dashboard/static/js/runtime-main.44761b2b.js.map",
+    "static/css/2.30530a76.chunk.css": "/IAP_Corona-Dashboard/static/css/2.30530a76.chunk.css",
+    "static/js/2.64832644.chunk.js": "/IAP_Corona-Dashboard/static/js/2.64832644.chunk.js",
+    "static/js/2.64832644.chunk.js.map": "/IAP_Corona-Dashboard/static/js/2.64832644.chunk.js.map",
+    "static/js/3.1bdb80db.chunk.js": "/IAP_Corona-Dashboard/static/js/3.1bdb80db.chunk.js",
+    "static/js/3.1bdb80db.chunk.js.map": "/IAP_Corona-Dashboard/static/js/3.1bdb80db.chunk.js.map",
+    "index.html": "/IAP_Corona-Dashboard/index.html",
+    "static/css/2.30530a76.chunk.css.map": "/IAP_Corona-Dashboard/static/css/2.30530a76.chunk.css.map",
+    "static/css/main.06fd64bf.chunk.css.map": "/IAP_Corona-Dashboard/static/css/main.06fd64bf.chunk.css.map",
+    "static/js/2.64832644.chunk.js.LICENSE.txt": "/IAP_Corona-Dashboard/static/js/2.64832644.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44761b2b.js",
+    "static/css/2.30530a76.chunk.css",
+    "static/js/2.64832644.chunk.js",
+    "static/css/main.06fd64bf.chunk.css",
+    "static/js/main.9d147a37.chunk.js"
+  ]
+}
