@@ -1,31 +1,36 @@
 from flask import Flask, request, send_from_directory
 from flask_cors import CORS
-import psycopg2
+from postgresAPI import executeSelect
 import json
 
 app = Flask(__name__)
 CORS(app)
 
-
+# /fetchData?table=germany&startdate=10.02.2020&enddate=15.02.2020&values=cases
 @app.route('/fetchData')
 def fetchData():
     #if key doesn't exist, returns None
-    country = request.args.get('country')
-    startdate = request.args.get('startdate')
-    enddate = request.args.get('enddate')
+    table = request.args.get('table')
     values = request.args.get('values')
+    group_by = request.args.get('group_by')
 
-    # /fetchData?country=Germany&startdate=10.02.2020&enddate=15.02.2020&values=cases
+    data = executeSelect(table, values, group_by)
 
-    # send args to a buildSQL() func to get a SQL statement string, send that to executeSQL, receive SQL data,
-    # throw it into a json
+    # try to return json, return pure data if not json-able (error in SQL)
+    # TODO: convert date to string
+    try:
+        return json.dumps(data)
+    except:
+        return "ERROR:" + str(data)
 
+@app.route('/dataWorld')
+def dataWorld():
+    ...
 
-    return '''<h1>Sending Data from {} to {} for {}</h1>'''.format(startdate, enddate, country)
 
 @app.route('/')
-def send_static(path):
-    return send_from_directory('../storage/results', path)
+def default():
+    return '''<h1>IAP_Corona_Dashboard - Flask-Endpoint</h1>'''
 
 if __name__ == "__main__":
     ...

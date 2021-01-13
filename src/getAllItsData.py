@@ -27,4 +27,4 @@ def download_its_data():
 
 if __name__ == "__main__":
 
-    compare_its_data()
+    ...

@@ -20,6 +20,37 @@ CREATE TABLE germany_its (
 )
 """
 
+def executeSelect(table, values, group_by=None):
+
+    print("postgreSQL: running SELECT statement...")
+
+    if group_by is not None:
+        group_by = "GROUP BY {}".format(group_by)
+    else:
+        group_by = ""
+
+    sql = "SELECT {} FROM {} {}".format(values, table, group_by)
+
+    conn = None
+    try:
+        params = config() # read database configuration
+        conn = psycopg2.connect(**params) # connect to the PostgreSQL database
+        cur = conn.cursor() # create a new cursor
+
+        cur.execute(sql)
+        
+        rows = cur.fetchall()
+
+        cur.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+        return(error)
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return rows
 
 
 def create_tables():
@@ -336,6 +367,6 @@ def updateTables():
 if __name__ == '__main__':
     #create_tables()
     #updateTables()
-    update_vaccination()
+    update_belgium()
     
     print("You are doing great! :)") # motivational message
