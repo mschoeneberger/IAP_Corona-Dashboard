@@ -33,7 +33,8 @@ function MapSelectionButtons() {
               <Tab
                 key={view}
                 active={active === view}
-                onClick={() => setActive(view)}>
+                onClick={() => setActive(view)}
+              >
                 <p>{view}</p>
               </Tab>
             )

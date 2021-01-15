@@ -1,6 +1,6 @@
 import LegendItem from "./LegendItem";
 
-const legendItems = [
+const legendItemsCCases = [
     new LegendItem(
         "5.000.000+",
         "#330000",
@@ -36,4 +36,4 @@ const legendItems = [
     new LegendItem("No Data", "#ffff4d", (cases) => true)
 ];
 
-export default legendItems;
+export default legendItemsCCases;

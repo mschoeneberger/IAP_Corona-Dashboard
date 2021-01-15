@@ -2,6 +2,7 @@ import React from 'react';
 import {MapContainer, GeoJSON} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./CovidMap.css";
+import formatNumberWithPeriods from "../tasks/formatNumberWithPeriods";
 
 const CovidMap = ({countries}) => {
     const mapStyle = {
@@ -12,7 +13,6 @@ const CovidMap = ({countries}) => {
     };
 
     const onEachCountry = (country, layer) => {
-        //Filling each Country with info/color. This has to change depending on the selected button.
         layer.options.fillColor = country.properties.color;
         const name = country.properties.ADMIN;
         const confirmedCases = formatNumberWithPeriods(country.properties.confirmed);
@@ -30,10 +30,5 @@ const CovidMap = ({countries}) => {
         <GeoJSON style={mapStyle} data={countries} onEachFeature={onEachCountry}/>
     </MapContainer>;
 };
-
- function formatNumberWithPeriods (number) {
-   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-};
-
  
 export default CovidMap;

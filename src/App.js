@@ -6,7 +6,8 @@ import LoadingMap from "./components/LoadingMap";
 import CovidMap from "./components/CovidMap";
 import MapSelectionButtons from "./components/MapSelectionButtons";
 import LoadCountriesTask from "./tasks/LoadCountriesTask";
-import legendItems from "./entities/LegendItems";
+import legendItemsCCases from "./entities/LegendItems";
+import buildLegends from "./tasks/BuildLegendsTask";
 
 const App = () => {
     const [countries, setCountries] = useState([]);
@@ -16,12 +17,13 @@ const App = () => {
         loadCountriesTask.load(setCountries);
     };
 
+    // const legends = buildLegends(["cases", "active", "incedence", "icu", "deaths", "tests", "vaccination"]);
     useEffect(load, []);
 
     return (
         <div className="page">
             <TopRow/>
-            <InfoPanel legendItems={legendItems}/>
+            <InfoPanel legendItems={legendItemsCCases}/>
             <div style={{height:"90vh", width:"70vw", float:"left"}}>
                {countries.length === 0 ? (
                    <LoadingMap/>

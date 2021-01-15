@@ -32,11 +32,12 @@ class LoadCountriesTask{
                 mapCountry.properties.peopleHospitalized = Number(covidCountry.latest.peopleHospitalized);
                 mapCountry.properties.mortalityRate = Number(covidCountry.latest.mortalityRate);
             }
-
+            //This badboy needs to go.
             this.setCountryColor(mapCountry);
         }
         this.setState(this.mapCountries);
     };
+    //This badboy needs to go
     setCountryColor = (mapCountry) => {
         const legendItem = legendItems.find((legendItem) => 
             legendItem.isFor(mapCountry.properties.confirmed)
