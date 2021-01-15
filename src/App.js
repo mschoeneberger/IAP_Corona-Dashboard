@@ -8,6 +8,7 @@ import MapSelectionButtons from "./components/MapSelectionButtons";
 import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import legendItemsCCases from "./entities/LegendItems";
 import buildLegends from "./tasks/BuildLegendsTask";
+import Charts from "./components/Charts"
 
 const App = () => {
     const [countries, setCountries] = useState([]);
@@ -32,6 +33,7 @@ const App = () => {
                )}
             <MapSelectionButtons/>
             </div>
+            <Charts/>
         </div>
     );
 };
