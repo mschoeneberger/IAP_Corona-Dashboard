@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Legend.css";
 
-const Legend = (legendItems) => {
-    const items = legendItems.legendItems;
+const Legend = (legends) => {
+    const items = legends.legends.legends[1];
     return (
         <div className="Legend">
            {items.map((item) => (

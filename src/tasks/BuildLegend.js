@@ -1,20 +1,21 @@
 import LegendItem from "../entities/LegendItem";
 import formatNumberWithPeriods from "./formatNumberWithPeriods";
 
-//Generates an array of 7 LegendItems 
+//Builds a legend (array) with 7 Legend Items
 function buildLegend (max) {
     var legendItems = [];
-    var newmax = Math.round(max);
+    var newmax = Math.floor(max);
     var maxlength = newmax.toString().length;
-    var oldmax;
+    var oldmax = Number.MAX_VALUE;
     //building the array for float values
-    if(maxlength===1){
+    if(maxlength <= 2){
         newmax = max.toFixed(3);
         legendItems.push(
             new LegendItem(
                 `${newmax}+`,
                 "#330000",
-                (comparator) => comparator >= newmax,
+                newmax,
+                oldmax,
                 "white"
             )
         );
@@ -23,8 +24,8 @@ function buildLegend (max) {
         legendItems.push(
             new LegendItem(
                 `${newmax} - ${oldmax-0.001}`,
-                "#660000",
-                (comparator) => comparator >= newmax && comparator < oldmax,
+                newmax,
+                oldmax,
                 "white"
             )
         );
@@ -34,7 +35,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${newmax} - ${oldmax-0.001}`,
                 "#990000",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         oldmax = newmax;
@@ -43,7 +45,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${newmax} - ${oldmax-0.001}`,
                 "#e60000",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         oldmax = newmax;
@@ -52,18 +55,20 @@ function buildLegend (max) {
             new LegendItem(
                 `${newmax} - ${oldmax-0.001}`,
                 "#ff5544",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         legendItems.push(
             new LegendItem(
                 `0.001 - ${newmax-0.001}`,
                 "#ff8080",
-                (comparator) => comparator >= 1 && comparator < newmax
+                0.001,
+                newmax
             )
         );
         legendItems.push(
-            new LegendItem("No Data", "#ffff4d", (comparator) => true)
+            new LegendItem("No Data", "#ffff4d", 0, 0.001)
         );
     }
     //building the array for ints
@@ -73,7 +78,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${formatNumberWithPeriods(newmax)}+`,
                 "#330000",
-                (comparator) => comparator >= newmax,
+                newmax,
+                oldmax,
                 "white"
             )
         );
@@ -83,7 +89,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
                 "#660000",
-                (comparator) => comparator >= newmax && comparator < oldmax,
+                newmax,
+                oldmax,
                 "white"
             )
         );
@@ -93,7 +100,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
                 "#990000",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         oldmax = newmax;
@@ -102,7 +110,8 @@ function buildLegend (max) {
             new LegendItem(
                 `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
                 "#e60000",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         oldmax = newmax;
@@ -111,18 +120,20 @@ function buildLegend (max) {
             new LegendItem(
                 `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
                 "#ff5544",
-                (comparator) => comparator >= newmax && comparator < oldmax
+                newmax,
+                oldmax
             )
         );
         legendItems.push(
             new LegendItem(
                 `1 - ${formatNumberWithPeriods(newmax-1)}`,
                 "#ff8080",
-                (comparator) => comparator >= 1 && comparator < newmax
+                1,
+                newmax
             )
         );
         legendItems.push(
-            new LegendItem("No Data", "#ffff4d", (comparator) => true)
+            new LegendItem("No Data", "#ffff4d", 0, 1)
         );
     }
     return legendItems;
@@ -131,11 +142,11 @@ function buildLegend (max) {
 function calcNewMax(max){
     let retmax = Math.round(max/2);
     let maxlength = retmax.toString().length;
-    if(maxlength===1){
+    if(maxlength <=2){
         return (max/2).toFixed(3);
     }
     else{
-        return Math.round(retmax/Math.pow(10,maxlength-1))*Math.pow(10,maxlength-1);
+        return Math.floor(retmax/Math.pow(10,maxlength-1))*Math.pow(10,maxlength-1);
     }
 }
 

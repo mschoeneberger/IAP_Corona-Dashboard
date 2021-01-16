@@ -1,6 +1,6 @@
 import {features} from "../data/countries.json";
 import data from "../data/countries_covid_data.json";
-import legendItems from "../entities/LegendItems";
+// import legendItemsCCases from "../entities/LegendItems";
 
 class LoadCountriesTask{
     setState = null;
@@ -32,20 +32,8 @@ class LoadCountriesTask{
                 mapCountry.properties.peopleHospitalized = Number(covidCountry.latest.peopleHospitalized);
                 mapCountry.properties.mortalityRate = Number(covidCountry.latest.mortalityRate);
             }
-            //This badboy needs to go.
-            this.setCountryColor(mapCountry);
         }
         this.setState(this.mapCountries);
-    };
-    //This badboy needs to go
-    setCountryColor = (mapCountry) => {
-        const legendItem = legendItems.find((legendItem) => 
-            legendItem.isFor(mapCountry.properties.confirmed)
-        );
-
-        if(legendItem != null){
-            mapCountry.properties.color = legendItem.color;
-        }
     };
 }
 
