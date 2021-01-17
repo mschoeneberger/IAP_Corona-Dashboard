@@ -9,13 +9,13 @@ import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import buildLegends from "./tasks/BuildLegendsTask";
 
 const App = () => {
-    const views = ["Cumulative Cases", "Active Cases", "7-Day-Incedence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
+    const views = ["Cumulative Cases", "Active Cases", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
     const [countries, setCountries] = useState([]);
     const [activeLegend, setActiveLegend] = useState(views[0]);
 
     const legends = buildLegends(
         views,
-        [5_000_000, 50_000, 500, 100, 500_000, 100_000, 500_000]
+        [5_000_000, 500_000, 5000, 100, 100_000, 500_000, 500_000]
     );
 
     const load = () => {

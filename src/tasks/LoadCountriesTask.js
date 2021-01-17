@@ -16,7 +16,7 @@ class LoadCountriesTask{
             mapCountry.properties.fatalities = 0;
             mapCountry.properties.recovered = 0;
             mapCountry.properties.active = 0;
-            mapCountry.properties.incidentRate = 0;
+            mapCountry.properties.incidentRate = 0.0;
             mapCountry.properties.peopleTested = 0;
             mapCountry.properties.peopleHospitalized = 0;
             mapCountry.properties.mortalityRate = 0;
@@ -27,10 +27,10 @@ class LoadCountriesTask{
                 mapCountry.properties.fatalities = Number(covidCountry.latest.deaths);
                 mapCountry.properties.recovered = Number(covidCountry.latest.recovered);
                 mapCountry.properties.active = Number(covidCountry.latest.active);
-                mapCountry.properties.incidentRate = Number(covidCountry.latest.incidentRate);
-                mapCountry.properties.peopleTested = Number(covidCountry.latest.peopleTested);
-                mapCountry.properties.peopleHospitalized = Number(covidCountry.latest.peopleHospitalized);
-                mapCountry.properties.mortalityRate = Number(covidCountry.latest.mortalityRate);
+                mapCountry.properties.incidentRate = Number(covidCountry.latest.incident_rate);
+                mapCountry.properties.peopleTested = Number(covidCountry.latest.people_tested);
+                mapCountry.properties.peopleHospitalized = Number(covidCountry.latest.people_hospitalized);
+                mapCountry.properties.mortalityRate = Number(covidCountry.latest.mortality_rate);
             }
         }
         this.setState(this.mapCountries);
