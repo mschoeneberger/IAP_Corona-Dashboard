@@ -4,13 +4,13 @@ import Legend from "./Legend";
 import Newsticker from "./Newsticker";
 import NewstickerLanguage from "./NewstickerLanguage";
 
-const InfoPanel = (legends) => {
+const InfoPanel = (props) => {
     return (
         <div className="InfoStructure">
             <div className ="Header">
                 <h2>Legend</h2>
             </div>
-            <Legend legends={legends} />
+            <Legend legends={props.legends} active={props.active} />
             <div className = "Header">
                 <h2>Newsticker</h2>
             </div>

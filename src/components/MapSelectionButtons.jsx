@@ -1,7 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-const views = ["Cumulative Cases", "Active Cases", "7-Day-Incedence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
 
 const Tab = styled.button`
   padding: calc(min(0.8vh,0.8vw));
@@ -24,16 +22,15 @@ const Tab = styled.button`
     `}
 `;
 
-function MapSelectionButtons() {
-  const [active, setActive] = useState(views[0])
+function MapSelectionButtons(props) {
     return (
       <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
         {
-          views.map(view=>
+          props.views.map(view=>
               <Tab
                 key={view}
-                active={active === view}
-                onClick={() => setActive(view)}
+                active={props.active === view}
+                onClick={() => props.setActiveLegend(view)}
               >
                 <p>{view}</p>
               </Tab>

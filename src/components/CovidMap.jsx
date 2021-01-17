@@ -2,7 +2,15 @@ import React from 'react';
 import {MapContainer, GeoJSON} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./CovidMap.css";
-import formatNumberWithPeriods from "../tasks/formatNumberWithPeriods";
+import formatNumberWithSpaces from "../tasks/formatNumberWithSpaces";
+
+//Cumulative: CCases, Population, CCases/Population-Ratio
+//Active: ACases, Population, ACases/Population-Ratio
+//7-Day-Incendence: Incedence-Rate, 7-day-cases, 14-day-cases?
+//ICU-Occupancy: Percentage, ICU-Beds, ICU-Occupancy
+//CFatalities: CFatalities, Recovered, CFatalities/Recovered-Ratio
+//Testing Rate: Tests/week, Population, Tests/week/population-Ratio
+//Vaccinated Pop: Vaccinated, Population, Vaccinated/Population-Ratio
 
 const CovidMap = (props) => {
     const mapStyle = {
@@ -12,28 +20,80 @@ const CovidMap = (props) => {
         fillOpacity: 1,
     };
 
-    function colorCountry (country) {
-        const legend = props.legends[1];
-        console.log(legend);
+    function colorCountry (key) {
+        var legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
+        const legend = props.legends[legendIndex];
         for(let i=0; i<legend.length; i++){
-            if(country.properties.confirmed >= legend[i].from &&
-                country.properties.confirmed < legend[i].to
+            if(key >= legend[i].from &&
+                key < legend[i].to
                 ){
                     return legend[i].color;
                 }
         }
     }
+//"Cumulative Cases", "Active Cases", "7-Day-Incedence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"]
+//[key, item1string, item2string, item3string]
+    function getRelevantData(country, active){
+        var relevantData;
+        switch(active){
+            case "Vaccinated Population":
+                relevantData = [0]
+                relevantData.push("");
+                relevantData.push("");
+                relevantData.push("");
+                return relevantData;
+            case "Testing Rate":
+                relevantData = [0]
+                relevantData.push("");
+                relevantData.push("");
+                relevantData.push("");
+                return relevantData;
+            case "Cumulative Fatalities":
+                relevantData = [country.properties.fatalities];
+                relevantData.push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
+                relevantData.push("Recovered: " + formatNumberWithSpaces(country.properties.recovered));
+                relevantData.push("Ratio: " + (country.properties.fatalies/(country.properties.recovered + country.properties.fatalies) * 100).toFixed(3) + "%");
+                return relevantData;
+            case "ICU-Occupancy":
+                relevantData = [0]
+                relevantData.push("");
+                relevantData.push("");
+                relevantData.push("");
+                return relevantData;
+            case "7-Day-Incedence":
+                relevantData = [country.properties.incedentRate];
+                relevantData.push("7-Day-Incedence: " + country.properties.incedentRate);
+                relevantData.push("");
+                relevantData.push("");
+                return relevantData;
+            case "Active":
+                relevantData = [country.properties.active];
+                relevantData.push("Active Cases: " + formatNumberWithSpaces(country.properties.active));
+                relevantData.push("Population: " + formatNumberWithSpaces(country.properties.population));
+                relevantData.push("Ratio: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
+                return relevantData;
+            case "Cumulative Cases":
+                relevantData = [country.properties.confirmed];
+                relevantData.push("Cases: " + formatNumberWithSpaces(country.properties.confirmed));
+                relevantData.push("Population: " + formatNumberWithSpaces(country.properties.population));
+                relevantData.push("Ratio: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
+                return relevantData;
+            default:
+                return [0,"","",""];
+        }
+    }
 
     const onEachCountry = (country, layer) => {
-        layer.options.fillColor = colorCountry(country);
-        const name = country.properties.ADMIN;
-        const confirmedCases = formatNumberWithPeriods(country.properties.confirmed);
-        const population = formatNumberWithPeriods(country.properties.population);
+        const relevantData = getRelevantData(country,props.active);
+        layer.options.fillColor = colorCountry(relevantData[0]);
+        const item1 = relevantData[1];
+        const item2 = relevantData[2];
+        const item3 = relevantData[3];
         layer.bindPopup(
-                `${name}
-                <br/> Cases: ${confirmedCases}
-                <br/> Population: ${population} 
-                <br/> Ratio: ${(country.properties.confirmed/country.properties.population * 100).toFixed(3)} %
+                `${country.properties.ADMIN}
+                <br/> ${item1}
+                <br/> ${item2} 
+                <br/> ${item3}
             `
             );
     };

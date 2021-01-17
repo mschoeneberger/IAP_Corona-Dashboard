@@ -1,8 +1,9 @@
 import React from 'react';
 import "./Legend.css";
 
-const Legend = (legends) => {
-    const items = legends.legends.legends[1];
+const Legend = (props) => {
+    var legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
+    const items = props.legends[legendIndex];
     return (
         <div className="Legend">
            {items.map((item) => (

@@ -1,5 +1,5 @@
 import LegendItem from "../entities/LegendItem";
-import formatNumberWithPeriods from "./formatNumberWithPeriods";
+import formatNumberWithSpaces from "./formatNumberWithSpaces";
 
 //Builds a legend (array) with 7 Legend Items
 function buildLegend (max) {
@@ -76,7 +76,7 @@ function buildLegend (max) {
         newmax = Math.round(newmax/Math.pow(10,maxlength-1))*Math.pow(10,maxlength-1);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithPeriods(newmax)}+`,
+                `${formatNumberWithSpaces(newmax)}+`,
                 "#330000",
                 newmax,
                 oldmax,
@@ -87,7 +87,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
                 "#660000",
                 newmax,
                 oldmax,
@@ -98,7 +98,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
                 "#990000",
                 newmax,
                 oldmax
@@ -108,7 +108,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
                 "#e60000",
                 newmax,
                 oldmax
@@ -118,7 +118,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithPeriods(newmax)} - ${formatNumberWithPeriods(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
                 "#ff5544",
                 newmax,
                 oldmax
@@ -126,7 +126,7 @@ function buildLegend (max) {
         );
         legendItems.push(
             new LegendItem(
-                `1 - ${formatNumberWithPeriods(newmax-1)}`,
+                `1 - ${formatNumberWithSpaces(newmax-1)}`,
                 "#ff8080",
                 1,
                 newmax
