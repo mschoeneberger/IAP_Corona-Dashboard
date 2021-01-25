@@ -1,15 +1,15 @@
 import React from 'react';
 import "./TopRow.css";
 import UpdatePanel from "./UpdatePanel";
-import ContextMenuButton from "./ContextMenuButton";
+import DropdownMenuButton from "./DropdownMenuButton";
 
-const TopRow = () => {
+const TopRow = (props) => {
     return (<div className="myRow">
         <div className="titleArea">
             <h1><b>Yet Another Corona Dashboard</b></h1>
         </div>
         <UpdatePanel/>
-        <ContextMenuButton/>
+        <DropdownMenuButton dropdownOpen={props.dropdownOpen} setOpen={props.setOpen}/>
     </div>);
 }
  
