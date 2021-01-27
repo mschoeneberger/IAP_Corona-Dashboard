@@ -1,12 +1,10 @@
 import React from 'react';
 import "./UpdatePanel.css"
 
-const date = 0;
-
-const UpdatePanel = () => {
+const UpdatePanel = (props) => {
     return (
     <div className="panel">
-        <h2>Last Update: <br/>{date}</h2>
+        <h2>Last Update: <br/>{props.lastUpdate.toLocaleString()}</h2>
     </div>
     );
 }

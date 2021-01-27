@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
+import DropdownMenu from '../entities/DropdownMenu';
 
 const Button = styled.button`
   padding: calc(min(0.8vh,0.8vw));
@@ -16,13 +17,14 @@ const Button = styled.button`
   font-size: calc(min(1.6vh,1.6vw));
 `;
 
-
-
-const DropdownMenuButton = (props) => {
-  return (
-    <Button onClick={() => props.setOpen(!(props.dropdownOpen))}>
-      <p>-<br/>-<br/>-</p>
-    </Button>
+const DropdownMenuButton = () => {
+  const [dropdownOpen, setOpen] = useState(false);
+  return (<>
+      <Button onClick={() => setOpen(!(dropdownOpen))}>
+        <p>-<br/>-<br/>-</p>
+      </Button>
+      <DropdownMenu dropdownOpen={dropdownOpen}/>
+    </>
   );
 }
  
