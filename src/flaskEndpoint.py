@@ -14,7 +14,7 @@ def dataWorld():
     
     file = open(CURRENT_DIR + '/../api_files/world.json')
 
-    return file
+    return json.dumps(json.load(file))
 
 
 @app.route('/')
