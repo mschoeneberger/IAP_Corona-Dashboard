@@ -3,10 +3,20 @@ from flask_cors import CORS
 import json
 import os
 
+from createVisulationData import createWorldData
+
 CURRENT_DIR = current_dir = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 CORS(app)
+
+
+@app.route('/downloadWorldData')
+def downloadWorldData():
+
+    createWorldData()
+
+    return "<h1>success <3</h1>"
 
 
 @app.route('/dataWorld')

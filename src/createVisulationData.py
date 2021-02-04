@@ -14,7 +14,7 @@ def createWorldData():
     # download files
     for country in countryIsoCodes:
         try:
-            #getJsonData(country['name'], 'https://mahabub81.github.io/covid-19-api/api/v1/countries/' + country['alpha-2'] + '.json')
+            getJsonData(country['name'], 'https://mahabub81.github.io/covid-19-api/api/v1/countries/' + country['alpha-2'] + '.json')
             
             world[country["name"]] = []
             with open(CURRENT_DIR + '/../storage/' + country['name'] + '.json') as file:
