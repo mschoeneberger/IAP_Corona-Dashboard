@@ -3,6 +3,7 @@ import json
 import os
 import copy
 import pandas as pd
+from datetime import datetime
 
 
 CURRENT_DIR = current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -98,15 +99,108 @@ def createNetherlandsData():
     with open(CURRENT_DIR + '/../api_files/netherlands.json', 'w') as outfile:
         json.dump(output, outfile, indent=4)
 
-if __name__ == "__main__":
-    createNetherlandsData()
+# TODO
+def createBelgiumData():
+    label = "belgium"
 
-    with open(CURRENT_DIR + '/../api_files/netherlands.json', 'r') as outfile:
+    rd.getCsvData(label + "/cases", 'https://epistat.sciensano.be/Data/COVID19BE_CASES_AGESEX.csv')
+    rd.getCsvData(label + "/deaths", 'https://epistat.sciensano.be/Data/COVID19BE_MORT.csv')
+    rd.getCsvData(label + "/hospital", 'https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv')
+    rd.getCsvData(label + "/tests", 'https://epistat.sciensano.be/Data/COVID19BE_tests.csv')
+
+    
+    # formating data
+    output = []
+    path = CURRENT_DIR + '/../storage/belgium/'
+
+    cases = pd.read_csv(path + "cases.csv")
+    deaths = pd.read_csv(path + "deaths.csv")
+    hospital = pd.read_csv(path + "hospital.csv")
+    tested = pd.read_csv(path + "tests.csv")
+
+    row = [None] * 8
+    olddate = '1970-01-01'
+
+
+    for index, df_row in cases.iterrows():
+        if index != 0:
+            if (df_row["DATE"] == row[0]) and (df_row["PROVINCE"] == row[1]):
+                row[3] += df_row["CASES"]
+                continue
+            else:
+                #row = [float("nan") if e is None for e in row]
+                output.append(tuple(row))
+        
+        row = [None] * 8
+        row[0] = df_row["DATE"]
+        row[1] = df_row["PROVINCE"]
+        row[3] = df_row["CASES"]
+        try:
+            row[2] = int(tested.loc[(tested["DATE"] == row[0]) & (tested["PROVINCE"] == row[1])]["TESTS_ALL"])
+        except:
+            row[2] = float("nan")
+        try:
+            row[4] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["NEW_IN"])
+            row[5] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["TOTAL_IN"])
+            row[6] = int(hospital.loc[(hospital["DATE"] == row[0]) & (hospital["PROVINCE"] == row[1])]["TOTAL_IN_ICU"])
+        except:
+            row[4] = float("nan")
+            row[5] = float("nan")
+            row[6] = float("nan")
+        if row[0] != olddate:
+            row[7] = deaths.loc[deaths["DATE"] == row[0]]["DEATHS"].sum()
+            olddate = row[0]
+        else:
+            row[7] = float("nan")
+
+    #row = [float("nan") if e is None for e in row]
+    output.append(tuple(row))
+    
+    return output
+
+
+def createLuxembourgData():
+    # download data
+    rd.indirectLinkCsv("luxembourg", 'https://data.public.lu/fr/datasets/r/767f8091-0591-4b04-9a6f-a9d60cd57159')
+
+    # format data
+    output = []
+    path = CURRENT_DIR + '/../storage/luxembourg.csv'
+
+    data = pd.read_csv(path, encoding='latin-1', sep=";")
+
+    for index, dataframe_row in data.iterrows():
+        row = {}
+        row["date"] = datetime.strptime(dataframe_row["Date"], '%d/%m/%Y').strftime('%Y-%m-%d')
+        row["tested"] = dataframe_row["Nb de tests effectués"]
+        row["cases"] = dataframe_row["Nb de positifs"]
+        row["current_hosp"] = dataframe_row["Soins normaux"]
+        row["current_icu"] = dataframe_row["Soins intensifs"]
+        row["deceased"] = dataframe_row["[1.NbMorts]"]
+
+        for key in row:
+            if row[key] == "-":
+                row[key] = None
+            else:
+                try:
+                    row[key] = int(row[key])
+                except:
+                    pass
+
+        output.append(row)
+
+    with open(CURRENT_DIR + '/../api_files/luxembourg.json', 'w') as outfile:
+        json.dump(output, outfile, indent=4)
+
+if __name__ == "__main__":
+    createLuxembourgData()
+
+    with open(CURRENT_DIR + '/../api_files/luxembourg.json', 'r') as outfile:
         a = json.load(outfile)
         summ = 0
         for b in a:
             try:
                 summ += b["cases"]
             except:
-                continue;
+                pass
         print(summ)
