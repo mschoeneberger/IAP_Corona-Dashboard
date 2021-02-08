@@ -178,7 +178,7 @@ def createLuxembourgData():
         row["current_icu"] = dataframe_row["Soins intensifs"]
         row["deceased"] = dataframe_row["[1.NbMorts]"]
 
-        for key in row:
+        for key in row:# TODO: look at read_csv(france), dtype ?!?!
             if row[key] == "-":
                 row[key] = None
             else:
@@ -192,10 +192,83 @@ def createLuxembourgData():
     with open(CURRENT_DIR + '/../api_files/luxembourg.json', 'w') as outfile:
         json.dump(output, outfile, indent=4)
 
-if __name__ == "__main__":
-    createLuxembourgData()
 
-    with open(CURRENT_DIR + '/../api_files/luxembourg.json', 'r') as outfile:
+def createFranceData():
+    #download data
+    rd.indirectLinkCsv("france", 'https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675')
+
+    #format data
+    output = []
+    path = CURRENT_DIR + '/../storage/france.csv'
+
+    data = pd.read_csv(path, dtype={'dep': str}, sep=";")
+
+    dateold = '1970-01-01'
+
+    row = {}
+
+    for index, df_row in data.iterrows():
+        if df_row["jour"] != dateold and index > 0:
+            output.append(row)
+        row = {}
+        row["date"] = df_row["jour"]
+        dateold = row["date"]
+        row["region"] = df_row["dep"]
+        row["tested"] = df_row["T"]
+        row["cases"] = df_row["P"]
+
+    output.append(row)
+
+    with open(CURRENT_DIR + '/../api_files/france.json', 'w') as outfile:
+        json.dump(output, outfile, indent=4)
+
+# TODO: ask Larry if cases cumulative are ok too
+def createSwitzerlandData():
+    #download data
+    rd.getCsvData("switzerland", 'https://raw.github.com/openZH/covid_19/master/COVID19_Fallzahlen_CH_total_v2.csv')
+
+    output = []
+    path = CURRENT_DIR + '/../storage/switzerland.csv'
+    data = pd.read_csv(path)
+
+    data.fillna("-", inplace=True)
+
+    for index, dataframe_row in data.iterrows():
+        row = {}
+        row["date"] = dataframe_row["date"]
+        row["region"] = dataframe_row["abbreviation_canton_and_fl"]
+        row["tested"] = dataframe_row["ncumul_tested"]
+        row["cases"] = dataframe_row["ncumul_conf"]
+        row["current_hosp"] = dataframe_row["current_hosp"]
+        row["current_icu"] = dataframe_row["current_icu"]
+        row["recovered"] = dataframe_row["ncumul_released"]
+        row["deceased"] = dataframe_row["ncumul_deceased"]
+
+        for key in row:# TODO: look at read_csv(france), dtype ?!?!
+            if row[key] == "-":
+                row[key] = None
+            else:
+                try:
+                    row[key] = int(row[key])
+                except:
+                    pass
+
+        output.append(row)
+
+    with open(CURRENT_DIR + '/../api_files/switzerland.json', 'w') as outfile:
+        json.dump(output, outfile, indent=4)    
+
+
+# TODO:
+# Belgium
+# Austria
+# Tschechien
+# Poland
+
+if __name__ == "__main__":
+    createSwitzerlandData()
+
+    with open(CURRENT_DIR + '/../api_files/switzerland.json', 'r') as outfile:
         a = json.load(outfile)
         summ = 0
         for b in a:
