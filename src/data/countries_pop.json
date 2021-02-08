@@ -192,7 +192,7 @@
         "population": 832322
     },
     {
-        "country": "Congo",
+        "country": "Republic of Congo",
         "population": 5244363
     },
     {
@@ -218,6 +218,10 @@
     {
         "country": "Czech Republic",
         "population": 10629928
+    },
+    {
+        "country": "Democratic Republic of the Congo",
+        "population": 5793636
     },
     {
         "country": "Denmark",
@@ -372,7 +376,7 @@
         "population": 0
     },
     {
-        "country": "Holy See (Vatican City State)",
+        "country": "Vatican",
         "population": 825
     },
     {
@@ -764,7 +768,7 @@
         "population": 15854360
     },
     {
-        "country": "Serbia",
+        "country": "Republic of Serbia",
         "population": 6963764	
     },
     {
@@ -816,7 +820,7 @@
         "population": 46796540
     },
     {
-        "country": "SriLanka",
+        "country": "Sri Lanka",
         "population": 21670000
     },
     {
@@ -848,11 +852,15 @@
         "population": 16906283
     },
     {
+        "country": "Taiwan",
+        "population": 23574274
+    },
+    {
         "country": "Tajikistan",
         "population": 9100837
     },
     {
-        "country": "Tanzania",
+        "country": "United Republic of Tanzania",
         "population": 56318348
     },
     {
@@ -861,7 +869,7 @@
     },
     {
         "country": "The Democratic Republic of Congo",
-        "population": 84068091
+        "population": 92378000
     },
     {
         "country": "Togo",
@@ -912,11 +920,11 @@
         "population": 9630959
     },
     {
-        "country": "United Kingdom",
+        "country": "United Kingdom of Great Britain and Northern Ireland",
         "population": 66460344
     },
     {
-        "country": "United States",
+        "country": "United States of America",
         "population": 326687501
     },
     {

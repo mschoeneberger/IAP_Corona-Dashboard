@@ -9,7 +9,6 @@ class LoadNewsTask{
     articleLinks = [];
 
     async load  (setNews)   {
-        console.log("loadNews");
         this.setNews = setNews;
         for (let i = 0; i < this.rssURLs.length; i++){
             this.titles = [];

@@ -13,9 +13,7 @@ const App = () => {
     const [countries, setCountries] = useState([]);
     const [activeLegend, setActiveLegend] = useState(views[0]);
     const [activeFocus, setActiveFocus] = useState("World");
-
-    //Zu ersetzen, wenn eigene .json abgegriffen wird.
-    const lastUpdate = new Date(2020, 12, 24);
+    const [lastUpdate, setLastUpdate] = useState();
 
     const legends = buildLegends(
         views,
@@ -24,7 +22,7 @@ const App = () => {
 
     const load = () => {
         const loadCountriesTask = new LoadCountriesTask();
-        loadCountriesTask.load(setCountries);
+        loadCountriesTask.load(setCountries, setLastUpdate);
     };
 
     useEffect(load, []);

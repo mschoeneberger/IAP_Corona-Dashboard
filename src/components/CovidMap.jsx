@@ -52,7 +52,7 @@ const CovidMap = (props) => {
                 relevantData = [country.properties.fatalities];
                 relevantData.push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
                 relevantData.push("Recovered: " + formatNumberWithSpaces(country.properties.recovered));
-                relevantData.push("Mortality Rate: " + country.properties.mortalityRate.toFixed(3).toString() + "%");
+                relevantData.push("Mortality Rate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
                 relevantData = [0]

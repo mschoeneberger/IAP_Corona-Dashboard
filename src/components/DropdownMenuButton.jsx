@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import DropdownMenu from '../entities/DropdownMenu';
+import {FaBars} from 'react-icons/fa';
 
 const Button = styled.button`
   padding: calc(min(0.8vh,0.8vw));
@@ -21,7 +22,7 @@ const DropdownMenuButton = () => {
   const [dropdownOpen, setOpen] = useState(false);
   return (<>
       <Button onClick={() => setOpen(!(dropdownOpen))}>
-        <p>-<br/>-<br/>-</p>
+        <FaBars/>
       </Button>
       <DropdownMenu dropdownOpen={dropdownOpen}/>
     </>

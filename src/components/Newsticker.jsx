@@ -21,10 +21,6 @@ const Newsticker = (props) => {
         return <div className="Newsticker"/>;
     }
 
-    // if(news[0].titles.length === 0){
-    //     return <div className="Newsticker"/>;
-    // }
-
     if(props.activeLanguage === "English"){
         return (
             <div className="Newsticker">

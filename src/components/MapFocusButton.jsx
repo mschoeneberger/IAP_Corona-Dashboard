@@ -12,6 +12,7 @@ const Button = styled.button`
   outline: 0;
   border:0;
   border-right: 2px solid #222222;
+  border-bottom: 2px solid #222222;
   float: left;
   font-size: calc(min(2vh,2vw));
 `;
@@ -26,11 +27,9 @@ function nextFocus(activeFocus){
 }
 
 function MapFocusButton (props) {
-    return (<div>
-        <Button onClick={() => props.setActiveFocus(nextFocus(props.activeFocus))}>
+    return (<Button onClick={() => props.setActiveFocus(nextFocus(props.activeFocus))}>
             <p>Active Focus: </p>{props.activeFocus}
-        </Button>
-    </div>);
+        </Button>);
 };
  
 export default MapFocusButton;
