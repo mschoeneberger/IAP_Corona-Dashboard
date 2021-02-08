@@ -73,13 +73,40 @@ def createDenmarkData():
         json.dump(output, outfile, indent=4)
 
 
+def createNetherlandsData():
+    # download data
+    rd.getJsonData("netherlands/data", 'https://raw.github.com/J535D165/CoronaWatchNL/master/data-json/data-provincial/RIVM_NL_provincial.json')
+    rd.getCsvData("netherlands/tests", 'https://raw.github.com/J535D165/CoronaWatchNL/master/data-misc/data-test/RIVM_NL_test_latest.csv')
+
+    output = []
+    path = CURRENT_DIR + '/../storage/netherlands/'
+    data = open(path + "/data.json", 'r')
+    # tests = open(path + "/tests.csv", 'r') # TODO: TBD
+
+    json_iter = json.loads(data.read())["data"]
+
+    for element in json_iter:
+        row = {}
+        row["date"] = element["Datum"]
+        row["region"] = element["Provincienaam"]  # region
+        row["cases"] = element["totaalAantal"]  # cases
+        row["hospital"] = element["ziekenhuisopnameAantal"]  # hospital
+        row["deaths"] = element["overledenAantal"]  # deaths
+        # row = [float("nan") if e == None else e for e in row]
+        output.append(row)
+
+    with open(CURRENT_DIR + '/../api_files/netherlands.json', 'w') as outfile:
+        json.dump(output, outfile, indent=4)
 
 if __name__ == "__main__":
-    createDenmarkData()
+    createNetherlandsData()
 
-    with open(CURRENT_DIR + '/../api_files/denmark.json', 'r') as outfile:
+    with open(CURRENT_DIR + '/../api_files/netherlands.json', 'r') as outfile:
         a = json.load(outfile)
         summ = 0
         for b in a:
-            summ += b["cases"]
+            try:
+                summ += b["cases"]
+            except:
+                continue;
         print(summ)
