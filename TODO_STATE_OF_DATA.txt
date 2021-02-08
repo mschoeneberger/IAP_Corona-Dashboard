@@ -6,6 +6,7 @@ Germany
 
 Denmark
     - needs review
+    - data stops mid december
 
 Netherlands
     - needs review
