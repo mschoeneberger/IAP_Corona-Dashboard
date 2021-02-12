@@ -6,7 +6,7 @@ import formatNumberWithSpaces from "../tasks/formatNumberWithSpaces";
 import {v4 as uuidv4} from "uuid";
 
 //Cumulative: CCases, Population, CCases/Population-Ratio
-//Active: ACases, Population, ACases/Population-Ratio
+//New Cases(21 Days): ACases, Population, ACases/Population-Ratio
 //7-Day-Incendence: Incidence-Rate, 7-day-cases, 14-day-cases?
 //ICU-Occupancy: Percentage, ICU-Beds, ICU-Occupancy
 //CFatalities: CFatalities, Recovered, CFatalities/Recovered-Ratio
@@ -66,9 +66,9 @@ const CovidMap = (props) => {
                 relevantData.push("");
                 relevantData.push("");
                 return relevantData;
-            case "Active Cases":
+            case "New Cases(21 Days)":
                 relevantData = [country.properties.active];
-                relevantData.push("Active Cases: " + formatNumberWithSpaces(country.properties.active));
+                relevantData.push("New Cases(21 Days): " + formatNumberWithSpaces(country.properties.active));
                 relevantData.push("Population: " + formatNumberWithSpaces(country.properties.population));
                 relevantData.push("Ratio: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
                 return relevantData;

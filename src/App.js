@@ -9,7 +9,7 @@ import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import buildLegends from "./tasks/BuildLegendsTask";
 
 const App = () => {
-    const views = ["Cumulative Cases", "Active Cases", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
+    const views = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
     const [countries, setCountries] = useState([]);
     const [activeLegend, setActiveLegend] = useState(views[0]);
     const [activeFocus, setActiveFocus] = useState("World");

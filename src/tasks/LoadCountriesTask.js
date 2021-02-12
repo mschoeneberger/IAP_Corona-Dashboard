@@ -47,13 +47,17 @@ class LoadCountriesTask{
                     mapCountry.properties.incidentRate = Number(covidCountry[(covidCountry.length -1)].incident_rate);
                     mapCountry.properties.peopleTested = Number(covidCountry[(covidCountry.length -1)].people_tested);
                     mapCountry.properties.peopleHospitalized = Number(covidCountry[(covidCountry.length -1)].people_hospitalized);
-                    mapCountry.properties.date = covidCountry[(covidCountry.length - 1)].report_date.toString()
-                    
-                    this.lastDate = new Date(covidCountry[(covidCountry.length - 1)].report_date.toString())
+                    try {
+                        mapCountry.properties.date = covidCountry[(covidCountry.length - 1)].report_date.toString()
+                    }
+                    catch(TypeError){
+                        console.log("TypeError raised and caught when loading pub_date from: " + mapCountry.properties.ADMIN)
+                        mapCountry.properties.date = "Unknown."
+                    }
 
                     if(mapCountry.properties.active === 0){
-                        for(let j=1; j<15; j++){
-                            mapCountry.properties.active += Number(covidCountry[(covidCountry.length -15 + j)].delta_confirmed);
+                        for(let j=1; j<22; j++){
+                            mapCountry.properties.active += Number(covidCountry[(covidCountry.length -22 + j)].delta_confirmed);
                         }
                     }
                     if(mapCountry.properties.recovered === 0){
@@ -62,21 +66,35 @@ class LoadCountriesTask{
                     mapCountry.properties.mortalityRate = mapCountry.properties.fatalities / mapCountry.properties.confirmed;
                 }
             }
+            //
+            ////Loop to find Corona-data that is not displayed. Only for debugging.
+            //
+            // var noMatch = [];
+            // validKeys.forEach(key => {
+            //     let hit = false;
+            //     this.mapCountries.forEach(mapCountry => {
+            //         if(key === mapCountry.properties.ADMIN){hit = true;}
+            //     })
+            //     if(!hit){noMatch.push(key);}
+            // });
+        //console.log(noMatch);
         })
-        var nonpop = [];
-        var nocase = [];
-        for(let i = 0; i < this.mapCountries.length; i++){
-            let mapCountry = this.mapCountries[i];
-            if(mapCountry.properties.population === 0){
-                nonpop.push(mapCountry.properties.ADMIN);
-            }
-            if(mapCountry.properties.confirmed === 0){
-                nocase.push(mapCountry.properties.ADMIN);
-            }
-        }
-        console.log(nonpop);
-        console.log(nocase);
-        this.setDate(this.lastDate);
+        ////Loop to find countries that we have no population data for (nonpop) or that we have no corona data for (nocase)
+        //
+        // var nonpop = [];
+        // var nocase = [];
+        // for(let i = 0; i < this.mapCountries.length; i++){
+        //     let mapCountry = this.mapCountries[i];
+        //     if(mapCountry.properties.population === 0){
+        //         nonpop.push(mapCountry.properties.ADMIN);
+        //     }
+        //     if(mapCountry.properties.confirmed === 0){
+        //         nocase.push(mapCountry.properties.ADMIN);
+        //     }
+        // }
+        // console.log(nonpop);
+        // console.log(nocase);
+        this.setDate(this.mapCountries[61].properties.date);
         this.setState(this.mapCountries);
     };
 }

@@ -100,7 +100,7 @@
         "population": 754394
     },
     {
-        "country": "Bolivia",
+        "country": "Bolivia (Plurinational State of)",
         "population": 11353142
     },
     {
@@ -124,7 +124,7 @@
         "population": 0
     },
     {
-        "country": "Brunei",
+        "country": "Brunei Darussalam",
         "population": 428962
     },
     {
@@ -152,7 +152,7 @@
         "population": 37057765
     },
     {
-        "country": "Cape Verde",
+        "country": "Cabo Verde",
         "population": 543767
     },
     {
@@ -192,7 +192,7 @@
         "population": 832322
     },
     {
-        "country": "Republic of Congo",
+        "country": "Congo",
         "population": 5244363
     },
     {
@@ -216,11 +216,11 @@
         "population": 1189265
     },
     {
-        "country": "Czech Republic",
+        "country": "Czechia",
         "population": 10629928
     },
     {
-        "country": "Democratic Republic of the Congo",
+        "country": "Congo, Democratic Republic of the",
         "population": 5793636
     },
     {
@@ -240,7 +240,7 @@
         "population": 10627165
     },
     {
-        "country": "East Timor",
+        "country": "Timor-Leste",
         "population": 1267972
     },
     {
@@ -376,7 +376,7 @@
         "population": 0
     },
     {
-        "country": "Vatican",
+        "country": "Holy See",
         "population": 825
     },
     {
@@ -404,7 +404,7 @@
         "population": 267663435
     },
     {
-        "country": "Iran",
+        "country": "Iran (Islamic Republic of)",
         "population": 81800269
     },
     {
@@ -424,7 +424,7 @@
         "population": 60421760
     },
     {
-        "country": "Ivory Coast",
+        "country": "Côte d'Ivoire",
         "population": 25069229
     },
     {
@@ -460,7 +460,7 @@
         "population": 6322800
     },
     {
-        "country": "Laos",
+        "country": "Lao People's Democratic Republic",
         "population": 7061507
     },
     {
@@ -552,11 +552,11 @@
         "population": 126190788
     },
     {
-        "country": "Micronesia, Federated States of",
+        "country": "Micronesia (Federated States of)",
         "population": 112640
     },
     {
-        "country": "Moldova",
+        "country": "Moldova, Republic of",
         "population": 2706049
     },
     {
@@ -664,7 +664,7 @@
         "population": 17907
     },
     {
-        "country": "Palestine",
+        "country": "Palestine, State of",
         "population": 4569087
     },
     {
@@ -768,7 +768,7 @@
         "population": 15854360
     },
     {
-        "country": "Republic of Serbia",
+        "country": "Serbia",
         "population": 6963764	
     },
     {
@@ -808,7 +808,7 @@
         "population": 30
     },
     {
-        "country": "South Korea",
+        "country": "Korea, Republic of",
         "population": 51606633
     },
     {
@@ -836,7 +836,7 @@
         "population": 2572
     },
     {
-        "country": "Swaziland",
+        "country": "Eswatini",
         "population": 1136191
     },
     {
@@ -848,11 +848,11 @@
         "population": 8513227
     },
     {
-        "country": "Syria",
+        "country": "Syrian Arab Republic",
         "population": 16906283
     },
     {
-        "country": "Taiwan",
+        "country": "Taiwan, Province of China",
         "population": 23574274
     },
     {
@@ -860,7 +860,7 @@
         "population": 9100837
     },
     {
-        "country": "United Republic of Tanzania",
+        "country": "Tanzania, United Republic of",
         "population": 56318348
     },
     {
@@ -944,11 +944,11 @@
         "population": 292680
     },
     {
-        "country": "Venezuela",
+        "country": "Venezuela (Bolivarian Republic of)",
         "population": 28870195
     },
     {
-        "country": "Vietnam",
+        "country": "Viet Nam",
         "population": 95540395
     },
     {
@@ -956,7 +956,7 @@
         "population": 29802
     },
     {
-        "country": "Virgin Islands, U.S.",
+        "country": "Virgin Islands (U.S.)",
         "population": 106977
     },
     {
