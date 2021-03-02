@@ -2,3 +2,4 @@ storage/*
 !storage/country_iso2.json
 database.ini
 src/__pycache__
+api_files/
