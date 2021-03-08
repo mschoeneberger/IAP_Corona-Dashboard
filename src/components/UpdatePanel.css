@@ -1,13 +1,13 @@
 .panel {
   height: 10vh;
-  width: 40vw;
+  width: 20vw;
   float: left;
   border-right: 2px inset #222222;
 }
 
 .panel h2 {
-  font-size: calc(min(2.5vh, 2.5vw));
+  font-size: calc(min(2vh, 2vw));
   text-align: center;
   color: white;
-  padding: calc(min(2vh, 2vw));
+  padding: calc(min(1.5vh, 1.5vw));
 }

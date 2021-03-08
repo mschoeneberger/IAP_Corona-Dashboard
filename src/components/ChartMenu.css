@@ -1,0 +1,13 @@
+
+.slidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    background: radial-gradient(circle, rgb(36, 36, 36) 0%, rgb(15, 15, 15) 50%, rgba(0,0,0,1) 100%);
+}
+.centering{
+    margin-top: 50px;
+}
