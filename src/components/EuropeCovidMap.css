@@ -1,0 +1,6 @@
+.leaflet-container {
+  background-color: rgb(150, 200, 255);
+  height: 80vh;
+  width: 70vw;
+  z-index: 50;
+}

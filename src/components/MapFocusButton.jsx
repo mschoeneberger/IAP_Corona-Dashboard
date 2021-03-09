@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import {FaChevronCircleDown} from 'react-icons/fa';
+import FocusMenu from "../entities/FocusMenu";
 
 const Button = styled.button`
   padding: calc(min(0.5vh,0.5vw));
@@ -15,21 +17,26 @@ const Button = styled.button`
   border-bottom: 2px solid #222222;
   float: left;
   font-size: calc(min(2vh,2vw));
+  text-align: left;
 `;
 
-function nextFocus(activeFocus){
-    if(activeFocus === "World"){
-       return "Germany";
-    }
-    else{
-        return "World";
-    }
-}
-
 function MapFocusButton (props) {
-    return (<Button onClick={() => props.setActiveFocus(nextFocus(props.activeFocus))}>
-            <p>Active Focus: </p>{props.activeFocus}
-        </Button>);
+    const [focusSelectionOpen, setOpen] = useState(false);
+    return (<>
+                <Button onClick={() => setOpen(!(focusSelectionOpen))}>
+                    <p style={{padding: "2px"}}>
+                        {props.activeFocus}
+                        {focusSelectionOpen ? (
+                            <FaChevronCircleDown style={{float:"right", height:"3vh", width:"3vw", opacity:"0.7"}}/>
+                        ) : (
+                            <FaChevronCircleDown style={{float:"right", height:"3vh", width:"3vw"}}/>
+                        )
+                        }
+                    </p>
+                </Button>
+                <FocusMenu focusSelectionOpen={focusSelectionOpen} setActiveFocus={props.setActiveFocus} setOpen={setOpen}/>
+            </>
+    );
 };
  
 export default MapFocusButton;

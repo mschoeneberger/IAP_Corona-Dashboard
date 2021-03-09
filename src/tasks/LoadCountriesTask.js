@@ -44,7 +44,11 @@ class LoadCountriesTask{
                     mapCountry.properties.fatalities = Number(covidCountry[(covidCountry.length -1)].deaths);
                     mapCountry.properties.recovered = Number(covidCountry[(covidCountry.length -1)].recovered);
                     mapCountry.properties.active = Number(covidCountry[(covidCountry.length -1)].active);
-                    mapCountry.properties.incidentRate = Number(covidCountry[(covidCountry.length -1)].incident_rate);
+                    // mapCountry.properties.incidentRate = Number(covidCountry[(covidCountry.length -1)].incident_rate);
+                    for(let j=1; j<8; j++){
+                        mapCountry.properties.incidentRate += Number(covidCountry[(covidCountry.length -8 + j)].delta_confirmed);
+                    }
+                    mapCountry.properties.incidentRate = (mapCountry.properties.incidentRate * 100000) / mapCountry.properties.population;
                     mapCountry.properties.peopleTested = Number(covidCountry[(covidCountry.length -1)].people_tested);
                     mapCountry.properties.peopleHospitalized = Number(covidCountry[(covidCountry.length -1)].people_hospitalized);
                     try {
