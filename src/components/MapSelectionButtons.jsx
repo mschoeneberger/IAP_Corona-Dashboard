@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+import Tooltipbox from "./Tooltipbox";
 
 const Tab = styled.button`
   padding: calc(min(0.8vh,0.8vw));
@@ -23,20 +24,25 @@ const Tab = styled.button`
 `;
 
 function MapSelectionButtons(props) {
-    return (
-      <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
-        {
-          props.views.map(view=>
-              <Tab
-                key={view}
-                active={props.active === view}
-                onClick={() => props.setActiveLegend(view)}
-              >
-                <p>{view}</p>
-              </Tab>
-            )
-        }
-      </div>
+    const [tooltipOpen,setTooltipOpen] = useState("None");
+    return (<>
+        <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
+          {
+            props.views.map(view=>
+                <Tab
+                  key={view}
+                  active={props.active === view}
+                  onClick={() => props.setActiveLegend(view)}
+                  onMouseEnter ={() => setTooltipOpen(view)}
+                  onMouseLeave ={() => setTooltipOpen("None")}
+                >
+                  <p>{view}</p>
+                </Tab>
+              )
+              }
+        </div>
+        <Tooltipbox tooltipOpen={tooltipOpen}/>
+      </>
     );
   }
 
