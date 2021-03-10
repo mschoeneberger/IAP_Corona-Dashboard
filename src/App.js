@@ -10,6 +10,18 @@ import buildLegends from "./tasks/BuildLegendsTask";
 import LoadEuropeTask from "./tasks/LoadEuropeTask.js";
 import EuropeCovidMap from "./components/EuropeCovidMap";
 
+// TODO: 
+// Flexbox statt Float
+// Code für Präsentation auskommentieren
+// DropdownMenü Einträge sollten etwas tun oder entfernt werden
+// Nicht benötigte MapSelectionButtons entfernen
+// Coronadaten für Regions einlesen
+// Zugriff für Weltdaten überprüfen (veraltet?)
+// Anpassung für mobile Geräte
+// Generelles Styling überarbeiten
+// Map-Translation: Gebietsnamen übersetzen?
+// Map/Legend Anpassungen: Tilelayer-OSM? Farbkorrektur aufgrund von Transparenz?
+
 const App = () => {
     // views are the different categories of data we want to display
     const views = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
@@ -23,6 +35,8 @@ const App = () => {
     const [activeFocus, setActiveFocus] = useState("World");
     // hook to display the correct Date for the UpdatePanel
     const [lastUpdate, setLastUpdate] = useState();
+    // hook to change language
+    const [activeLanguage, setActiveLanguage] = useState("English");
 
     //Building the legends for the world focus
     const legends = buildLegends(
@@ -49,8 +63,8 @@ const App = () => {
 
     return (
         <div className="page">
-            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus}/>
-            <InfoPanel legends={legends} active={activeLegend}/>
+            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
+            <InfoPanel legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
             <div style={{height:"90vh", width:"70vw", float:"left"}}>
                 {/* This div is only there to fix a visual glitch when changing focus */}
                 <div style={{height:"80vh", width:"70vw", float:"left"}}>
@@ -59,16 +73,16 @@ const App = () => {
                         // If the background loading of the data is not quite done yet, display a loading symbol.
                        <LoadingMap/>
                     ) : (<>
-                            <CovidMap countries={countries} legends={legends} active={activeLegend}/>
+                            <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage}/>
                         </>
                     )) : (europeCountries.length === 0 ? (
                        <LoadingMap/>
                     ) : (<>
-                            <EuropeCovidMap regions={europeCountries} legends={regionLegends} active={activeLegend}/>
+                            <EuropeCovidMap regions={europeCountries} legends={regionLegends} active={activeLegend} activeLanguage={activeLanguage}/>
                         </>
                     ))}
                 </div>
-                <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views}/>
+                <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
             </div>
         </div>
     );

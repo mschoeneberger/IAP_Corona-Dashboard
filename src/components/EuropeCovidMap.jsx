@@ -21,7 +21,7 @@ const EuropeCovidMap = (props) => {
         fillOpacity: 0.7,
     };
 
-    function colorCountry (key) {
+    function colorRegion (key) {
         var legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
         const legend = props.legends[legendIndex];
         for(let i=0; i<legend.length; i++){
@@ -37,46 +37,67 @@ const EuropeCovidMap = (props) => {
         var relevantData;
         switch(active){
             case "Vaccinated Population":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "Testing Rate":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "Cumulative Fatalities":
-                relevantData = [region.properties.cumulativeDeaths];
-                relevantData.push("Fatalities: " + formatNumberWithSpaces(region.properties.cumulativeDeaths));
-                relevantData.push("Recovered: " + formatNumberWithSpaces(region.properties.cumulativeRecovered));
-                relevantData.push("Mortality Rate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                 relevantData = {"English": [region.properties.cumulativeDeaths], "Deutsch": [region.properties.cumulativeDeaths]};
+                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.cumulativeDeaths));
+                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(region.properties.cumulativeRecovered));
+                relevantData["English"].push("Mortality Rate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(region.properties.cumulativeDeaths));
+                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(region.properties.cumulativeRecovered));
+                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "7-Day-Incidence":
-                relevantData = [region.properties.incidentRate];
-                relevantData.push("7-Day-Incidence: " + region.properties.incidentRate.toFixed(3));
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [region.properties.incidentRate], "Deutsch": [region.properties.incidentRate]};
+                relevantData["English"].push("7-Day-Incidence: " + region.properties.incidentRate.toFixed(3));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + region.properties.incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "New Cases(21 Days)":
-                relevantData = [region.properties.active];
-                relevantData.push("New Cases(21 Days): " + formatNumberWithSpaces(region.properties.active));
-                relevantData.push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData.push("Ratio: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
+                relevantData = {"English": [region.properties.active], "Deutsch": [region.properties.active]};
+                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(region.properties.active));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["English"].push("Ratio: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(region.properties.active));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
                 return relevantData;
             case "Cumulative Cases":
-                relevantData = [region.properties.confirmed];
-                relevantData.push("Cases: " + formatNumberWithSpaces(region.properties.cumulativeCases));
-                relevantData.push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData.push("Ratio: " + (region.properties.cumulativeCases/region.properties.population * 100).toFixed(3) + "%");
+                relevantData = {"English": [region.properties.cumulativeCases], "Deutsch": [region.properties.cumulativeCases]};
+                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(region.properties.cumulativeCases));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["English"].push("Ratio: " + (region.properties.cumulativeCases/region.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(region.properties.cumulativeCases));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
+                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.cumulativeCases/region.properties.population * 100).toFixed(3) + "%");
                 return relevantData;
             default:
                 return [0,"","",""];
@@ -85,10 +106,10 @@ const EuropeCovidMap = (props) => {
 
     const onEachRegion = (region, layer) => {
         const relevantData = getRelevantData(region,props.active);
-        layer.options.fillColor = colorCountry(relevantData[0]);
-        const item1 = relevantData[1];
-        const item2 = relevantData[2];
-        const item3 = relevantData[3];
+        layer.options.fillColor = colorRegion(relevantData[props.activeLanguage][0]);
+        const item1 = relevantData[props.activeLanguage][1];
+        const item2 = relevantData[props.activeLanguage][2];
+        const item3 = relevantData[props.activeLanguage][3];
         layer.bindPopup(
                 `${region.properties.name}
                 <br/> ${item1}

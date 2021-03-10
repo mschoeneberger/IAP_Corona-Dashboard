@@ -1,22 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./InfoPanel.css";
 import Legend from "./Legend";
 import Newsticker from "./Newsticker";
 import NewstickerLanguage from "./NewstickerLanguage";
 
 const InfoPanel = (props) => {
-    const [activeLanguage, setActiveLanguage] = useState("Deutsch");
+    const languageOptions = {
+        "English": "Legend",
+        "Deutsch": "Legende"
+    }
     return (
         <div className="InfoStructure">
             <div className ="Header">
-                <h2>Legend</h2>
+                <h2>{languageOptions[props.activeLanguage]}</h2>
             </div>
             <Legend legends={props.legends} active={props.active} />
             <div className = "Header">
                 <h2>Newsticker</h2>
             </div>
-            <Newsticker activeLanguage={activeLanguage}/>
-            <NewstickerLanguage activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
+            <Newsticker activeLanguage={props.activeLanguage}/>
+            <NewstickerLanguage activeLanguage={props.activeLanguage} setActiveLanguage={props.setActiveLanguage}/>
         </div>
      );
 }

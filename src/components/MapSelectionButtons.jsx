@@ -25,6 +25,15 @@ const Tab = styled.button`
 
 function MapSelectionButtons(props) {
     const [tooltipOpen,setTooltipOpen] = useState("None");
+    const germanViews = {
+      "Cumulative Cases": "Kumulative Fälle",
+      "New Cases(21 Days)": "Neue Fälle (21 Tage)",
+      "7-Day-Incidence": "7-Tages-Inzidenz",
+      "ICU-Occupancy": "Intensivstation-Belegung",
+      "Cumulative Fatalities": "Kumulative Todesfälle",
+      "Testing Rate": "Test Rate",
+      "Vaccinated Population": "Geimpfte Bevölkerung"
+    }
     return (<>
         <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
           {
@@ -36,12 +45,14 @@ function MapSelectionButtons(props) {
                   onMouseEnter ={() => setTooltipOpen(view)}
                   onMouseLeave ={() => setTooltipOpen("None")}
                 >
-                  <p>{view}</p>
+                  <p>{
+                    props.activeLanguage === "English" ? (view) : (germanViews[view])
+                  }</p>
                 </Tab>
               )
               }
         </div>
-        <Tooltipbox tooltipOpen={tooltipOpen}/>
+        <Tooltipbox tooltipOpen={tooltipOpen} activeLanguage={props.activeLanguage}/>
       </>
     );
   }

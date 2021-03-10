@@ -21,11 +21,15 @@ const Button = styled.button`
 `;
 
 function MapFocusButton (props) {
+    const germanFocuses = {
+        "World": "Welt",
+        "Regions": "Regionen"
+    }
     const [focusSelectionOpen, setOpen] = useState(false);
     return (<>
                 <Button onClick={() => setOpen(!(focusSelectionOpen))}>
                     <p style={{padding: "2px"}}>
-                        {props.activeFocus}
+                        {props.activeLanguage === "English" ? (props.activeFocus) : (germanFocuses[props.activeFocus])}
                         {focusSelectionOpen ? (
                             <FaChevronCircleDown style={{float:"right", height:"3vh", width:"3vw", opacity:"0.7"}}/>
                         ) : (
@@ -34,7 +38,7 @@ function MapFocusButton (props) {
                         }
                     </p>
                 </Button>
-                <FocusMenu focusSelectionOpen={focusSelectionOpen} setActiveFocus={props.setActiveFocus} setOpen={setOpen}/>
+                <FocusMenu focusSelectionOpen={focusSelectionOpen} setActiveFocus={props.setActiveFocus} setOpen={setOpen} activeLanguage={props.activeLanguage}/>
             </>
     );
 };

@@ -18,13 +18,13 @@ const Button = styled.button`
   font-size: calc(min(1.6vh,1.6vw));
 `;
 
-const DropdownMenuButton = () => {
+const DropdownMenuButton = (props) => {
   const [dropdownOpen, setOpen] = useState(false);
   return (<>
       <Button onClick={() => setOpen(!(dropdownOpen))}>
         <FaBars/>
       </Button>
-      <DropdownMenu dropdownOpen={dropdownOpen}/>
+      <DropdownMenu dropdownOpen={dropdownOpen} activeLanguage={props.activeLanguage}/>
     </>
   );
 }

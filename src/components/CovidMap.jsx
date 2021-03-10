@@ -32,51 +32,72 @@ const CovidMap = (props) => {
                 }
         }
     }
-//[key, item1string, item2string, item3string]
+    //[key, item1string, item2string, item3string]
     function getRelevantData(country, active){
         var relevantData;
         switch(active){
             case "Vaccinated Population":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "Testing Rate":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "Cumulative Fatalities":
-                relevantData = [country.properties.fatalities];
-                relevantData.push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
-                relevantData.push("Recovered: " + formatNumberWithSpaces(country.properties.recovered));
-                relevantData.push("Mortality Rate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                 relevantData = {"English": [country.properties.fatalities], "Deutsch": [country.properties.fatalities]};
+                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
+                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(country.properties.recovered));
+                relevantData["English"].push("Mortality Rate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(country.properties.fatalities));
+                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(country.properties.recovered));
+                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
-                relevantData = [0]
-                relevantData.push("");
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [0], "Deutsch": [0]};
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "7-Day-Incidence":
-                relevantData = [country.properties.incidentRate];
-                relevantData.push("7-Day-Incidence: " + country.properties.incidentRate.toFixed(3));
-                relevantData.push("");
-                relevantData.push("");
+                relevantData = {"English": [country.properties.incidentRate], "Deutsch": [country.properties.incidentRate]};
+                relevantData["English"].push("7-Day-Incidence: " + country.properties.incidentRate.toFixed(3));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["English"].push("");
+                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + country.properties.incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["Deutsch"].push("");
                 return relevantData;
             case "New Cases(21 Days)":
-                relevantData = [country.properties.active];
-                relevantData.push("New Cases(21 Days): " + formatNumberWithSpaces(country.properties.active));
-                relevantData.push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData.push("Ratio: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
+                relevantData = {"English": [country.properties.active], "Deutsch": [country.properties.active]};
+                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(country.properties.active));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["English"].push("Ratio: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(country.properties.active));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
                 return relevantData;
             case "Cumulative Cases":
-                relevantData = [country.properties.confirmed];
-                relevantData.push("Cases: " + formatNumberWithSpaces(country.properties.confirmed));
-                relevantData.push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData.push("Ratio: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
+                relevantData = {"English": [country.properties.confirmed], "Deutsch": [country.properties.confirmed]};
+                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(country.properties.confirmed));
+                relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["English"].push("Ratio: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(country.properties.confirmed));
+                relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
+                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
                 return relevantData;
             default:
                 return [0,"","",""];
@@ -85,10 +106,10 @@ const CovidMap = (props) => {
 
     const onEachCountry = (country, layer) => {
         const relevantData = getRelevantData(country,props.active);
-        layer.options.fillColor = colorCountry(relevantData[0]);
-        const item1 = relevantData[1];
-        const item2 = relevantData[2];
-        const item3 = relevantData[3];
+        layer.options.fillColor = colorCountry(relevantData[props.activeLanguage][0]);
+        const item1 = relevantData[props.activeLanguage][1];
+        const item2 = relevantData[props.activeLanguage][2];
+        const item3 = relevantData[props.activeLanguage][3];
         layer.bindPopup(
                 `${country.properties.ADMIN}
                 <br/> ${item1}

@@ -19,6 +19,10 @@ const Tab = styled.button`
 
 
 const FocusMenu = (props) => {
+    const buttonNames= {
+        "English": ["World", "Regions"],
+        "Deutsch": ["Welt", "Regionen"]
+    }
     var vis = "hidden";
     if(props.focusSelectionOpen){
         vis = "visible";
@@ -29,14 +33,14 @@ const FocusMenu = (props) => {
                 props.setOpen(false)
                 }
             }>
-                World
+                {buttonNames[props.activeLanguage][0]}
             </Tab>
             <Tab onClick={() => {
                 props.setActiveFocus("Regions")
                 props.setOpen(false)
                 }
             }>
-                Regions
+                {buttonNames[props.activeLanguage][1]}
             </Tab>
         </div>);
     a.props.style.visibility = vis;

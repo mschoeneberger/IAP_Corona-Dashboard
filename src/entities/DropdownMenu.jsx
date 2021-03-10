@@ -17,17 +17,20 @@ const Tab = styled.button`
   float: right;
 `;
 
-
 const DropdownMenu = (props) => {
+    const tabNames = {
+        "English": ["Mobile Mode", "Graphs", "Sources", "About Us"],
+        "Deutsch": ["Mobiler Modus", "Graphen", "Quellen", "Über Uns"]
+    }
     var vis = "hidden";
     if(props.dropdownOpen){
         vis = "visible";
     }
     var a = (<div className="DropdownMenu" style={{visibility: "hidden"}}>
-            <Tab>Mobile Mode</Tab>
-            <Tab>Graphs</Tab>
-            <Tab>Sources</Tab>
-            <Tab>About Us</Tab>
+            <Tab>{tabNames[props.activeLanguage][0]}</Tab>
+            <Tab>{tabNames[props.activeLanguage][1]}</Tab>
+            <Tab>{tabNames[props.activeLanguage][2]}</Tab>
+            <Tab>{tabNames[props.activeLanguage][3]}</Tab>
         </div>);
     a.props.style.visibility = vis;
     return a;
