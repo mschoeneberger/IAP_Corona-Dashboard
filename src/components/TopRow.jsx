@@ -1,15 +1,21 @@
 import React from 'react';
 import "./TopRow.css";
 import UpdatePanel from "./UpdatePanel";
-import ContextMenuButton from "./ContextMenuButton";
+import DropdownMenuButton from "./DropdownMenuButton";
+import MapFocusButton from "./MapFocusButton";
 
-const TopRow = () => {
+const TopRow = (props) => {
+    const title = {
+        "English": "Yet Another Corona Dashboard",
+        "Deutsch": "Noch Eine Weitere Corona Übersichtsseite"
+    }
     return (<div className="myRow">
         <div className="titleArea">
-            <h1><b>Yet Another Corona Dashboard</b></h1>
+            <h1><b>{title[props.activeLanguage]}</b></h1>
         </div>
-        <UpdatePanel/>
-        <ContextMenuButton/>
+        <MapFocusButton activeFocus={props.activeFocus} setActiveFocus={props.setActiveFocus} activeLanguage={props.activeLanguage}/>
+        <UpdatePanel lastUpdate = {props.lastUpdate} activeLanguage={props.activeLanguage}/>
+        <DropdownMenuButton activeLanguage={props.activeLanguage}/>
     </div>);
 }
  

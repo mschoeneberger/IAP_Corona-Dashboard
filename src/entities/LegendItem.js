@@ -1,8 +1,9 @@
 class LegendItem{
-    constructor(title, color, isFor, textColor){
+    constructor(title, color, from, to, textColor){
         this.title = title;
         this.color = color;
-        this.isFor = isFor;
+        this.from = from;
+        this.to = to;
         this.textColor = textColor != null ? textColor : "black";
     }
 }

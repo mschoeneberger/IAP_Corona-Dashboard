@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-const langs = ["Deutsch", "English"];
+const languages = ["Deutsch", "English"];
 
 const Tab = styled.button`
   padding: calc(min(1vh,1vw));
@@ -23,19 +23,22 @@ const Tab = styled.button`
     `}
 `;
 
-function NewstickerLanguage() {
-  const [active, setActive] = useState(langs[0])
+function NewstickerLanguage(props) {
     return (
       <div style={{height:"10vh", width:"30vw"}}>
         {
-          langs.map(lang=>
+          languages.map(lang=>
               <Tab
                 key={lang}
-                active={active === lang}
-                onClick={() => setActive(lang)}>
-                {lang}
+                active={props.activeLanguage === lang}
+                onClick={() => props.setActiveLanguage(lang)}>
+                {lang === "Deutsch" ? (
+                  <img src="https://www.countryflags.io/DE/flat/64.png" alt="Deutsch" width="50vw" height="50vh"/>
+                ) : (
+                  <img src="https://www.countryflags.io/GB/flat/64.png" alt ="English" width="50vw" height="50vh"/>
+                )} 
               </Tab>
-            )
+          )
         }
       </div>
     );

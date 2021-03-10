@@ -4,18 +4,22 @@ import Legend from "./Legend";
 import Newsticker from "./Newsticker";
 import NewstickerLanguage from "./NewstickerLanguage";
 
-const InfoPanel = (legendItems) => {
+const InfoPanel = (props) => {
+    const languageOptions = {
+        "English": "Legend",
+        "Deutsch": "Legende"
+    }
     return (
         <div className="InfoStructure">
             <div className ="Header">
-                <h2>Legend</h2>
+                <h2>{languageOptions[props.activeLanguage]}</h2>
             </div>
-            <Legend legendItems={legendItems.legendItems}/>
+            <Legend legends={props.legends} active={props.active} />
             <div className = "Header">
                 <h2>Newsticker</h2>
             </div>
-            <Newsticker/>
-            <NewstickerLanguage/>
+            <Newsticker activeLanguage={props.activeLanguage}/>
+            <NewstickerLanguage activeLanguage={props.activeLanguage} setActiveLanguage={props.setActiveLanguage}/>
         </div>
      );
 }

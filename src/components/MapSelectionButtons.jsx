@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-
-const views = ["Cumulative Cases", "Active Cases", "7-Day-Incedence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
+import Tooltipbox from "./Tooltipbox";
 
 const Tab = styled.button`
   padding: calc(min(0.8vh,0.8vw));
@@ -24,22 +23,37 @@ const Tab = styled.button`
     `}
 `;
 
-function MapSelectionButtons() {
-  const [active, setActive] = useState(views[0])
-    return (
-      <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
-        {
-          views.map(view=>
-              <Tab
-                key={view}
-                active={active === view}
-                onClick={() => setActive(view)}
-              >
-                <p>{view}</p>
-              </Tab>
-            )
-        }
-      </div>
+function MapSelectionButtons(props) {
+    const [tooltipOpen,setTooltipOpen] = useState("None");
+    const germanViews = {
+      "Cumulative Cases": "Kumulative Fälle",
+      "New Cases(21 Days)": "Neue Fälle (21 Tage)",
+      "7-Day-Incidence": "7-Tages-Inzidenz",
+      "ICU-Occupancy": "Intensivstation-Belegung",
+      "Cumulative Fatalities": "Kumulative Todesfälle",
+      "Testing Rate": "Test Rate",
+      "Vaccinated Population": "Geimpfte Bevölkerung"
+    }
+    return (<>
+        <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
+          {
+            props.views.map(view=>
+                <Tab
+                  key={view}
+                  active={props.active === view}
+                  onClick={() => props.setActiveLegend(view)}
+                  onMouseEnter ={() => setTooltipOpen(view)}
+                  onMouseLeave ={() => setTooltipOpen("None")}
+                >
+                  <p>{
+                    props.activeLanguage === "English" ? (view) : (germanViews[view])
+                  }</p>
+                </Tab>
+              )
+              }
+        </div>
+        <Tooltipbox tooltipOpen={tooltipOpen} activeLanguage={props.activeLanguage}/>
+      </>
     );
   }
 
