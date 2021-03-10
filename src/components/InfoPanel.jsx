@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./InfoPanel.css";
 import Legend from "./Legend";
 import Newsticker from "./Newsticker";

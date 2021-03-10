@@ -17,6 +17,7 @@ class LoadCountriesTask{
         await fetch("https://fathomless-oasis-85586.herokuapp.com/dataWorld")
         .then(response => response.json())
         .then(data => {
+            setCompleteData(data)
             const validKeys = Object.keys(data);
             for(let i = 0; i < this.mapCountries.length; i++){
                 // mapCountry yields the Geo-data and some properties for a single country.

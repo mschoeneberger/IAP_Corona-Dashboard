@@ -4,3 +4,11 @@
   justify-content: space-evenly;
   background-color: inherit;
 }
+.slidecontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: inherit;
+  flex-direction: column;
+}

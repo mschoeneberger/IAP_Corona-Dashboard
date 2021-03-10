@@ -22,6 +22,9 @@ import EuropeCovidMap from "./components/EuropeCovidMap";
 // Map-Translation: Gebietsnamen übersetzen?
 // Map/Legend Anpassungen: Tilelayer-OSM? Farbkorrektur aufgrund von Transparenz?
 
+
+import { useAlert } from 'react-alert'
+
 const App = () => {
     // views are the different categories of data we want to display
     const views = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
@@ -47,20 +50,32 @@ const App = () => {
     //Doing the same for the region focus, with slightly different values though
     const regionLegends = buildLegends(
         views,
-        [200_000, 20_000, 150, 100, 10_000, 50_000, 50_000]
-    );
+        [200_000, 20_000, 150, 100, 10_000, 50_000, 50_000])
+    /* -------------------------------------------------
+    * Tassias Code : 
+    * -------------------------------------------------- */
+    // Sate um nachzuvollziehen, welche Country auf der CovidMap ausgewählt wurde
+    const [activeCountry, setActiveCountry] = useState("World");
+    // State um die kompletten Daten der API zu speichern (ohne Formatierung für die CovidMap) für die Charts
+    const [completeData, setCompleteData] = useState();//{World:[]}
+    const [countryList,setcountryList] = useState();
+    const [startDate, setStartDate] = useState();
+    const [endDate, setEndDate] = useState();
+    const [selectedCountries,setSelectedCountries] = useState([{ value: 'World', label: 'World'}]);
+    const [WorldData, setWorldData] = useState([]);
+    const alert = useAlert()
 
     //Function to load the Geo- & Coronadata for both focuses
     const load = () => {
         const loadCountriesTask = new LoadCountriesTask();
-        loadCountriesTask.load(setCountries, setLastUpdate);
+        loadCountriesTask.load(setCountries, setLastUpdate, setCompleteData);
         const loadEuropeTask = new LoadEuropeTask();
         loadEuropeTask.load(setEuropeCountries);
     };
 
     //Executing the load function in the background
     useEffect(load, []);
-
+      
     return (
         <div className="page">
             <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
@@ -84,7 +99,11 @@ const App = () => {
                 </div>
                 <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
             </div>
-            <Charts/>
+            <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
+                startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
+                countryList={countryList} setcountryList={setcountryList} 
+                selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
+                alert={alert}/>
         </div>
     );
 };

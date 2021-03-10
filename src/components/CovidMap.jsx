@@ -117,7 +117,20 @@ const CovidMap = (props) => {
                 <br/> ${item3}
             `
             );
-    };
+             /* ----------------------------------------------------------------------------------------------------
+             * Tassias Code : Setzt den ActiveCountry State auf die Country, die in der CovidMap selektiert wird
+             * ---------------------------------------------------------------------------------------------------- */
+            layer.on({
+                click: (e) => {
+                    let country_name = country.properties.ADMIN
+                    console.log(country_name)
+                    props.setActiveCountry(country_name)
+                }
+            })
+        };
+        function func (oEvent){
+            console.log(oEvent)
+        }
 
     return <MapContainer zoom={2.5} center={[45, 10]}>
         <TileLayer
