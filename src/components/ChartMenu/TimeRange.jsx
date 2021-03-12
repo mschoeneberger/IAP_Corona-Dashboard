@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "./TimeRange.css"
-
-
 import "react-datepicker/dist/react-datepicker.css";
 
 const TimeRange = (props) => {

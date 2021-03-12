@@ -9,6 +9,7 @@ import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import buildLegends from "./tasks/BuildLegendsTask";
 import LoadEuropeTask from "./tasks/LoadEuropeTask.js";
 import EuropeCovidMap from "./components/EuropeCovidMap";
+import Charts from "./components/Charts";
 
 // TODO: 
 // Flexbox statt Float
@@ -23,7 +24,7 @@ import EuropeCovidMap from "./components/EuropeCovidMap";
 // Map/Legend Anpassungen: Tilelayer-OSM? Farbkorrektur aufgrund von Transparenz?
 
 
-import { useAlert } from 'react-alert'
+// import { useAlert } from 'react-alert'
 
 const App = () => {
     // views are the different categories of data we want to display
@@ -38,7 +39,6 @@ const App = () => {
     const [activeFocus, setActiveFocus] = useState("World");
     // hook to display the correct Date for the UpdatePanel
     const [lastUpdate, setLastUpdate] = useState();
-    // hook to change language
     const [activeLanguage, setActiveLanguage] = useState("English");
 
     //Building the legends for the world focus
@@ -63,7 +63,7 @@ const App = () => {
     const [endDate, setEndDate] = useState();
     const [selectedCountries,setSelectedCountries] = useState([{ value: 'World', label: 'World'}]);
     const [WorldData, setWorldData] = useState([]);
-    const alert = useAlert()
+    // const alert = useAlert()
 
     //Function to load the Geo- & Coronadata for both focuses
     const load = () => {
@@ -73,7 +73,6 @@ const App = () => {
         loadEuropeTask.load(setEuropeCountries);
     };
 
-    //Executing the load function in the background
     useEffect(load, []);
       
     return (
