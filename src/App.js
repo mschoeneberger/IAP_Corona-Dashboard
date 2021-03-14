@@ -9,6 +9,7 @@ import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import buildLegends from "./tasks/BuildLegendsTask";
 import LoadEuropeTask from "./tasks/LoadEuropeTask.js";
 import EuropeCovidMap from "./components/EuropeCovidMap";
+import Charts from "./components/Charts"
 
 // TODO: 
 // Flexbox statt Float
@@ -88,7 +89,7 @@ const App = () => {
                         // If the background loading of the data is not quite done yet, display a loading symbol.
                        <LoadingMap/>
                     ) : (<>
-                            <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage}/>
+                            <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveCountry={setActiveCountry} />
                         </>
                     )) : (europeCountries.length === 0 ? (
                        <LoadingMap/>

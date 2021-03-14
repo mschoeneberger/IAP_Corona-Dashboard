@@ -10,7 +10,7 @@ class LoadCountriesTask{
     setDate = null;
     lastDate;
 
-    async load (setState, setDate) {
+    async load (setState, setDate, setCompleteData) {
         this.setState = setState;
         this.setDate = setDate;
         // Fetching the Corona data from backend. This usually takes a while.
