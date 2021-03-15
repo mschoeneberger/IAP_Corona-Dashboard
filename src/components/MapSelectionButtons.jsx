@@ -4,8 +4,9 @@ import Tooltipbox from "./Tooltipbox";
 
 const Tab = styled.button`
   padding: calc(min(0.8vh,0.8vw));
-  height: 10vh;
-  width: 10vw;
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 15%;
   cursor: pointer;
   opacity: 0.6;
   background: black;
@@ -13,7 +14,6 @@ const Tab = styled.button`
   outline: 0;
   border: 1px solid #222222;
   border-top: 2px solid #222222;
-  float: left;
   font-size: calc(min(1.6vh,1.6vw));
   ${({ active }) =>
     active &&
@@ -35,7 +35,7 @@ function MapSelectionButtons(props) {
       "Vaccinated Population": "Geimpfte Bevölkerung"
     }
     return (<>
-        <div style={{height:"10vh", width:"70vw", overflow:"hidden"}}>
+        <div style={{flexBasis:"10vh", flexGrow:"0", width:"100%", display:"flex", overflow:"hidden"}}>
           {
             props.views.map(view=>
                 <Tab

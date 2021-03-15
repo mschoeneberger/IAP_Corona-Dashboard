@@ -1,13 +1,15 @@
-.myRow {
+.flex-container {
+  display: flex;
+  flex-direction: row;
   height: 10vh;
   width: 100vw;
   border-bottom: 2px inset #222222;
 }
 
 .titleArea {
-  width: 50vw;
+  flex-grow: 50;
   height: 10vh;
-  float: left;
+  flex-basis: 50vw;
   border-right: 2px inset #222222;
 }
 
@@ -16,8 +18,4 @@
   font-size: calc(min(3.3vh, 3.5vw));
   text-align: center;
   padding: calc(min(2vh, 2vw));
-}
-
-.UpdatePanel {
-  float: left;
 }

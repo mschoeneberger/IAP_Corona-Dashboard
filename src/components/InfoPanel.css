@@ -1,15 +1,18 @@
 .InfoStructure {
-  height: 90vh;
-  width: 30vw;
+  height: 100%;
+  flex-basis: 20%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   border-right: 2px inset #222222;
-  float: left;
 }
 
 .Header {
-  height: 5vh;
-  width: 30vw;
+  flex-grow: 1;
+  width: 100%;
   border-bottom: 2px inset #222222;
   align-items: center;
+  text-align: center;
 }
 
 .Header h2 {

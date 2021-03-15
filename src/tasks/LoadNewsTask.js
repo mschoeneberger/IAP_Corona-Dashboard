@@ -3,7 +3,7 @@ import NewsItem from "../entities/NewsItem";
 class LoadNewsTask{
     setNews = null;
     news = [[],[]];
-    rssURLs = ["https://www.tagesschau.de/xml/rss2/", "https://www.politico.eu/feed/"];
+    rssURLs = ["https://www.tagesschau.de/xml/rss2/", "https://cors-anywhere.herokuapp.com/https://www.politico.eu/feed/"];
     linkTexts = ["[Mehr]", "[More]"];
     titles = [];
     articleLinks = [];

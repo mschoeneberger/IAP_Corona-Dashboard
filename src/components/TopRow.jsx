@@ -9,7 +9,7 @@ const TopRow = (props) => {
         "English": "Yet Another Corona Dashboard",
         "Deutsch": "Noch Eine Weitere Corona Übersichtsseite"
     }
-    return (<div className="myRow">
+    return (<div className="flex-container">
         <div className="titleArea">
             <h1><b>{title[props.activeLanguage]}</b></h1>
         </div>

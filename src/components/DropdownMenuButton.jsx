@@ -6,7 +6,8 @@ import {FaBars} from 'react-icons/fa';
 const Button = styled.button`
   padding: calc(min(0.8vh,0.8vw));
   height: 10vh;
-  width: 10vw;
+  flex-basis: 10vw;
+  flex-grow: 10;
   cursor: pointer;
   opacity: 1;
   background: black;
@@ -14,7 +15,6 @@ const Button = styled.button`
   outline: 0;
   border: 1px solid #222222;
   border-top: 2px solid #222222;
-  float: left;
   font-size: calc(min(1.6vh,1.6vw));
 `;
 

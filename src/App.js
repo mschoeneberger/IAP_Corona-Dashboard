@@ -78,31 +78,34 @@ const App = () => {
     return (
         <div className="page">
             <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
-            <InfoPanel legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
-            <div style={{height:"90vh", width:"70vw", float:"left"}}>
-                {/* This div is only there to fix a visual glitch when changing focus */}
-                <div style={{height:"80vh", width:"70vw", float:"left"}}>
-                    {/* Depending on the activeFocus either the CovidMap or the EuropeCovidMap is displayed. */}
-                    {activeFocus === "World" ? (countries.length === 0 ? (
-                        // If the background loading of the data is not quite done yet, display a loading symbol.
-                       <LoadingMap/>
-                    ) : (<>
-                            <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage}/>
-                        </>
-                    )) : (europeCountries.length === 0 ? (
-                       <LoadingMap/>
-                    ) : (<>
-                            <EuropeCovidMap regions={europeCountries} legends={regionLegends} active={activeLegend} activeLanguage={activeLanguage}/>
-                        </>
-                    ))}
+            <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
+                <InfoPanel legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
+                <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
+                    {/* This div is only there to fix a visual glitch when changing focus */}
+                    <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
+                        {/* Depending on the activeFocus either the CovidMap or the EuropeCovidMap is displayed. */}
+                        {activeFocus === "World" ? (countries.length === 0 ? (
+                            // If the background loading of the data is not quite done yet, display a loading symbol.
+                           <LoadingMap/>
+                        ) : (<>
+                                <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveCountry={setActiveCountry}/>
+                            </>
+                        )) : (europeCountries.length === 0 ? (
+                           <LoadingMap/>
+                        ) : (<>
+                                <EuropeCovidMap regions={europeCountries} legends={regionLegends} active={activeLegend} activeLanguage={activeLanguage}/>
+                            </>
+                        ))}
+                    </div>
+                    <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
                 </div>
-                <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
             </div>
-            <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
+            
+            {/* <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
                 startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
                 countryList={countryList} setcountryList={setcountryList} 
                 selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
-                alert={alert}/>
+                alert={alert}/> */}
         </div>
     );
 };

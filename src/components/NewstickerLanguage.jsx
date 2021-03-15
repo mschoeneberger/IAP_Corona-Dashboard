@@ -5,8 +5,8 @@ const languages = ["Deutsch", "English"];
 
 const Tab = styled.button`
   padding: calc(min(1vh,1vw));
-  height: 10vh;
-  width: 50%;
+  height: 100%;
+  flex-grow: 1;
   cursor: pointer;
   opacity: 0.6;
   background: black;
@@ -25,7 +25,7 @@ const Tab = styled.button`
 
 function NewstickerLanguage(props) {
     return (
-      <div style={{height:"10vh", width:"30vw"}}>
+      <div style={{height: "10vh", flexGrow: "0", width:"100%", display:"flex", flexDirection:"row", overflow:"hidden"}}>
         {
           languages.map(lang=>
               <Tab
@@ -33,9 +33,9 @@ function NewstickerLanguage(props) {
                 active={props.activeLanguage === lang}
                 onClick={() => props.setActiveLanguage(lang)}>
                 {lang === "Deutsch" ? (
-                  <img src="https://www.countryflags.io/DE/flat/64.png" alt="Deutsch" width="50vw" height="50vh"/>
+                  <img src="https://www.countryflags.io/DE/flat/64.png" alt="Deutsch" width="70%" height="70%"/>
                 ) : (
-                  <img src="https://www.countryflags.io/GB/flat/64.png" alt ="English" width="50vw" height="50vh"/>
+                  <img src="https://www.countryflags.io/GB/flat/64.png" alt ="English" width="70%" height="70%"/>
                 )} 
               </Tab>
           )

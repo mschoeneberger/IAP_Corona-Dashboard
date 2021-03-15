@@ -4,7 +4,8 @@ const LoadingMap = () => {
     return (
     <div
         style={{
-            height: "80vh", 
+            flexBasis: "60vh",
+            flexGrow: "16", 
             display: "flex", 
             justifyContent: "center", 
             alignItems: "center"

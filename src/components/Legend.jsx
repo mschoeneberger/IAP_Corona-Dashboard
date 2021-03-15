@@ -12,7 +12,7 @@ const Legend = (props) => {
                     backgroundColor: item.color,
                     textAlign: "center",
                     textJustify: "center",
-                    height: "5vh",
+                    flexGrow: "1",
                     color: item.textColor,
                     fontSize: "calc(min(2vw,2vh))"
                 }}
