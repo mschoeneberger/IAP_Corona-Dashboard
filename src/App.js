@@ -12,7 +12,6 @@ import EuropeCovidMap from "./components/EuropeCovidMap";
 import Charts from "./components/Charts";
 
 // TODO: 
-// Flexbox statt Float
 // Code für Präsentation auskommentieren
 // DropdownMenü Einträge sollten etwas tun oder entfernt werden
 // Nicht benötigte MapSelectionButtons entfernen
@@ -75,7 +74,7 @@ const App = () => {
 
     useEffect(load, []);
       
-    return (
+    return (<>
         <div className="page">
             <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
             <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
@@ -100,13 +99,15 @@ const App = () => {
                     <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
                 </div>
             </div>
+        </div>
             
-            {/* <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
+            <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
                 startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
                 countryList={countryList} setcountryList={setcountryList} 
                 selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
-                alert={alert}/> */}
-        </div>
+                alert={alert}/>
+        </>
+        
     );
 };
 

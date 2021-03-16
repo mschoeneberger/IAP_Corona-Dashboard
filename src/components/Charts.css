@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  background-color: inherit;
+  background-color: black;
 }
 .slidecontainer {
   display: flex;
