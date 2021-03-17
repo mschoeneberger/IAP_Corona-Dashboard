@@ -23,7 +23,7 @@ import Charts from "./components/Charts";
 // Map/Legend Anpassungen: Tilelayer-OSM? Farbkorrektur aufgrund von Transparenz?
 
 
-// import { useAlert } from 'react-alert'
+ import { useAlert } from 'react-alert';
 
 const App = () => {
     // views are the different categories of data we want to display
@@ -62,7 +62,7 @@ const App = () => {
     const [endDate, setEndDate] = useState();
     const [selectedCountries,setSelectedCountries] = useState([{ value: 'World', label: 'World'}]);
     const [WorldData, setWorldData] = useState([]);
-    // const alert = useAlert()
+    const alert = useAlert();
 
     //Function to load the Geo- & Coronadata for both focuses
     const load = () => {
@@ -74,7 +74,8 @@ const App = () => {
 
     useEffect(load, []);
       
-    return (<>
+    return (
+    <div style={{overflow: "hidden"}}>
         <div className="page">
             <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
             <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
@@ -100,14 +101,12 @@ const App = () => {
                 </div>
             </div>
         </div>
-            
-            <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
-                startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
-                countryList={countryList} setcountryList={setcountryList} 
-                selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
-                alert={alert}/>
-        </>
-        
+        <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
+            startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
+            countryList={countryList} setcountryList={setcountryList} 
+            selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
+            alert={alert}/>
+    </div>   
     );
 };
 

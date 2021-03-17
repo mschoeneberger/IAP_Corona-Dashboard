@@ -1,9 +1,13 @@
 .chartContainer {
   display: flex;
+  flex-direction: row;
   width: 100%;
+  height: 100%;
   justify-content: space-evenly;
   background-color: black;
+  overflow: hidden;
 }
+/* Unused? */
 .slidecontainer {
   display: flex;
   width: 100%;

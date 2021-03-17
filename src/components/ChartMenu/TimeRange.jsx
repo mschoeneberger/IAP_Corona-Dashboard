@@ -23,6 +23,9 @@ const TimeRange = (props) => {
     maxDate={props.endDate}
     minDate={new Date("01/22/2020")}
     className="DatePicker"
+    // Larry-Code:
+    popperPlacement="left"
+    //
   />
   <br/>
   <label className="margin2">to:  </label>
@@ -35,6 +38,9 @@ const TimeRange = (props) => {
     minDate={props.startDate}
     maxDate={lastUpdate}
     className="DatePicker"
+    // Larry-Code:
+    popperPlacement="left"
+    //
   />
   
   </form>

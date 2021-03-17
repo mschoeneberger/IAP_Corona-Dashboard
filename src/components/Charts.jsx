@@ -92,7 +92,9 @@ var config = {
 
 // chart size
 const styles = {
-    width: '85%'
+    width: '85%',
+    height: "500px",
+    overflow: "hidden"
 }
 // chart options size
 const styles2 = {
@@ -351,7 +353,7 @@ const Charts = (props) => {
             for(var chart_data of chart.data.datasets){
                 var country_name = chart_data.label
                 if(country_name === "World"){ 
-                    if(props.activeLegend === "7-Day-Incidence") return props.alert("not implemented for World yet") // 7-Day-Incidence is not correct implemented for WorldData
+                    if(props.activeLegend === "7-Day-Incidence") return props.alert.info("not implemented for World yet") // 7-Day-Incidence is not correct implemented for WorldData
                     var CountryData = props.WorldData
                 } else {
                     var CountryData = completeData[country_name]
