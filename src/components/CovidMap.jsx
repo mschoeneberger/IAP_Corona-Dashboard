@@ -128,9 +128,9 @@ const CovidMap = (props) => {
                 }
             })
         };
-        function func (oEvent){
-            console.log(oEvent)
-        }
+        // function func (oEvent){
+        //     console.log(oEvent)
+        // }
 
     return <MapContainer zoom={2.5} center={[45, 10]}>
         <TileLayer

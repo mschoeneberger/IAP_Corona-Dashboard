@@ -65,7 +65,7 @@ var config = {
     },
     plugins:[
         {afterDraw:function(chart) {
-            var goin = false
+            // var goin = false
             if(chart.data.labels.length === 0)    {              //goin = true
             //else if(chart.data.datasets[0].data.length === 0)   //goin = true
             //if (goin) {
@@ -106,15 +106,16 @@ const id = {id:"ChartID_1"}
 var init_Chart = true
 var init_States= true
 var chart;
-if(chart)   var showing = chart.data.datasets
-else        var showing = 0
+var showing;
+if(chart)   showing = chart.data.datasets
+else        showing = 0
 var number_of_colors = chartColors.length
 
 
 function getRelevantData(CountryData, activeLegend, startDate, endDate, step, lastUpdated){
 
     // ignore countries with no data
-    if(CountryData == undefined) {
+    if(CountryData === undefined) {
         if(chart.data.labels){
             return [[],chart.data.labels]
         } else {
@@ -206,17 +207,18 @@ function chart_addDataset(chart,data,labels,activeCountry){
     // get the right color. If a country in the middle has been deleted, there is a free color. 
     // and here I find this color
     var sets = chart.data.datasets.length
+    var index;
     if(sets === 0) {
-        var index = 0
+        index = 0
     }
     else if (sets === 1){
         index = chart.data.datasets[0].colorNumber + 1
     } else {
         var numbers = [...Array(number_of_colors).keys()];
-        for( var c of chart.data.datasets){
+        for( let c of chart.data.datasets){
             numbers.splice(numbers.findIndex(x=>x===c.colorNumber),1)
         }
-        var index = numbers.shift()
+        index = numbers.shift()
     }
     
     chart.data.datasets.push({
@@ -264,7 +266,7 @@ const Charts = (props) => {
             showing = chart.data.datasets
         }
           
-    },[ props.completeData])
+    },[completeData])
 
     /* --------------------------------------------------------------------------------
     | Handle Map Select
@@ -284,7 +286,7 @@ const Charts = (props) => {
                 if(showing.length >= number_of_colors)   return props.alert.show("Maximum number of countries reached")
                 else                                     props.setSelectedCountries(x => [...x,{value:props.activeCountry,label:props.activeCountry}])
             }
-    },[props.activeCountry])
+    },[props])
 
     /* --------------------------------------------------------------------------------
     | Manage Datasets
@@ -326,9 +328,9 @@ const Charts = (props) => {
             for(var country of compare_selected){
                 //if(country.label === "Map") continue
                 if(country.label === "World"){ 
-                    var CountryData = props.WorldData
+                    CountryData = props.WorldData
                 } else {
-                    var CountryData = completeData[country.label]
+                    CountryData = completeData[country.label]
                 }
                 var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate))
                 chart_addDataset(chart,data,labels,country.label)
@@ -340,7 +342,7 @@ const Charts = (props) => {
             }
             chart.update()
         }
-    },[props.selectedCountries,  props.WorldData])
+    },[props, completeData, step])
 
     /* --------------------------------------------------------------------------------
     | Range Update
@@ -352,11 +354,12 @@ const Charts = (props) => {
         if(chart){
             for(var chart_data of chart.data.datasets){
                 var country_name = chart_data.label
+                var CountryData;
                 if(country_name === "World"){ 
                     if(props.activeLegend === "7-Day-Incidence") return props.alert.info("not implemented for World yet") // 7-Day-Incidence is not correct implemented for WorldData
-                    var CountryData = props.WorldData
+                    CountryData = props.WorldData
                 } else {
-                    var CountryData = completeData[country_name]
+                    CountryData = completeData[country_name]
                 }
                 var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate))
                 chart_data.data = data
@@ -364,7 +367,7 @@ const Charts = (props) => {
             chart.data.labels = labels
             chart.update()
         }
-    },[props.activeLegend, props.startDate, props.endDate, step])
+    },[props, completeData, step])
 
 
     /* --------------------------------------------------------------------------------

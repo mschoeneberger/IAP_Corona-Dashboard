@@ -34,6 +34,7 @@ const AddCountry = (props) => {
     switch (action) {
       case "remove-value":
         check_count = !check_count
+        break;
       case "pop-value":
         if (removedValue.isFixed) {
           return;
