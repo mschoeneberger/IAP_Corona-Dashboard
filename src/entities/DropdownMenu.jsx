@@ -28,9 +28,27 @@ const DropdownMenu = (props) => {
     }
     var a = (<div className="DropdownMenu" style={{visibility: "hidden"}}>
             <Tab>{tabNames[props.activeLanguage][0]}</Tab>
-            <Tab>{tabNames[props.activeLanguage][1]}</Tab>
-            <Tab>{tabNames[props.activeLanguage][2]}</Tab>
-            <Tab>{tabNames[props.activeLanguage][3]}</Tab>
+            <Tab 
+            onClick={() => {
+                props.setOpen(false);
+                window.scrollBy({top: 500, left: 0, behavior: "smooth"});
+            }}>
+                {tabNames[props.activeLanguage][1]}
+            </Tab>
+            <Tab
+            onClick={() => {
+                props.setOpen(false);
+                props.setInfoWindow("sources");
+            }}>
+                {tabNames[props.activeLanguage][2]}
+            </Tab>
+            <Tab
+            onClick={() => {
+                props.setOpen(false);
+                props.setInfoWindow("aboutus");
+            }}>
+                {tabNames[props.activeLanguage][3]}
+            </Tab>
         </div>);
     a.props.style.visibility = vis;
     return a;

@@ -11,7 +11,7 @@ const TopRow = (props) => {
         </div>
         <MapFocusButton activeFocus={props.activeFocus} setActiveFocus={props.setActiveFocus} activeLanguage={props.activeLanguage}/>
         <UpdatePanel lastUpdate = {props.lastUpdate} activeLanguage={props.activeLanguage}/>
-        <DropdownMenuButton activeLanguage={props.activeLanguage}/>
+        <DropdownMenuButton activeLanguage={props.activeLanguage} setInfoWindow={props.setInfoWindow}/>
     </div>);
 }
  

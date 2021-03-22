@@ -10,6 +10,7 @@ import buildLegends from "./tasks/BuildLegendsTask";
 import LoadEuropeTask from "./tasks/LoadEuropeTask.js";
 import EuropeCovidMap from "./components/EuropeCovidMap";
 import Charts from "./components/Charts";
+import InfoWindow from "./components/InfoWindow";
 
 // TODO: 
 // Code für Präsentation auskommentieren
@@ -39,6 +40,8 @@ const App = () => {
     // hook to display the correct Date for the UpdatePanel
     const [lastUpdate, setLastUpdate] = useState();
     const [activeLanguage, setActiveLanguage] = useState("English");
+    // hook to display or hide the InfoWindow component.
+    const [infoWindow,setInfoWindow] = useState("hidden");
 
     //Building the legends for the world focus
     const legends = buildLegends(
@@ -74,10 +77,10 @@ const App = () => {
 
     useEffect(load, []);
       
-    return (
+    if(infoWindow === "hidden") return (
     <div style={{overflow: "hidden"}}>
         <div className="page">
-            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage}/>
+            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow}/>
             <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
                 <InfoPanel legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
                 <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
@@ -108,6 +111,11 @@ const App = () => {
             alert={alert}/>
     </div>   
     );
+    else return (
+        <div className="page">
+            <InfoWindow infoWindow={infoWindow} setInfoWindow={setInfoWindow} activeLanguage={activeLanguage}/>
+        </div>
+    )
 };
 
 export default App;

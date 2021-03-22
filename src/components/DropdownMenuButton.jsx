@@ -24,7 +24,7 @@ const DropdownMenuButton = (props) => {
       <Button onClick={() => setOpen(!(dropdownOpen))}>
         <FaBars/>
       </Button>
-      <DropdownMenu dropdownOpen={dropdownOpen} activeLanguage={props.activeLanguage}/>
+      <DropdownMenu dropdownOpen={dropdownOpen} activeLanguage={props.activeLanguage} setOpen={setOpen} setInfoWindow={props.setInfoWindow}/>
     </>
   );
 }
