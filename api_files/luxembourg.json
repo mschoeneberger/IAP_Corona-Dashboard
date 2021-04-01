@@ -177,16 +177,16 @@
     },
     {
         "date": "2020-03-17",
-        "tested": 580,
-        "cases": 110,
+        "tested": 578,
+        "cases": 108,
         "current_hosp": 0,
         "current_icu": 0,
         "deceased": 3
     },
     {
         "date": "2020-03-18",
-        "tested": 882,
-        "cases": 149,
+        "tested": 880,
+        "cases": 147,
         "current_hosp": 0,
         "current_icu": 0,
         "deceased": 3
@@ -201,8 +201,8 @@
     },
     {
         "date": "2020-03-20",
-        "tested": 996,
-        "cases": 169,
+        "tested": 995,
+        "cases": 168,
         "current_hosp": 18,
         "current_icu": 3,
         "deceased": 6
@@ -233,8 +233,8 @@
     },
     {
         "date": "2020-03-24",
-        "tested": 886,
-        "cases": 174,
+        "tested": 885,
+        "cases": 173,
         "current_hosp": 97,
         "current_icu": 9,
         "deceased": 7
@@ -249,16 +249,16 @@
     },
     {
         "date": "2020-03-26",
-        "tested": 4599,
-        "cases": 202,
+        "tested": 4597,
+        "cases": 201,
         "current_hosp": 120,
         "current_icu": 26,
         "deceased": 9
     },
     {
         "date": "2020-03-27",
-        "tested": 1083,
-        "cases": 153,
+        "tested": 1081,
+        "cases": 152,
         "current_hosp": 128,
         "current_icu": 26,
         "deceased": 14
@@ -281,8 +281,8 @@
     },
     {
         "date": "2020-03-30",
-        "tested": 1076,
-        "cases": 137,
+        "tested": 1075,
+        "cases": 136,
         "current_hosp": 150,
         "current_icu": 30,
         "deceased": 22
@@ -313,8 +313,8 @@
     },
     {
         "date": "2020-04-03",
-        "tested": 1214,
-        "cases": 88,
+        "tested": 1212,
+        "cases": 87,
         "current_hosp": 167,
         "current_icu": 45,
         "deceased": 29
@@ -361,8 +361,8 @@
     },
     {
         "date": "2020-04-09",
-        "tested": 864,
-        "cases": 58,
+        "tested": 863,
+        "cases": 57,
         "current_hosp": 163,
         "current_icu": 39,
         "deceased": 49
@@ -377,7 +377,7 @@
     },
     {
         "date": "2020-04-11",
-        "tested": 309,
+        "tested": 308,
         "cases": 7,
         "current_hosp": 150,
         "current_icu": 40,
@@ -401,7 +401,7 @@
     },
     {
         "date": "2020-04-14",
-        "tested": 1374,
+        "tested": 1372,
         "cases": 59,
         "current_hosp": 140,
         "current_icu": 43,
@@ -409,7 +409,7 @@
     },
     {
         "date": "2020-04-15",
-        "tested": 845,
+        "tested": 843,
         "cases": 33,
         "current_hosp": 124,
         "current_icu": 44,
@@ -417,8 +417,8 @@
     },
     {
         "date": "2020-04-16",
-        "tested": 960,
-        "cases": 26,
+        "tested": 958,
+        "cases": 25,
         "current_hosp": 138,
         "current_icu": 41,
         "deceased": 71
@@ -449,7 +449,7 @@
     },
     {
         "date": "2020-04-20",
-        "tested": 933,
+        "tested": 931,
         "cases": 15,
         "current_hosp": 130,
         "current_icu": 39,
@@ -457,7 +457,7 @@
     },
     {
         "date": "2020-04-21",
-        "tested": 754,
+        "tested": 752,
         "cases": 24,
         "current_hosp": 126,
         "current_icu": 38,
@@ -465,7 +465,7 @@
     },
     {
         "date": "2020-04-22",
-        "tested": 1141,
+        "tested": 1140,
         "cases": 9,
         "current_hosp": 125,
         "current_icu": 35,
@@ -473,7 +473,7 @@
     },
     {
         "date": "2020-04-23",
-        "tested": 793,
+        "tested": 789,
         "cases": 16,
         "current_hosp": 112,
         "current_icu": 30,
@@ -481,7 +481,7 @@
     },
     {
         "date": "2020-04-24",
-        "tested": 1316,
+        "tested": 1309,
         "cases": 17,
         "current_hosp": 109,
         "current_icu": 30,
@@ -489,7 +489,7 @@
     },
     {
         "date": "2020-04-25",
-        "tested": 610,
+        "tested": 607,
         "cases": 12,
         "current_hosp": 98,
         "current_icu": 28,
@@ -505,7 +505,7 @@
     },
     {
         "date": "2020-04-27",
-        "tested": 770,
+        "tested": 758,
         "cases": 9,
         "current_hosp": 89,
         "current_icu": 25,
@@ -513,7 +513,7 @@
     },
     {
         "date": "2020-04-28",
-        "tested": 1728,
+        "tested": 1724,
         "cases": 17,
         "current_hosp": 92,
         "current_icu": 25,
@@ -521,7 +521,7 @@
     },
     {
         "date": "2020-04-29",
-        "tested": 1889,
+        "tested": 1885,
         "cases": 10,
         "current_hosp": 78,
         "current_icu": 27,
@@ -529,7 +529,7 @@
     },
     {
         "date": "2020-04-30",
-        "tested": 1971,
+        "tested": 1962,
         "cases": 12,
         "current_hosp": 67,
         "current_icu": 27,
@@ -537,7 +537,7 @@
     },
     {
         "date": "2020-05-01",
-        "tested": 1396,
+        "tested": 1392,
         "cases": 7,
         "current_hosp": 79,
         "current_icu": 28,
@@ -545,7 +545,7 @@
     },
     {
         "date": "2020-05-02",
-        "tested": 698,
+        "tested": 694,
         "cases": 4,
         "current_hosp": 74,
         "current_icu": 27,
@@ -553,7 +553,7 @@
     },
     {
         "date": "2020-05-03",
-        "tested": 240,
+        "tested": 237,
         "cases": 4,
         "current_hosp": 73,
         "current_icu": 26,
@@ -561,7 +561,7 @@
     },
     {
         "date": "2020-05-04",
-        "tested": 1042,
+        "tested": 1036,
         "cases": 11,
         "current_hosp": 71,
         "current_icu": 25,
@@ -569,15 +569,15 @@
     },
     {
         "date": "2020-05-05",
-        "tested": 1283,
+        "tested": 1276,
         "cases": 8,
         "current_hosp": 81,
         "current_icu": 23,
-        "deceased": 98
+        "deceased": 99
     },
     {
         "date": "2020-05-06",
-        "tested": 1435,
+        "tested": 1433,
         "cases": 6,
         "current_hosp": 75,
         "current_icu": 24,
@@ -585,7 +585,7 @@
     },
     {
         "date": "2020-05-07",
-        "tested": 1325,
+        "tested": 1317,
         "cases": 5,
         "current_hosp": 67,
         "current_icu": 19,
@@ -593,7 +593,7 @@
     },
     {
         "date": "2020-05-08",
-        "tested": 1320,
+        "tested": 1312,
         "cases": 3,
         "current_hosp": 75,
         "current_icu": 18,
@@ -601,7 +601,7 @@
     },
     {
         "date": "2020-05-09",
-        "tested": 737,
+        "tested": 730,
         "cases": 8,
         "current_hosp": 68,
         "current_icu": 17,
@@ -609,7 +609,7 @@
     },
     {
         "date": "2020-05-10",
-        "tested": 213,
+        "tested": 212,
         "cases": 1,
         "current_hosp": 59,
         "current_icu": 21,
@@ -617,7 +617,7 @@
     },
     {
         "date": "2020-05-11",
-        "tested": 1050,
+        "tested": 1047,
         "cases": 4,
         "current_hosp": 56,
         "current_icu": 23,
@@ -625,7 +625,7 @@
     },
     {
         "date": "2020-05-12",
-        "tested": 1396,
+        "tested": 1391,
         "cases": 7,
         "current_hosp": 57,
         "current_icu": 23,
@@ -633,7 +633,7 @@
     },
     {
         "date": "2020-05-13",
-        "tested": 1207,
+        "tested": 1206,
         "cases": 9,
         "current_hosp": 59,
         "current_icu": 12,
@@ -641,7 +641,7 @@
     },
     {
         "date": "2020-05-14",
-        "tested": 1295,
+        "tested": 1293,
         "cases": 3,
         "current_hosp": 63,
         "current_icu": 12,
@@ -649,7 +649,7 @@
     },
     {
         "date": "2020-05-15",
-        "tested": 1277,
+        "tested": 1274,
         "cases": 5,
         "current_hosp": 50,
         "current_icu": 16,
@@ -657,15 +657,15 @@
     },
     {
         "date": "2020-05-16",
-        "tested": 1018,
-        "cases": 10,
+        "tested": 1011,
+        "cases": 9,
         "current_hosp": 42,
         "current_icu": 14,
         "deceased": 106
     },
     {
         "date": "2020-05-17",
-        "tested": 152,
+        "tested": 150,
         "cases": 1,
         "current_hosp": 38,
         "current_icu": 9,
@@ -673,7 +673,7 @@
     },
     {
         "date": "2020-05-18",
-        "tested": 1012,
+        "tested": 990,
         "cases": 12,
         "current_hosp": 42,
         "current_icu": 11,
@@ -681,7 +681,7 @@
     },
     {
         "date": "2020-05-19",
-        "tested": 1072,
+        "tested": 1067,
         "cases": 7,
         "current_hosp": 43,
         "current_icu": 7,
@@ -689,7 +689,7 @@
     },
     {
         "date": "2020-05-20",
-        "tested": 1517,
+        "tested": 1513,
         "cases": 7,
         "current_hosp": 48,
         "current_icu": 7,
@@ -697,7 +697,7 @@
     },
     {
         "date": "2020-05-21",
-        "tested": 788,
+        "tested": 787,
         "cases": 0,
         "current_hosp": 36,
         "current_icu": 6,
@@ -705,7 +705,7 @@
     },
     {
         "date": "2020-05-22",
-        "tested": 1221,
+        "tested": 1197,
         "cases": 9,
         "current_hosp": 37,
         "current_icu": 9,
@@ -713,7 +713,7 @@
     },
     {
         "date": "2020-05-23",
-        "tested": 1215,
+        "tested": 1211,
         "cases": 2,
         "current_hosp": 27,
         "current_icu": 8,
@@ -729,7 +729,7 @@
     },
     {
         "date": "2020-05-25",
-        "tested": 946,
+        "tested": 944,
         "cases": 2,
         "current_hosp": 30,
         "current_icu": 6,
@@ -745,7 +745,7 @@
     },
     {
         "date": "2020-05-27",
-        "tested": 1209,
+        "tested": 1205,
         "cases": 1,
         "current_hosp": 29,
         "current_icu": 5,
@@ -753,7 +753,7 @@
     },
     {
         "date": "2020-05-28",
-        "tested": 2003,
+        "tested": 2000,
         "cases": 3,
         "current_hosp": 25,
         "current_icu": 5,
@@ -761,7 +761,7 @@
     },
     {
         "date": "2020-05-29",
-        "tested": 2204,
+        "tested": 2205,
         "cases": 3,
         "current_hosp": 25,
         "current_icu": 4,
@@ -769,7 +769,7 @@
     },
     {
         "date": "2020-05-30",
-        "tested": 2017,
+        "tested": 2016,
         "cases": 2,
         "current_hosp": 23,
         "current_icu": 4,
@@ -785,15 +785,15 @@
     },
     {
         "date": "2020-06-01",
-        "tested": 425,
-        "cases": 2,
+        "tested": 421,
+        "cases": 1,
         "current_hosp": 21,
         "current_icu": 4,
         "deceased": 110
     },
     {
         "date": "2020-06-02",
-        "tested": 1593,
+        "tested": 1590,
         "cases": 2,
         "current_hosp": 20,
         "current_icu": 2,
@@ -801,7 +801,7 @@
     },
     {
         "date": "2020-06-03",
-        "tested": 1745,
+        "tested": 1744,
         "cases": 2,
         "current_hosp": 18,
         "current_icu": 3,
@@ -809,7 +809,7 @@
     },
     {
         "date": "2020-06-04",
-        "tested": 1679,
+        "tested": 1674,
         "cases": 4,
         "current_hosp": 18,
         "current_icu": 1,
@@ -817,7 +817,7 @@
     },
     {
         "date": "2020-06-05",
-        "tested": 2878,
+        "tested": 2866,
         "cases": 1,
         "current_hosp": 18,
         "current_icu": 1,
@@ -825,7 +825,7 @@
     },
     {
         "date": "2020-06-06",
-        "tested": 1827,
+        "tested": 1820,
         "cases": 2,
         "current_hosp": 12,
         "current_icu": 1,
@@ -841,7 +841,7 @@
     },
     {
         "date": "2020-06-08",
-        "tested": 2245,
+        "tested": 2240,
         "cases": 4,
         "current_hosp": 18,
         "current_icu": 2,
@@ -849,7 +849,7 @@
     },
     {
         "date": "2020-06-09",
-        "tested": 2604,
+        "tested": 2602,
         "cases": 3,
         "current_hosp": 16,
         "current_icu": 1,
@@ -857,7 +857,7 @@
     },
     {
         "date": "2020-06-10",
-        "tested": 4492,
+        "tested": 4490,
         "cases": 4,
         "current_hosp": 16,
         "current_icu": 1,
@@ -865,7 +865,7 @@
     },
     {
         "date": "2020-06-11",
-        "tested": 4030,
+        "tested": 4025,
         "cases": 1,
         "current_hosp": 15,
         "current_icu": 0,
@@ -873,7 +873,7 @@
     },
     {
         "date": "2020-06-12",
-        "tested": 5951,
+        "tested": 5950,
         "cases": 2,
         "current_hosp": 16,
         "current_icu": 0,
@@ -881,7 +881,7 @@
     },
     {
         "date": "2020-06-13",
-        "tested": 3374,
+        "tested": 3370,
         "cases": 8,
         "current_hosp": 12,
         "current_icu": 1,
@@ -889,15 +889,15 @@
     },
     {
         "date": "2020-06-14",
-        "tested": 669,
-        "cases": 3,
+        "tested": 666,
+        "cases": 2,
         "current_hosp": 10,
         "current_icu": 1,
         "deceased": 110
     },
     {
         "date": "2020-06-15",
-        "tested": 4793,
+        "tested": 4784,
         "cases": 5,
         "current_hosp": 13,
         "current_icu": 2,
@@ -905,7 +905,7 @@
     },
     {
         "date": "2020-06-16",
-        "tested": 4848,
+        "tested": 4837,
         "cases": 7,
         "current_hosp": 14,
         "current_icu": 1,
@@ -913,7 +913,7 @@
     },
     {
         "date": "2020-06-17",
-        "tested": 6250,
+        "tested": 6241,
         "cases": 1,
         "current_hosp": 10,
         "current_icu": 2,
@@ -921,7 +921,7 @@
     },
     {
         "date": "2020-06-18",
-        "tested": 6171,
+        "tested": 6159,
         "cases": 6,
         "current_hosp": 12,
         "current_icu": 2,
@@ -929,7 +929,7 @@
     },
     {
         "date": "2020-06-19",
-        "tested": 6805,
+        "tested": 6796,
         "cases": 9,
         "current_hosp": 11,
         "current_icu": 1,
@@ -937,7 +937,7 @@
     },
     {
         "date": "2020-06-20",
-        "tested": 5417,
+        "tested": 5397,
         "cases": 13,
         "current_hosp": 12,
         "current_icu": 1,
@@ -953,7 +953,7 @@
     },
     {
         "date": "2020-06-22",
-        "tested": 6088,
+        "tested": 6053,
         "cases": 12,
         "current_hosp": 14,
         "current_icu": 1,
@@ -969,7 +969,7 @@
     },
     {
         "date": "2020-06-24",
-        "tested": 4696,
+        "tested": 4677,
         "cases": 13,
         "current_hosp": 13,
         "current_icu": 0,
@@ -977,7 +977,7 @@
     },
     {
         "date": "2020-06-25",
-        "tested": 5318,
+        "tested": 5277,
         "cases": 19,
         "current_hosp": 12,
         "current_icu": 1,
@@ -985,15 +985,15 @@
     },
     {
         "date": "2020-06-26",
-        "tested": 6163,
-        "cases": 42,
+        "tested": 6134,
+        "cases": 41,
         "current_hosp": 8,
         "current_icu": 1,
         "deceased": 110
     },
     {
         "date": "2020-06-27",
-        "tested": 5561,
+        "tested": 5527,
         "cases": 30,
         "current_hosp": 12,
         "current_icu": 1,
@@ -1001,7 +1001,7 @@
     },
     {
         "date": "2020-06-28",
-        "tested": 938,
+        "tested": 929,
         "cases": 10,
         "current_hosp": 9,
         "current_icu": 2,
@@ -1009,7 +1009,7 @@
     },
     {
         "date": "2020-06-29",
-        "tested": 8688,
+        "tested": 8630,
         "cases": 44,
         "current_hosp": 14,
         "current_icu": 2,
@@ -1017,7 +1017,7 @@
     },
     {
         "date": "2020-06-30",
-        "tested": 7792,
+        "tested": 7712,
         "cases": 24,
         "current_hosp": 16,
         "current_icu": 2,
@@ -1025,23 +1025,23 @@
     },
     {
         "date": "2020-07-01",
-        "tested": 10250,
-        "cases": 51,
+        "tested": 10153,
+        "cases": 50,
         "current_hosp": 14,
         "current_icu": 2,
         "deceased": 110
     },
     {
         "date": "2020-07-02",
-        "tested": 11174,
-        "cases": 44,
+        "tested": 11068,
+        "cases": 43,
         "current_hosp": 19,
         "current_icu": 3,
         "deceased": 110
     },
     {
         "date": "2020-07-03",
-        "tested": 10601,
+        "tested": 10512,
         "cases": 28,
         "current_hosp": 14,
         "current_icu": 3,
@@ -1049,7 +1049,7 @@
     },
     {
         "date": "2020-07-04",
-        "tested": 7877,
+        "tested": 7762,
         "cases": 49,
         "current_hosp": 21,
         "current_icu": 3,
@@ -1057,7 +1057,7 @@
     },
     {
         "date": "2020-07-05",
-        "tested": 1027,
+        "tested": 1004,
         "cases": 12,
         "current_hosp": 17,
         "current_icu": 3,
@@ -1065,7 +1065,7 @@
     },
     {
         "date": "2020-07-06",
-        "tested": 10081,
+        "tested": 9946,
         "cases": 48,
         "current_hosp": 19,
         "current_icu": 3,
@@ -1073,7 +1073,7 @@
     },
     {
         "date": "2020-07-07",
-        "tested": 9591,
+        "tested": 9479,
         "cases": 52,
         "current_hosp": 23,
         "current_icu": 1,
@@ -1081,7 +1081,7 @@
     },
     {
         "date": "2020-07-08",
-        "tested": 11455,
+        "tested": 11292,
         "cases": 51,
         "current_hosp": 24,
         "current_icu": 2,
@@ -1089,7 +1089,7 @@
     },
     {
         "date": "2020-07-09",
-        "tested": 11120,
+        "tested": 11000,
         "cases": 35,
         "current_hosp": 24,
         "current_icu": 3,
@@ -1097,7 +1097,7 @@
     },
     {
         "date": "2020-07-10",
-        "tested": 5493,
+        "tested": 5314,
         "cases": 56,
         "current_hosp": 29,
         "current_icu": 2,
@@ -1105,7 +1105,7 @@
     },
     {
         "date": "2020-07-11",
-        "tested": 7843,
+        "tested": 7687,
         "cases": 77,
         "current_hosp": 33,
         "current_icu": 3,
@@ -1113,23 +1113,23 @@
     },
     {
         "date": "2020-07-12",
-        "tested": 4617,
-        "cases": 29,
+        "tested": 4504,
+        "cases": 27,
         "current_hosp": 34,
         "current_icu": 4,
         "deceased": 111
     },
     {
         "date": "2020-07-13",
-        "tested": 10554,
-        "cases": 93,
+        "tested": 10372,
+        "cases": 92,
         "current_hosp": 44,
         "current_icu": 3,
         "deceased": 111
     },
     {
         "date": "2020-07-14",
-        "tested": 11677,
+        "tested": 11496,
         "cases": 52,
         "current_hosp": 34,
         "current_icu": 4,
@@ -1137,7 +1137,7 @@
     },
     {
         "date": "2020-07-15",
-        "tested": 14472,
+        "tested": 14223,
         "cases": 134,
         "current_hosp": 37,
         "current_icu": 5,
@@ -1145,23 +1145,23 @@
     },
     {
         "date": "2020-07-16",
-        "tested": 13522,
-        "cases": 107,
+        "tested": 13278,
+        "cases": 106,
         "current_hosp": 36,
         "current_icu": 4,
         "deceased": 111
     },
     {
         "date": "2020-07-17",
-        "tested": 14466,
-        "cases": 73,
+        "tested": 14297,
+        "cases": 72,
         "current_hosp": 36,
         "current_icu": 6,
         "deceased": 111
     },
     {
         "date": "2020-07-18",
-        "tested": 12797,
+        "tested": 12590,
         "cases": 97,
         "current_hosp": 42,
         "current_icu": 6,
@@ -1169,7 +1169,7 @@
     },
     {
         "date": "2020-07-19",
-        "tested": 3128,
+        "tested": 3039,
         "cases": 27,
         "current_hosp": 47,
         "current_icu": 7,
@@ -1177,7 +1177,7 @@
     },
     {
         "date": "2020-07-20",
-        "tested": 9809,
+        "tested": 9621,
         "cases": 71,
         "current_hosp": 50,
         "current_icu": 5,
@@ -1185,7 +1185,7 @@
     },
     {
         "date": "2020-07-21",
-        "tested": 16439,
+        "tested": 16175,
         "cases": 113,
         "current_hosp": 55,
         "current_icu": 5,
@@ -1193,7 +1193,7 @@
     },
     {
         "date": "2020-07-22",
-        "tested": 7198,
+        "tested": 7037,
         "cases": 77,
         "current_hosp": 57,
         "current_icu": 1,
@@ -1201,7 +1201,7 @@
     },
     {
         "date": "2020-07-23",
-        "tested": 15309,
+        "tested": 15085,
         "cases": 85,
         "current_hosp": 49,
         "current_icu": 3,
@@ -1209,7 +1209,7 @@
     },
     {
         "date": "2020-07-24",
-        "tested": 10611,
+        "tested": 10459,
         "cases": 121,
         "current_hosp": 44,
         "current_icu": 4,
@@ -1217,7 +1217,7 @@
     },
     {
         "date": "2020-07-25",
-        "tested": 6160,
+        "tested": 6020,
         "cases": 75,
         "current_hosp": 50,
         "current_icu": 4,
@@ -1225,7 +1225,7 @@
     },
     {
         "date": "2020-07-26",
-        "tested": 1091,
+        "tested": 1041,
         "cases": 40,
         "current_hosp": 55,
         "current_icu": 6,
@@ -1233,15 +1233,15 @@
     },
     {
         "date": "2020-07-27",
-        "tested": 14400,
-        "cases": 34,
+        "tested": 14254,
+        "cases": 33,
         "current_hosp": 50,
         "current_icu": 5,
         "deceased": 113
     },
     {
         "date": "2020-07-28",
-        "tested": 8501,
+        "tested": 8328,
         "cases": 138,
         "current_hosp": 55,
         "current_icu": 4,
@@ -1249,7 +1249,7 @@
     },
     {
         "date": "2020-07-29",
-        "tested": 6733,
+        "tested": 6620,
         "cases": 67,
         "current_hosp": 57,
         "current_icu": 6,
@@ -1257,7 +1257,7 @@
     },
     {
         "date": "2020-07-30",
-        "tested": 9821,
+        "tested": 9658,
         "cases": 68,
         "current_hosp": 48,
         "current_icu": 7,
@@ -1265,15 +1265,15 @@
     },
     {
         "date": "2020-07-31",
-        "tested": 8743,
-        "cases": 78,
+        "tested": 8597,
+        "cases": 77,
         "current_hosp": 47,
         "current_icu": 6,
         "deceased": 116
     },
     {
         "date": "2020-08-01",
-        "tested": 6250,
+        "tested": 6119,
         "cases": 48,
         "current_hosp": 51,
         "current_icu": 6,
@@ -1281,7 +1281,7 @@
     },
     {
         "date": "2020-08-02",
-        "tested": 869,
+        "tested": 858,
         "cases": 7,
         "current_hosp": 54,
         "current_icu": 7,
@@ -1289,7 +1289,7 @@
     },
     {
         "date": "2020-08-03",
-        "tested": 6297,
+        "tested": 6162,
         "cases": 49,
         "current_hosp": 52,
         "current_icu": 7,
@@ -1297,7 +1297,7 @@
     },
     {
         "date": "2020-08-04",
-        "tested": 7868,
+        "tested": 7723,
         "cases": 79,
         "current_hosp": 42,
         "current_icu": 5,
@@ -1305,7 +1305,7 @@
     },
     {
         "date": "2020-08-05",
-        "tested": 10111,
+        "tested": 9971,
         "cases": 54,
         "current_hosp": 42,
         "current_icu": 9,
@@ -1313,7 +1313,7 @@
     },
     {
         "date": "2020-08-06",
-        "tested": 6253,
+        "tested": 6151,
         "cases": 33,
         "current_hosp": 42,
         "current_icu": 6,
@@ -1321,7 +1321,7 @@
     },
     {
         "date": "2020-08-07",
-        "tested": 6935,
+        "tested": 6859,
         "cases": 46,
         "current_hosp": 41,
         "current_icu": 8,
@@ -1329,7 +1329,7 @@
     },
     {
         "date": "2020-08-08",
-        "tested": 5930,
+        "tested": 5835,
         "cases": 29,
         "current_hosp": 39,
         "current_icu": 8,
@@ -1337,7 +1337,7 @@
     },
     {
         "date": "2020-08-09",
-        "tested": 350,
+        "tested": 342,
         "cases": 7,
         "current_hosp": 35,
         "current_icu": 6,
@@ -1345,7 +1345,7 @@
     },
     {
         "date": "2020-08-10",
-        "tested": 5570,
+        "tested": 5500,
         "cases": 25,
         "current_hosp": 41,
         "current_icu": 4,
@@ -1353,15 +1353,15 @@
     },
     {
         "date": "2020-08-11",
-        "tested": 6659,
-        "cases": 44,
+        "tested": 6546,
+        "cases": 45,
         "current_hosp": 41,
         "current_icu": 3,
         "deceased": 123
     },
     {
         "date": "2020-08-12",
-        "tested": 4802,
+        "tested": 4728,
         "cases": 55,
         "current_hosp": 37,
         "current_icu": 1,
@@ -1369,7 +1369,7 @@
     },
     {
         "date": "2020-08-13",
-        "tested": 4668,
+        "tested": 4613,
         "cases": 33,
         "current_hosp": 35,
         "current_icu": 3,
@@ -1377,7 +1377,7 @@
     },
     {
         "date": "2020-08-14",
-        "tested": 8473,
+        "tested": 8378,
         "cases": 26,
         "current_hosp": 40,
         "current_icu": 4,
@@ -1385,7 +1385,7 @@
     },
     {
         "date": "2020-08-15",
-        "tested": 2570,
+        "tested": 2521,
         "cases": 15,
         "current_hosp": 29,
         "current_icu": 3,
@@ -1393,7 +1393,7 @@
     },
     {
         "date": "2020-08-16",
-        "tested": 487,
+        "tested": 480,
         "cases": 6,
         "current_hosp": 34,
         "current_icu": 3,
@@ -1401,7 +1401,7 @@
     },
     {
         "date": "2020-08-17",
-        "tested": 3473,
+        "tested": 3400,
         "cases": 23,
         "current_hosp": 28,
         "current_icu": 4,
@@ -1409,7 +1409,7 @@
     },
     {
         "date": "2020-08-18",
-        "tested": 5646,
+        "tested": 5559,
         "cases": 58,
         "current_hosp": 30,
         "current_icu": 3,
@@ -1417,15 +1417,15 @@
     },
     {
         "date": "2020-08-19",
-        "tested": 8666,
-        "cases": 54,
+        "tested": 8553,
+        "cases": 53,
         "current_hosp": 31,
         "current_icu": 3,
         "deceased": 124
     },
     {
         "date": "2020-08-20",
-        "tested": 5015,
+        "tested": 4940,
         "cases": 59,
         "current_hosp": 37,
         "current_icu": 3,
@@ -1433,7 +1433,7 @@
     },
     {
         "date": "2020-08-21",
-        "tested": 7900,
+        "tested": 7805,
         "cases": 50,
         "current_hosp": 26,
         "current_icu": 1,
@@ -1441,7 +1441,7 @@
     },
     {
         "date": "2020-08-22",
-        "tested": 5629,
+        "tested": 5551,
         "cases": 19,
         "current_hosp": 31,
         "current_icu": 1,
@@ -1449,7 +1449,7 @@
     },
     {
         "date": "2020-08-23",
-        "tested": 1002,
+        "tested": 988,
         "cases": 9,
         "current_hosp": 30,
         "current_icu": 1,
@@ -1457,7 +1457,7 @@
     },
     {
         "date": "2020-08-24",
-        "tested": 2840,
+        "tested": 2768,
         "cases": 28,
         "current_hosp": 31,
         "current_icu": 1,
@@ -1465,23 +1465,23 @@
     },
     {
         "date": "2020-08-25",
-        "tested": 6824,
-        "cases": 76,
+        "tested": 6669,
+        "cases": 75,
         "current_hosp": 31,
         "current_icu": 2,
         "deceased": 124
     },
     {
         "date": "2020-08-26",
-        "tested": 6034,
-        "cases": 52,
+        "tested": 5922,
+        "cases": 51,
         "current_hosp": 25,
         "current_icu": 2,
         "deceased": 124
     },
     {
         "date": "2020-08-27",
-        "tested": 8187,
+        "tested": 8081,
         "cases": 37,
         "current_hosp": 28,
         "current_icu": 2,
@@ -1489,7 +1489,7 @@
     },
     {
         "date": "2020-08-28",
-        "tested": 6977,
+        "tested": 6845,
         "cases": 45,
         "current_hosp": 21,
         "current_icu": 4,
@@ -1497,7 +1497,7 @@
     },
     {
         "date": "2020-08-29",
-        "tested": 6755,
+        "tested": 6613,
         "cases": 48,
         "current_hosp": 20,
         "current_icu": 3,
@@ -1505,7 +1505,7 @@
     },
     {
         "date": "2020-08-30",
-        "tested": 971,
+        "tested": 939,
         "cases": 4,
         "current_hosp": 25,
         "current_icu": 2,
@@ -1513,7 +1513,7 @@
     },
     {
         "date": "2020-08-31",
-        "tested": 5350,
+        "tested": 5233,
         "cases": 24,
         "current_hosp": 26,
         "current_icu": 2,
@@ -1521,7 +1521,7 @@
     },
     {
         "date": "2020-09-01",
-        "tested": 10156,
+        "tested": 9996,
         "cases": 48,
         "current_hosp": 15,
         "current_icu": 1,
@@ -1529,7 +1529,7 @@
     },
     {
         "date": "2020-09-02",
-        "tested": 7696,
+        "tested": 7553,
         "cases": 60,
         "current_hosp": 14,
         "current_icu": 2,
@@ -1537,7 +1537,7 @@
     },
     {
         "date": "2020-09-03",
-        "tested": 7532,
+        "tested": 7368,
         "cases": 43,
         "current_hosp": 11,
         "current_icu": 0,
@@ -1545,7 +1545,7 @@
     },
     {
         "date": "2020-09-04",
-        "tested": 9425,
+        "tested": 9198,
         "cases": 42,
         "current_hosp": 10,
         "current_icu": 0,
@@ -1553,7 +1553,7 @@
     },
     {
         "date": "2020-09-05",
-        "tested": 7537,
+        "tested": 7352,
         "cases": 54,
         "current_hosp": 10,
         "current_icu": 0,
@@ -1561,7 +1561,7 @@
     },
     {
         "date": "2020-09-06",
-        "tested": 1169,
+        "tested": 1140,
         "cases": 10,
         "current_hosp": 15,
         "current_icu": 0,
@@ -1569,7 +1569,7 @@
     },
     {
         "date": "2020-09-07",
-        "tested": 5262,
+        "tested": 5132,
         "cases": 14,
         "current_hosp": 20,
         "current_icu": 0,
@@ -1577,23 +1577,23 @@
     },
     {
         "date": "2020-09-08",
-        "tested": 10212,
-        "cases": 48,
+        "tested": 9994,
+        "cases": 49,
         "current_hosp": 23,
         "current_icu": 0,
         "deceased": 124
     },
     {
         "date": "2020-09-09",
-        "tested": 7900,
-        "cases": 66,
+        "tested": 7731,
+        "cases": 65,
         "current_hosp": 21,
         "current_icu": 0,
         "deceased": 124
     },
     {
         "date": "2020-09-10",
-        "tested": 9043,
+        "tested": 8836,
         "cases": 70,
         "current_hosp": 20,
         "current_icu": 1,
@@ -1601,7 +1601,7 @@
     },
     {
         "date": "2020-09-11",
-        "tested": 10225,
+        "tested": 9972,
         "cases": 35,
         "current_hosp": 17,
         "current_icu": 0,
@@ -1609,7 +1609,7 @@
     },
     {
         "date": "2020-09-12",
-        "tested": 8031,
+        "tested": 7815,
         "cases": 44,
         "current_hosp": 18,
         "current_icu": 0,
@@ -1617,7 +1617,7 @@
     },
     {
         "date": "2020-09-13",
-        "tested": 1430,
+        "tested": 1393,
         "cases": 6,
         "current_hosp": 15,
         "current_icu": 1,
@@ -1625,7 +1625,7 @@
     },
     {
         "date": "2020-09-14",
-        "tested": 7941,
+        "tested": 7716,
         "cases": 40,
         "current_hosp": 19,
         "current_icu": 0,
@@ -1633,15 +1633,15 @@
     },
     {
         "date": "2020-09-15",
-        "tested": 10833,
-        "cases": 112,
+        "tested": 10513,
+        "cases": 110,
         "current_hosp": 22,
         "current_icu": 0,
         "deceased": 125
     },
     {
         "date": "2020-09-16",
-        "tested": 9223,
+        "tested": 8950,
         "cases": 146,
         "current_hosp": 23,
         "current_icu": 0,
@@ -1649,7 +1649,7 @@
     },
     {
         "date": "2020-09-17",
-        "tested": 4326,
+        "tested": 4179,
         "cases": 177,
         "current_hosp": 17,
         "current_icu": 1,
@@ -1657,7 +1657,7 @@
     },
     {
         "date": "2020-09-18",
-        "tested": 4829,
+        "tested": 4670,
         "cases": 85,
         "current_hosp": 16,
         "current_icu": 0,
@@ -1665,15 +1665,15 @@
     },
     {
         "date": "2020-09-19",
-        "tested": 3796,
-        "cases": 104,
+        "tested": 3654,
+        "cases": 103,
         "current_hosp": 20,
         "current_icu": 2,
         "deceased": 125
     },
     {
         "date": "2020-09-20",
-        "tested": 855,
+        "tested": 829,
         "cases": 10,
         "current_hosp": 20,
         "current_icu": 1,
@@ -1681,7 +1681,7 @@
     },
     {
         "date": "2020-09-21",
-        "tested": 6699,
+        "tested": 6412,
         "cases": 100,
         "current_hosp": 19,
         "current_icu": 1,
@@ -1689,7 +1689,7 @@
     },
     {
         "date": "2020-09-22",
-        "tested": 6468,
+        "tested": 6119,
         "cases": 74,
         "current_hosp": 22,
         "current_icu": 1,
@@ -1697,7 +1697,7 @@
     },
     {
         "date": "2020-09-23",
-        "tested": 6414,
+        "tested": 6101,
         "cases": 67,
         "current_hosp": 23,
         "current_icu": 3,
@@ -1705,7 +1705,7 @@
     },
     {
         "date": "2020-09-24",
-        "tested": 6340,
+        "tested": 6052,
         "cases": 76,
         "current_hosp": 18,
         "current_icu": 1,
@@ -1713,7 +1713,7 @@
     },
     {
         "date": "2020-09-25",
-        "tested": 6320,
+        "tested": 6077,
         "cases": 83,
         "current_hosp": 24,
         "current_icu": 1,
@@ -1721,7 +1721,7 @@
     },
     {
         "date": "2020-09-26",
-        "tested": 5485,
+        "tested": 5293,
         "cases": 46,
         "current_hosp": 27,
         "current_icu": 3,
@@ -1729,7 +1729,7 @@
     },
     {
         "date": "2020-09-27",
-        "tested": 731,
+        "tested": 706,
         "cases": 14,
         "current_hosp": 33,
         "current_icu": 3,
@@ -1737,7 +1737,7 @@
     },
     {
         "date": "2020-09-28",
-        "tested": 5713,
+        "tested": 5408,
         "cases": 55,
         "current_hosp": 30,
         "current_icu": 4,
@@ -1745,7 +1745,7 @@
     },
     {
         "date": "2020-09-29",
-        "tested": 7371,
+        "tested": 7072,
         "cases": 78,
         "current_hosp": 25,
         "current_icu": 5,
@@ -1753,7 +1753,7 @@
     },
     {
         "date": "2020-09-30",
-        "tested": 6319,
+        "tested": 6038,
         "cases": 86,
         "current_hosp": 25,
         "current_icu": 5,
@@ -1761,15 +1761,15 @@
     },
     {
         "date": "2020-10-01",
-        "tested": 7332,
-        "cases": 124,
+        "tested": 7075,
+        "cases": 123,
         "current_hosp": 17,
         "current_icu": 3,
         "deceased": 125
     },
     {
         "date": "2020-10-02",
-        "tested": 6656,
+        "tested": 6417,
         "cases": 88,
         "current_hosp": 17,
         "current_icu": 3,
@@ -1777,7 +1777,7 @@
     },
     {
         "date": "2020-10-03",
-        "tested": 5740,
+        "tested": 5508,
         "cases": 93,
         "current_hosp": 19,
         "current_icu": 2,
@@ -1785,7 +1785,7 @@
     },
     {
         "date": "2020-10-04",
-        "tested": 1031,
+        "tested": 1006,
         "cases": 26,
         "current_hosp": 19,
         "current_icu": 2,
@@ -1793,7 +1793,7 @@
     },
     {
         "date": "2020-10-05",
-        "tested": 5510,
+        "tested": 5263,
         "cases": 54,
         "current_hosp": 21,
         "current_icu": 1,
@@ -1801,23 +1801,23 @@
     },
     {
         "date": "2020-10-06",
-        "tested": 6934,
-        "cases": 144,
+        "tested": 6613,
+        "cases": 143,
         "current_hosp": 19,
         "current_icu": 2,
         "deceased": 128
     },
     {
         "date": "2020-10-07",
-        "tested": 7139,
-        "cases": 98,
+        "tested": 6845,
+        "cases": 97,
         "current_hosp": 20,
         "current_icu": 2,
         "deceased": 129
     },
     {
         "date": "2020-10-08",
-        "tested": 8137,
+        "tested": 7720,
         "cases": 140,
         "current_hosp": 23,
         "current_icu": 1,
@@ -1825,7 +1825,7 @@
     },
     {
         "date": "2020-10-09",
-        "tested": 7287,
+        "tested": 6953,
         "cases": 154,
         "current_hosp": 33,
         "current_icu": 1,
@@ -1833,7 +1833,7 @@
     },
     {
         "date": "2020-10-10",
-        "tested": 5589,
+        "tested": 5274,
         "cases": 208,
         "current_hosp": 32,
         "current_icu": 2,
@@ -1841,7 +1841,7 @@
     },
     {
         "date": "2020-10-11",
-        "tested": 825,
+        "tested": 794,
         "cases": 9,
         "current_hosp": 34,
         "current_icu": 2,
@@ -1849,7 +1849,7 @@
     },
     {
         "date": "2020-10-12",
-        "tested": 6975,
+        "tested": 6614,
         "cases": 109,
         "current_hosp": 38,
         "current_icu": 2,
@@ -1857,7 +1857,7 @@
     },
     {
         "date": "2020-10-13",
-        "tested": 7816,
+        "tested": 7406,
         "cases": 190,
         "current_hosp": 43,
         "current_icu": 3,
@@ -1865,7 +1865,7 @@
     },
     {
         "date": "2020-10-14",
-        "tested": 7213,
+        "tested": 6763,
         "cases": 214,
         "current_hosp": 40,
         "current_icu": 4,
@@ -1873,7 +1873,7 @@
     },
     {
         "date": "2020-10-15",
-        "tested": 9109,
+        "tested": 8641,
         "cases": 227,
         "current_hosp": 37,
         "current_icu": 4,
@@ -1881,7 +1881,7 @@
     },
     {
         "date": "2020-10-16",
-        "tested": 8659,
+        "tested": 8242,
         "cases": 186,
         "current_hosp": 45,
         "current_icu": 4,
@@ -1889,7 +1889,7 @@
     },
     {
         "date": "2020-10-17",
-        "tested": 9055,
+        "tested": 8621,
         "cases": 242,
         "current_hosp": 50,
         "current_icu": 3,
@@ -1897,15 +1897,15 @@
     },
     {
         "date": "2020-10-18",
-        "tested": 1156,
-        "cases": 113,
+        "tested": 1049,
+        "cases": 112,
         "current_hosp": 53,
         "current_icu": 4,
         "deceased": 135
     },
     {
         "date": "2020-10-19",
-        "tested": 6148,
+        "tested": 5875,
         "cases": 244,
         "current_hosp": 56,
         "current_icu": 5,
@@ -1913,7 +1913,7 @@
     },
     {
         "date": "2020-10-20",
-        "tested": 8261,
+        "tested": 7743,
         "cases": 483,
         "current_hosp": 61,
         "current_icu": 7,
@@ -1921,7 +1921,7 @@
     },
     {
         "date": "2020-10-21",
-        "tested": 14400,
+        "tested": 13703,
         "cases": 596,
         "current_hosp": 61,
         "current_icu": 8,
@@ -1929,15 +1929,15 @@
     },
     {
         "date": "2020-10-22",
-        "tested": 9446,
-        "cases": 516,
+        "tested": 8933,
+        "cases": 517,
         "current_hosp": 76,
         "current_icu": 10,
         "deceased": 141
     },
     {
         "date": "2020-10-23",
-        "tested": 12469,
+        "tested": 11949,
         "cases": 864,
         "current_hosp": 77,
         "current_icu": 11,
@@ -1945,7 +1945,7 @@
     },
     {
         "date": "2020-10-24",
-        "tested": 10825,
+        "tested": 10364,
         "cases": 491,
         "current_hosp": 91,
         "current_icu": 12,
@@ -1953,7 +1953,7 @@
     },
     {
         "date": "2020-10-25",
-        "tested": 2025,
+        "tested": 1902,
         "cases": 195,
         "current_hosp": 102,
         "current_icu": 12,
@@ -1961,7 +1961,7 @@
     },
     {
         "date": "2020-10-26",
-        "tested": 9293,
+        "tested": 8862,
         "cases": 485,
         "current_hosp": 98,
         "current_icu": 16,
@@ -1969,7 +1969,7 @@
     },
     {
         "date": "2020-10-27",
-        "tested": 13000,
+        "tested": 12342,
         "cases": 774,
         "current_hosp": 116,
         "current_icu": 16,
@@ -1977,15 +1977,15 @@
     },
     {
         "date": "2020-10-28",
-        "tested": 9123,
-        "cases": 698,
+        "tested": 8646,
+        "cases": 697,
         "current_hosp": 119,
         "current_icu": 21,
         "deceased": 150
     },
     {
         "date": "2020-10-29",
-        "tested": 13441,
+        "tested": 12745,
         "cases": 777,
         "current_hosp": 126,
         "current_icu": 24,
@@ -1993,7 +1993,7 @@
     },
     {
         "date": "2020-10-30",
-        "tested": 14866,
+        "tested": 14097,
         "cases": 808,
         "current_hosp": 143,
         "current_icu": 26,
@@ -2001,7 +2001,7 @@
     },
     {
         "date": "2020-10-31",
-        "tested": 14245,
+        "tested": 13516,
         "cases": 848,
         "current_hosp": 141,
         "current_icu": 27,
@@ -2009,7 +2009,7 @@
     },
     {
         "date": "2020-11-01",
-        "tested": 6684,
+        "tested": 6439,
         "cases": 320,
         "current_hosp": 150,
         "current_icu": 29,
@@ -2017,23 +2017,23 @@
     },
     {
         "date": "2020-11-02",
-        "tested": 8728,
-        "cases": 534,
+        "tested": 8252,
+        "cases": 533,
         "current_hosp": 174,
         "current_icu": 29,
         "deceased": 168
     },
     {
         "date": "2020-11-03",
-        "tested": 11561,
-        "cases": 715,
+        "tested": 10941,
+        "cases": 714,
         "current_hosp": 194,
         "current_icu": 30,
         "deceased": 171
     },
     {
         "date": "2020-11-04",
-        "tested": 12954,
+        "tested": 12176,
         "cases": 802,
         "current_hosp": 179,
         "current_icu": 36,
@@ -2041,23 +2041,23 @@
     },
     {
         "date": "2020-11-05",
-        "tested": 13258,
-        "cases": 660,
+        "tested": 12513,
+        "cases": 659,
         "current_hosp": 171,
         "current_icu": 37,
         "deceased": 182
     },
     {
         "date": "2020-11-06",
-        "tested": 13659,
-        "cases": 676,
+        "tested": 13012,
+        "cases": 675,
         "current_hosp": 167,
         "current_icu": 41,
         "deceased": 189
     },
     {
         "date": "2020-11-07",
-        "tested": 11109,
+        "tested": 10519,
         "cases": 570,
         "current_hosp": 168,
         "current_icu": 36,
@@ -2065,7 +2065,7 @@
     },
     {
         "date": "2020-11-08",
-        "tested": 1161,
+        "tested": 1079,
         "cases": 180,
         "current_hosp": 158,
         "current_icu": 40,
@@ -2073,48 +2073,48 @@
     },
     {
         "date": "2020-11-09",
-        "tested": 10816,
-        "cases": 482,
+        "tested": 10806,
+        "cases": 480,
         "current_hosp": 165,
         "current_icu": 42,
         "deceased": 202
     },
     {
         "date": "2020-11-10",
-        "tested": 11742,
-        "cases": 793,
+        "tested": 11738,
+        "cases": 791,
         "current_hosp": 181,
         "current_icu": 38,
         "deceased": 208
     },
     {
         "date": "2020-11-11",
-        "tested": 11433,
-        "cases": 700,
+        "tested": 11429,
+        "cases": 699,
         "current_hosp": 176,
         "current_icu": 39,
         "deceased": 213
     },
     {
         "date": "2020-11-12",
-        "tested": 12432,
-        "cases": 713,
+        "tested": 12427,
+        "cases": 712,
         "current_hosp": 179,
         "current_icu": 41,
         "deceased": 221
     },
     {
         "date": "2020-11-13",
-        "tested": 10855,
-        "cases": 613,
+        "tested": 10852,
+        "cases": 612,
         "current_hosp": 165,
         "current_icu": 43,
         "deceased": 227
     },
     {
         "date": "2020-11-14",
-        "tested": 9659,
-        "cases": 548,
+        "tested": 9655,
+        "cases": 547,
         "current_hosp": 160,
         "current_icu": 46,
         "deceased": 230
@@ -2129,15 +2129,15 @@
     },
     {
         "date": "2020-11-16",
-        "tested": 8806,
-        "cases": 425,
+        "tested": 8802,
+        "cases": 424,
         "current_hosp": 188,
         "current_icu": 48,
         "deceased": 243
     },
     {
         "date": "2020-11-17",
-        "tested": 14247,
+        "tested": 14245,
         "cases": 891,
         "current_hosp": 199,
         "current_icu": 48,
@@ -2145,7 +2145,7 @@
     },
     {
         "date": "2020-11-18",
-        "tested": 11021,
+        "tested": 11016,
         "cases": 670,
         "current_hosp": 177,
         "current_icu": 44,
@@ -2153,7 +2153,7 @@
     },
     {
         "date": "2020-11-19",
-        "tested": 11782,
+        "tested": 11777,
         "cases": 519,
         "current_hosp": 179,
         "current_icu": 43,
@@ -2161,7 +2161,7 @@
     },
     {
         "date": "2020-11-20",
-        "tested": 10238,
+        "tested": 10237,
         "cases": 571,
         "current_hosp": 183,
         "current_icu": 41,
@@ -2169,8 +2169,8 @@
     },
     {
         "date": "2020-11-21",
-        "tested": 11716,
-        "cases": 602,
+        "tested": 11715,
+        "cases": 603,
         "current_hosp": 181,
         "current_icu": 45,
         "deceased": 275
@@ -2185,7 +2185,7 @@
     },
     {
         "date": "2020-11-23",
-        "tested": 9491,
+        "tested": 9487,
         "cases": 372,
         "current_hosp": 191,
         "current_icu": 46,
@@ -2193,43 +2193,43 @@
     },
     {
         "date": "2020-11-24",
-        "tested": 12881,
-        "cases": 616,
+        "tested": 12876,
+        "cases": 615,
         "current_hosp": 182,
         "current_icu": 43,
         "deceased": 295
     },
     {
         "date": "2020-11-25",
-        "tested": 12846,
-        "cases": 773,
+        "tested": 12841,
+        "cases": 772,
         "current_hosp": 180,
         "current_icu": 44,
         "deceased": 302
     },
     {
         "date": "2020-11-26",
-        "tested": 11431,
-        "cases": 535,
+        "tested": 11427,
+        "cases": 534,
         "current_hosp": 178,
         "current_icu": 43,
-        "deceased": 308
+        "deceased": 309
     },
     {
         "date": "2020-11-27",
-        "tested": 11596,
+        "tested": 11593,
         "cases": 565,
         "current_hosp": 165,
         "current_icu": 41,
-        "deceased": 317
+        "deceased": 318
     },
     {
         "date": "2020-11-28",
-        "tested": 10457,
+        "tested": 10452,
         "cases": 565,
         "current_hosp": 161,
         "current_icu": 42,
-        "deceased": 324
+        "deceased": 325
     },
     {
         "date": "2020-11-29",
@@ -2237,55 +2237,55 @@
         "cases": 139,
         "current_hosp": 172,
         "current_icu": 42,
-        "deceased": 330
+        "deceased": 331
     },
     {
         "date": "2020-11-30",
-        "tested": 9241,
+        "tested": 9240,
         "cases": 451,
         "current_hosp": 170,
         "current_icu": 42,
-        "deceased": 339
+        "deceased": 340
     },
     {
         "date": "2020-12-01",
-        "tested": 11542,
+        "tested": 11536,
         "cases": 674,
         "current_hosp": 169,
         "current_icu": 41,
-        "deceased": 344
+        "deceased": 345
     },
     {
         "date": "2020-12-02",
-        "tested": 11237,
+        "tested": 11236,
         "cases": 625,
         "current_hosp": 161,
         "current_icu": 41,
-        "deceased": 351
+        "deceased": 352
     },
     {
         "date": "2020-12-03",
-        "tested": 13108,
-        "cases": 652,
+        "tested": 13105,
+        "cases": 651,
         "current_hosp": 153,
         "current_icu": 41,
-        "deceased": 355
+        "deceased": 356
     },
     {
         "date": "2020-12-04",
-        "tested": 12190,
+        "tested": 12186,
         "cases": 713,
         "current_hosp": 150,
         "current_icu": 40,
-        "deceased": 361
+        "deceased": 362
     },
     {
         "date": "2020-12-05",
-        "tested": 11865,
+        "tested": 11862,
         "cases": 531,
         "current_hosp": 151,
         "current_icu": 40,
-        "deceased": 365
+        "deceased": 366
     },
     {
         "date": "2020-12-06",
@@ -2293,55 +2293,55 @@
         "cases": 151,
         "current_hosp": 164,
         "current_icu": 39,
-        "deceased": 369
+        "deceased": 370
     },
     {
         "date": "2020-12-07",
-        "tested": 9049,
+        "tested": 9047,
         "cases": 386,
         "current_hosp": 160,
         "current_icu": 43,
-        "deceased": 373
+        "deceased": 374
     },
     {
         "date": "2020-12-08",
-        "tested": 13127,
+        "tested": 13119,
         "cases": 725,
         "current_hosp": 164,
         "current_icu": 46,
-        "deceased": 380
+        "deceased": 381
     },
     {
         "date": "2020-12-09",
-        "tested": 12059,
+        "tested": 12057,
         "cases": 660,
         "current_hosp": 170,
         "current_icu": 47,
-        "deceased": 386
+        "deceased": 387
     },
     {
         "date": "2020-12-10",
-        "tested": 12696,
-        "cases": 506,
+        "tested": 12693,
+        "cases": 505,
         "current_hosp": 170,
         "current_icu": 47,
-        "deceased": 395
+        "deceased": 396
     },
     {
         "date": "2020-12-11",
-        "tested": 12690,
+        "tested": 12682,
         "cases": 516,
         "current_hosp": 174,
         "current_icu": 47,
-        "deceased": 400
+        "deceased": 401
     },
     {
         "date": "2020-12-12",
-        "tested": 9366,
+        "tested": 9365,
         "cases": 446,
         "current_hosp": 180,
         "current_icu": 46,
-        "deceased": 407
+        "deceased": 408
     },
     {
         "date": "2020-12-13",
@@ -2349,55 +2349,55 @@
         "cases": 182,
         "current_hosp": 190,
         "current_icu": 50,
-        "deceased": 414
+        "deceased": 415
     },
     {
         "date": "2020-12-14",
-        "tested": 11201,
-        "cases": 349,
+        "tested": 11199,
+        "cases": 348,
         "current_hosp": 191,
         "current_icu": 48,
-        "deceased": 422
+        "deceased": 423
     },
     {
         "date": "2020-12-15",
-        "tested": 13900,
+        "tested": 13898,
         "cases": 595,
         "current_hosp": 187,
         "current_icu": 48,
-        "deceased": 425
+        "deceased": 426
     },
     {
         "date": "2020-12-16",
-        "tested": 12787,
+        "tested": 12783,
         "cases": 434,
         "current_hosp": 183,
         "current_icu": 47,
-        "deceased": 431
+        "deceased": 432
     },
     {
         "date": "2020-12-17",
-        "tested": 13015,
+        "tested": 13012,
         "cases": 449,
         "current_hosp": 183,
         "current_icu": 43,
-        "deceased": 437
+        "deceased": 439
     },
     {
         "date": "2020-12-18",
-        "tested": 13849,
+        "tested": 13847,
         "cases": 339,
         "current_hosp": 179,
         "current_icu": 39,
-        "deceased": 444
+        "deceased": 445
     },
     {
         "date": "2020-12-19",
-        "tested": 12501,
+        "tested": 12498,
         "cases": 424,
         "current_hosp": 176,
         "current_icu": 38,
-        "deceased": 451
+        "deceased": 452
     },
     {
         "date": "2020-12-20",
@@ -2405,23 +2405,23 @@
         "cases": 91,
         "current_hosp": 169,
         "current_icu": 38,
-        "deceased": 453
+        "deceased": 454
     },
     {
         "date": "2020-12-21",
-        "tested": 10503,
+        "tested": 10501,
         "cases": 227,
         "current_hosp": 154,
         "current_icu": 39,
-        "deceased": 455
+        "deceased": 456
     },
     {
         "date": "2020-12-22",
-        "tested": 15480,
+        "tested": 15481,
         "cases": 403,
         "current_hosp": 152,
         "current_icu": 40,
-        "deceased": 461
+        "deceased": 462
     },
     {
         "date": "2020-12-23",
@@ -2429,15 +2429,15 @@
         "cases": 262,
         "current_hosp": 132,
         "current_icu": 39,
-        "deceased": 468
+        "deceased": 469
     },
     {
         "date": "2020-12-24",
-        "tested": 9082,
+        "tested": 9081,
         "cases": 253,
         "current_hosp": 132,
         "current_icu": 35,
-        "deceased": 471
+        "deceased": 472
     },
     {
         "date": "2020-12-25",
@@ -2445,7 +2445,7 @@
         "cases": 52,
         "current_hosp": 130,
         "current_icu": 35,
-        "deceased": 475
+        "deceased": 476
     },
     {
         "date": "2020-12-26",
@@ -2453,7 +2453,7 @@
         "cases": 54,
         "current_hosp": 127,
         "current_icu": 39,
-        "deceased": 486
+        "deceased": 487
     },
     {
         "date": "2020-12-27",
@@ -2461,7 +2461,7 @@
         "cases": 16,
         "current_hosp": 118,
         "current_icu": 32,
-        "deceased": 491
+        "deceased": 493
     },
     {
         "date": "2020-12-28",
@@ -2469,23 +2469,23 @@
         "cases": 239,
         "current_hosp": 125,
         "current_icu": 32,
-        "deceased": 496
+        "deceased": 497
     },
     {
         "date": "2020-12-29",
-        "tested": 8850,
+        "tested": 8849,
         "cases": 326,
         "current_hosp": 116,
         "current_icu": 31,
-        "deceased": 500
+        "deceased": 501
     },
     {
         "date": "2020-12-30",
-        "tested": 8609,
+        "tested": 8607,
         "cases": 187,
         "current_hosp": 101,
         "current_icu": 31,
-        "deceased": 504
+        "deceased": 505
     },
     {
         "date": "2020-12-31",
@@ -2493,7 +2493,7 @@
         "cases": 215,
         "current_hosp": 103,
         "current_icu": 33,
-        "deceased": 507
+        "deceased": 508
     },
     {
         "date": "2021-01-01",
@@ -2501,15 +2501,15 @@
         "cases": 21,
         "current_hosp": 93,
         "current_icu": 32,
-        "deceased": 509
+        "deceased": 510
     },
     {
         "date": "2021-01-02",
-        "tested": 3929,
+        "tested": 3928,
         "cases": 81,
         "current_hosp": 95,
         "current_icu": 30,
-        "deceased": 513
+        "deceased": 514
     },
     {
         "date": "2021-01-03",
@@ -2517,15 +2517,15 @@
         "cases": 66,
         "current_hosp": 91,
         "current_icu": 34,
-        "deceased": 515
+        "deceased": 516
     },
     {
         "date": "2021-01-04",
-        "tested": 9318,
+        "tested": 9317,
         "cases": 163,
         "current_hosp": 91,
         "current_icu": 32,
-        "deceased": 520
+        "deceased": 522
     },
     {
         "date": "2021-01-05",
@@ -2533,15 +2533,15 @@
         "cases": 281,
         "current_hosp": 76,
         "current_icu": 28,
-        "deceased": 524
+        "deceased": 526
     },
     {
         "date": "2021-01-06",
-        "tested": 10114,
+        "tested": 10116,
         "cases": 161,
         "current_hosp": 78,
         "current_icu": 26,
-        "deceased": 528
+        "deceased": 530
     },
     {
         "date": "2021-01-07",
@@ -2549,7 +2549,7 @@
         "cases": 149,
         "current_hosp": 77,
         "current_icu": 23,
-        "deceased": 534
+        "deceased": 536
     },
     {
         "date": "2021-01-08",
@@ -2557,7 +2557,7 @@
         "cases": 136,
         "current_hosp": 69,
         "current_icu": 22,
-        "deceased": 537
+        "deceased": 539
     },
     {
         "date": "2021-01-09",
@@ -2565,7 +2565,7 @@
         "cases": 104,
         "current_hosp": 72,
         "current_icu": 21,
-        "deceased": 539
+        "deceased": 542
     },
     {
         "date": "2021-01-10",
@@ -2573,7 +2573,7 @@
         "cases": 42,
         "current_hosp": 69,
         "current_icu": 23,
-        "deceased": 542
+        "deceased": 544
     },
     {
         "date": "2021-01-11",
@@ -2581,47 +2581,47 @@
         "cases": 153,
         "current_hosp": 69,
         "current_icu": 24,
-        "deceased": 545
+        "deceased": 547
     },
     {
         "date": "2021-01-12",
-        "tested": 9766,
-        "cases": 190,
+        "tested": 9765,
+        "cases": 189,
         "current_hosp": 71,
         "current_icu": 21,
-        "deceased": 549
-    },
-    {
-        "date": "2021-01-13",
-        "tested": 8876,
-        "cases": 114,
-        "current_hosp": 68,
-        "current_icu": 23,
         "deceased": 551
     },
     {
+        "date": "2021-01-13",
+        "tested": 8875,
+        "cases": 113,
+        "current_hosp": 68,
+        "current_icu": 23,
+        "deceased": 553
+    },
+    {
         "date": "2021-01-14",
-        "tested": 7376,
+        "tested": 7381,
         "cases": 143,
         "current_hosp": 69,
         "current_icu": 21,
-        "deceased": 555
+        "deceased": 557
     },
     {
         "date": "2021-01-15",
-        "tested": 8074,
+        "tested": 8077,
         "cases": 135,
         "current_hosp": 66,
         "current_icu": 18,
-        "deceased": 556
+        "deceased": 558
     },
     {
         "date": "2021-01-16",
-        "tested": 6123,
-        "cases": 87,
+        "tested": 6122,
+        "cases": 86,
         "current_hosp": 72,
         "current_icu": 19,
-        "deceased": 556
+        "deceased": 559
     },
     {
         "date": "2021-01-17",
@@ -2629,31 +2629,31 @@
         "cases": 37,
         "current_hosp": 68,
         "current_icu": 20,
-        "deceased": 561
+        "deceased": 564
     },
     {
         "date": "2021-01-18",
-        "tested": 7115,
+        "tested": 7113,
         "cases": 85,
         "current_hosp": 68,
         "current_icu": 20,
-        "deceased": 563
+        "deceased": 566
     },
     {
         "date": "2021-01-19",
-        "tested": 8487,
+        "tested": 8486,
         "cases": 229,
         "current_hosp": 68,
         "current_icu": 17,
-        "deceased": 565
+        "deceased": 568
     },
     {
         "date": "2021-01-20",
-        "tested": 6981,
+        "tested": 6980,
         "cases": 115,
         "current_hosp": 59,
         "current_icu": 14,
-        "deceased": 565
+        "deceased": 568
     },
     {
         "date": "2021-01-21",
@@ -2661,7 +2661,7 @@
         "cases": 119,
         "current_hosp": 63,
         "current_icu": 14,
-        "deceased": 566
+        "deceased": 569
     },
     {
         "date": "2021-01-22",
@@ -2669,7 +2669,7 @@
         "cases": 143,
         "current_hosp": 64,
         "current_icu": 14,
-        "deceased": 568
+        "deceased": 571
     },
     {
         "date": "2021-01-23",
@@ -2677,7 +2677,7 @@
         "cases": 123,
         "current_hosp": 58,
         "current_icu": 15,
-        "deceased": 568
+        "deceased": 571
     },
     {
         "date": "2021-01-24",
@@ -2685,15 +2685,15 @@
         "cases": 29,
         "current_hosp": 57,
         "current_icu": 14,
-        "deceased": 570
+        "deceased": 573
     },
     {
         "date": "2021-01-25",
-        "tested": 9210,
+        "tested": 9209,
         "cases": 119,
         "current_hosp": 61,
         "current_icu": 15,
-        "deceased": 573
+        "deceased": 576
     },
     {
         "date": "2021-01-26",
@@ -2701,23 +2701,23 @@
         "cases": 237,
         "current_hosp": 55,
         "current_icu": 15,
-        "deceased": 573
-    },
-    {
-        "date": "2021-01-27",
-        "tested": 7692,
-        "cases": 138,
-        "current_hosp": 49,
-        "current_icu": 14,
         "deceased": 576
     },
     {
+        "date": "2021-01-27",
+        "tested": 7696,
+        "cases": 138,
+        "current_hosp": 49,
+        "current_icu": 14,
+        "deceased": 579
+    },
+    {
         "date": "2021-01-28",
-        "tested": 8879,
+        "tested": 8878,
         "cases": 160,
         "current_hosp": 53,
         "current_icu": 12,
-        "deceased": 577
+        "deceased": 580
     },
     {
         "date": "2021-01-29",
@@ -2725,15 +2725,15 @@
         "cases": 159,
         "current_hosp": 58,
         "current_icu": 11,
-        "deceased": 581
+        "deceased": 584
     },
     {
         "date": "2021-01-30",
-        "tested": 6138,
+        "tested": 6139,
         "cases": 152,
         "current_hosp": 55,
         "current_icu": 11,
-        "deceased": 583
+        "deceased": 586
     },
     {
         "date": "2021-01-31",
@@ -2741,15 +2741,15 @@
         "cases": 34,
         "current_hosp": 55,
         "current_icu": 11,
-        "deceased": 584
+        "deceased": 587
     },
     {
         "date": "2021-02-01",
-        "tested": 10979,
+        "tested": 10978,
         "cases": 190,
         "current_hosp": 55,
         "current_icu": 13,
-        "deceased": 586
+        "deceased": 589
     },
     {
         "date": "2021-02-02",
@@ -2757,22 +2757,190 @@
         "cases": 203,
         "current_hosp": 57,
         "current_icu": 14,
-        "deceased": 588
+        "deceased": 591
     },
     {
         "date": "2021-02-03",
-        "tested": 9304,
+        "tested": 9301,
         "cases": 199,
         "current_hosp": 46,
         "current_icu": 12,
-        "deceased": 589
+        "deceased": 592
     },
     {
         "date": "2021-02-04",
-        "tested": 10452,
+        "tested": 10451,
         "cases": 181,
         "current_hosp": 46,
         "current_icu": 11,
-        "deceased": 590
+        "deceased": 593
+    },
+    {
+        "date": "2021-02-05",
+        "tested": 12285,
+        "cases": 177,
+        "current_hosp": 46,
+        "current_icu": 12,
+        "deceased": 595
+    },
+    {
+        "date": "2021-02-06",
+        "tested": 7258,
+        "cases": 159,
+        "current_hosp": 50,
+        "current_icu": 14,
+        "deceased": 597
+    },
+    {
+        "date": "2021-02-07",
+        "tested": 630,
+        "cases": 31,
+        "current_hosp": 51,
+        "current_icu": 14,
+        "deceased": 601
+    },
+    {
+        "date": "2021-02-08",
+        "tested": 10523,
+        "cases": 142,
+        "current_hosp": 53,
+        "current_icu": 15,
+        "deceased": 602
+    },
+    {
+        "date": "2021-02-09",
+        "tested": 11698,
+        "cases": 226,
+        "current_hosp": 53,
+        "current_icu": 12,
+        "deceased": 603
+    },
+    {
+        "date": "2021-02-10",
+        "tested": 11452,
+        "cases": 200,
+        "current_hosp": 49,
+        "current_icu": 13,
+        "deceased": 605
+    },
+    {
+        "date": "2021-02-11",
+        "tested": 12225,
+        "cases": 147,
+        "current_hosp": 53,
+        "current_icu": 14,
+        "deceased": 607
+    },
+    {
+        "date": "2021-02-12",
+        "tested": 14626,
+        "cases": 160,
+        "current_hosp": 58,
+        "current_icu": 10,
+        "deceased": 607
+    },
+    {
+        "date": "2021-02-13",
+        "tested": 9125,
+        "cases": 185,
+        "current_hosp": 58,
+        "current_icu": 11,
+        "deceased": 609
+    },
+    {
+        "date": "2021-02-14",
+        "tested": 968,
+        "cases": 39,
+        "current_hosp": 60,
+        "current_icu": 13,
+        "deceased": 612
+    },
+    {
+        "date": "2021-02-15",
+        "tested": 9391,
+        "cases": 139,
+        "current_hosp": 59,
+        "current_icu": 16,
+        "deceased": 613
+    },
+    {
+        "date": "2021-02-16",
+        "tested": 12078,
+        "cases": 267,
+        "current_hosp": 55,
+        "current_icu": 17,
+        "deceased": 618
+    },
+    {
+        "date": "2021-02-17",
+        "tested": 10243,
+        "cases": 233,
+        "current_hosp": 57,
+        "current_icu": 17,
+        "deceased": 620
+    },
+    {
+        "date": "2021-02-18",
+        "tested": 10531,
+        "cases": 220,
+        "current_hosp": 60,
+        "current_icu": 15,
+        "deceased": 623
+    },
+    {
+        "date": "2021-02-19",
+        "tested": 10216,
+        "cases": 186,
+        "current_hosp": 61,
+        "current_icu": 13,
+        "deceased": 624
+    },
+    {
+        "date": "2021-02-20",
+        "tested": 7849,
+        "cases": 170,
+        "current_hosp": 56,
+        "current_icu": 13,
+        "deceased": 627
+    },
+    {
+        "date": "2021-02-21",
+        "tested": 409,
+        "cases": 34,
+        "current_hosp": 63,
+        "current_icu": 15,
+        "deceased": 628
+    },
+    {
+        "date": "2021-02-22",
+        "tested": 9597,
+        "cases": 182,
+        "current_hosp": 66,
+        "current_icu": 16,
+        "deceased": 629
+    },
+    {
+        "date": "2021-02-23",
+        "tested": 12516,
+        "cases": 324,
+        "current_hosp": 64,
+        "current_icu": 15,
+        "deceased": 632
+    },
+    {
+        "date": "2021-02-24",
+        "tested": 9779,
+        "cases": 193,
+        "current_hosp": 63,
+        "current_icu": 15,
+        "deceased": 634
+    },
+    {
+        "date": "2021-02-25",
+        "tested": 11560,
+        "cases": 239,
+        "current_hosp": 64,
+        "current_icu": 17,
+        "deceased": 637
     }
 ]

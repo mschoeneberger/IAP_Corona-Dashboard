@@ -1,5 +1,4 @@
 requests
-psycopg2
 pandas
 xlrd
 openpyxl

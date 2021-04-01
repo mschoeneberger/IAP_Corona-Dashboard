@@ -2,1346 +2,1346 @@
     {
         "date": "2020-02-27",
         "region": "Drenthe",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Flevoland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Friesland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Gelderland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Groningen",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Limburg",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Noord-Brabant",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Noord-Holland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Overijssel",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Utrecht",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Zeeland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-27",
         "region": "Zuid-Holland",
-        "cases": null,
-        "hospital": null,
-        "deaths": null
+        "cases": 0,
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Gelderland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Noord-Brabant",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Noord-Holland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-28",
         "region": "Zuid-Holland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Gelderland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Noord-Brabant",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Noord-Holland",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-02-29",
         "region": "Zuid-Holland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Drenthe",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Gelderland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Noord-Brabant",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Noord-Holland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-01",
         "region": "Zuid-Holland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Gelderland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Noord-Brabant",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Noord-Holland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-02",
         "region": "Zuid-Holland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Drenthe",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Gelderland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Noord-Brabant",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Noord-Holland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Utrecht",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-03",
         "region": "Zuid-Holland",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Gelderland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Limburg",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Noord-Brabant",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Noord-Holland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-04",
         "region": "Zuid-Holland",
         "cases": 4,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Drenthe",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Flevoland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Gelderland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Limburg",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Noord-Brabant",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Noord-Holland",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Overijssel",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Utrecht",
         "cases": 20,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-05",
         "region": "Zuid-Holland",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Flevoland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Gelderland",
         "cases": 8,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Limburg",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Noord-Brabant",
         "cases": 10,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Noord-Holland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Utrecht",
         "cases": 10,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-06",
         "region": "Zuid-Holland",
         "cases": 10,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Gelderland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Limburg",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Noord-Brabant",
         "cases": 23,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Noord-Holland",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Overijssel",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Utrecht",
         "cases": 14,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Zeeland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-07",
         "region": "Zuid-Holland",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Drenthe",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Gelderland",
         "cases": 13,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Limburg",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Noord-Brabant",
         "cases": 36,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Noord-Holland",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Overijssel",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Utrecht",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-08",
         "region": "Zuid-Holland",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Drenthe",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Friesland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Gelderland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Limburg",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Noord-Brabant",
         "cases": 42,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Noord-Holland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Overijssel",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Utrecht",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-09",
         "region": "Zuid-Holland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Drenthe",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Friesland",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Gelderland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Limburg",
         "cases": 9,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Noord-Brabant",
         "cases": 22,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Noord-Holland",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Overijssel",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Utrecht",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Zeeland",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-10",
         "region": "Zuid-Holland",
         "cases": 10,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Flevoland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Friesland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Gelderland",
         "cases": 6,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Groningen",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Limburg",
         "cases": 16,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Noord-Brabant",
         "cases": 61,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Noord-Holland",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Overijssel",
         "cases": 2,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Utrecht",
         "cases": 12,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Zeeland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-11",
         "region": "Zuid-Holland",
         "cases": 10,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Drenthe",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Flevoland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Friesland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Gelderland",
         "cases": 12,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Groningen",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Limburg",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Noord-Brabant",
         "cases": 48,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Noord-Holland",
         "cases": 7,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Overijssel",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Utrecht",
         "cases": 13,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Zeeland",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-12",
         "region": "Zuid-Holland",
         "cases": 8,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Drenthe",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Flevoland",
         "cases": 4,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Friesland",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Gelderland",
         "cases": 16,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Groningen",
         "cases": 1,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Limburg",
         "cases": 14,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Noord-Brabant",
         "cases": 94,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Noord-Holland",
         "cases": 21,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Overijssel",
         "cases": 5,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Utrecht",
         "cases": 3,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Zeeland",
         "cases": 0,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-13",
         "region": "Zuid-Holland",
         "cases": 16,
-        "hospital": null,
-        "deaths": null
+        "hospital": 0,
+        "deaths": 0
     },
     {
         "date": "2020-03-14",
@@ -29230,5 +29230,4289 @@
         "cases": 409,
         "hospital": 14,
         "deaths": 13
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Drenthe",
+        "cases": 21,
+        "hospital": 0,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Flevoland",
+        "cases": 27,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Friesland",
+        "cases": 91,
+        "hospital": 3,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Gelderland",
+        "cases": 195,
+        "hospital": 1,
+        "deaths": 13
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Groningen",
+        "cases": 49,
+        "hospital": 3,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Limburg",
+        "cases": 145,
+        "hospital": 6,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Noord-Brabant",
+        "cases": 365,
+        "hospital": 7,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Noord-Holland",
+        "cases": 387,
+        "hospital": 8,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Overijssel",
+        "cases": 51,
+        "hospital": 3,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Utrecht",
+        "cases": 73,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Zeeland",
+        "cases": 18,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-09",
+        "region": "Zuid-Holland",
+        "cases": 331,
+        "hospital": 17,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Drenthe",
+        "cases": 81,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Flevoland",
+        "cases": 39,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Friesland",
+        "cases": 120,
+        "hospital": 7,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Gelderland",
+        "cases": 264,
+        "hospital": 2,
+        "deaths": 13
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Groningen",
+        "cases": 131,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Limburg",
+        "cases": 250,
+        "hospital": 3,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Noord-Brabant",
+        "cases": 552,
+        "hospital": 9,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Noord-Holland",
+        "cases": 506,
+        "hospital": 6,
+        "deaths": 14
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Overijssel",
+        "cases": 293,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Utrecht",
+        "cases": 265,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Zeeland",
+        "cases": 82,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-10",
+        "region": "Zuid-Holland",
+        "cases": 579,
+        "hospital": 24,
+        "deaths": 17
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Drenthe",
+        "cases": 81,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Flevoland",
+        "cases": 66,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Friesland",
+        "cases": 224,
+        "hospital": 3,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Gelderland",
+        "cases": 451,
+        "hospital": 6,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Groningen",
+        "cases": 138,
+        "hospital": 0,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Limburg",
+        "cases": 340,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Noord-Brabant",
+        "cases": 630,
+        "hospital": 7,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Noord-Holland",
+        "cases": 873,
+        "hospital": 13,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Overijssel",
+        "cases": 193,
+        "hospital": 5,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Utrecht",
+        "cases": 338,
+        "hospital": 7,
+        "deaths": 20
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Zeeland",
+        "cases": 96,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-11",
+        "region": "Zuid-Holland",
+        "cases": 971,
+        "hospital": 24,
+        "deaths": 14
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Drenthe",
+        "cases": 170,
+        "hospital": 3,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Flevoland",
+        "cases": 98,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Friesland",
+        "cases": 202,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Gelderland",
+        "cases": 383,
+        "hospital": 3,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Groningen",
+        "cases": 156,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Limburg",
+        "cases": 312,
+        "hospital": 1,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Noord-Brabant",
+        "cases": 692,
+        "hospital": 6,
+        "deaths": 13
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Noord-Holland",
+        "cases": 826,
+        "hospital": 13,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Overijssel",
+        "cases": 219,
+        "hospital": 1,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Utrecht",
+        "cases": 331,
+        "hospital": 7,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Zeeland",
+        "cases": 75,
+        "hospital": 20,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-12",
+        "region": "Zuid-Holland",
+        "cases": 846,
+        "hospital": 23,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Drenthe",
+        "cases": 183,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Flevoland",
+        "cases": 75,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Friesland",
+        "cases": 189,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Gelderland",
+        "cases": 380,
+        "hospital": 4,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Groningen",
+        "cases": 178,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Limburg",
+        "cases": 298,
+        "hospital": 6,
+        "deaths": 17
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Noord-Brabant",
+        "cases": 552,
+        "hospital": 10,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Noord-Holland",
+        "cases": 779,
+        "hospital": 5,
+        "deaths": 11
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Overijssel",
+        "cases": 251,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Utrecht",
+        "cases": 295,
+        "hospital": 8,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Zeeland",
+        "cases": 83,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-13",
+        "region": "Zuid-Holland",
+        "cases": 900,
+        "hospital": 18,
+        "deaths": 17
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Drenthe",
+        "cases": 106,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Flevoland",
+        "cases": 72,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Friesland",
+        "cases": 151,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Gelderland",
+        "cases": 280,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Groningen",
+        "cases": 144,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Limburg",
+        "cases": 274,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Noord-Brabant",
+        "cases": 565,
+        "hospital": 7,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Noord-Holland",
+        "cases": 722,
+        "hospital": 15,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Overijssel",
+        "cases": 190,
+        "hospital": 6,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Utrecht",
+        "cases": 258,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Zeeland",
+        "cases": 63,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-14",
+        "region": "Zuid-Holland",
+        "cases": 613,
+        "hospital": 14,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Drenthe",
+        "cases": 128,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Flevoland",
+        "cases": 68,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Friesland",
+        "cases": 172,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Gelderland",
+        "cases": 281,
+        "hospital": 2,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Groningen",
+        "cases": 76,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Limburg",
+        "cases": 201,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Noord-Brabant",
+        "cases": 441,
+        "hospital": 3,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Noord-Holland",
+        "cases": 559,
+        "hospital": 8,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Overijssel",
+        "cases": 155,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Utrecht",
+        "cases": 199,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Zeeland",
+        "cases": 77,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-15",
+        "region": "Zuid-Holland",
+        "cases": 450,
+        "hospital": 17,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Drenthe",
+        "cases": 108,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Flevoland",
+        "cases": 43,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Friesland",
+        "cases": 118,
+        "hospital": 3,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Gelderland",
+        "cases": 227,
+        "hospital": 4,
+        "deaths": 11
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Groningen",
+        "cases": 106,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Limburg",
+        "cases": 206,
+        "hospital": 0,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Noord-Brabant",
+        "cases": 415,
+        "hospital": 2,
+        "deaths": 14
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Noord-Holland",
+        "cases": 595,
+        "hospital": 11,
+        "deaths": 14
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Overijssel",
+        "cases": 128,
+        "hospital": 8,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Utrecht",
+        "cases": 176,
+        "hospital": 5,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Zeeland",
+        "cases": 37,
+        "hospital": 0,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-16",
+        "region": "Zuid-Holland",
+        "cases": 554,
+        "hospital": 17,
+        "deaths": 13
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Drenthe",
+        "cases": 62,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Flevoland",
+        "cases": 54,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Friesland",
+        "cases": 111,
+        "hospital": 3,
+        "deaths": 16
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Gelderland",
+        "cases": 273,
+        "hospital": 4,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Groningen",
+        "cases": 114,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Limburg",
+        "cases": 233,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Noord-Brabant",
+        "cases": 513,
+        "hospital": 10,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Noord-Holland",
+        "cases": 818,
+        "hospital": 15,
+        "deaths": 20
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Overijssel",
+        "cases": 137,
+        "hospital": 7,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Utrecht",
+        "cases": 225,
+        "hospital": 4,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Zeeland",
+        "cases": 69,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-17",
+        "region": "Zuid-Holland",
+        "cases": 727,
+        "hospital": 25,
+        "deaths": 17
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Drenthe",
+        "cases": 168,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Flevoland",
+        "cases": 62,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Friesland",
+        "cases": 185,
+        "hospital": 2,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Gelderland",
+        "cases": 464,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Groningen",
+        "cases": 140,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Limburg",
+        "cases": 267,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Noord-Brabant",
+        "cases": 754,
+        "hospital": 10,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Noord-Holland",
+        "cases": 770,
+        "hospital": 12,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Overijssel",
+        "cases": 300,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Utrecht",
+        "cases": 327,
+        "hospital": 6,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Zeeland",
+        "cases": 98,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-18",
+        "region": "Zuid-Holland",
+        "cases": 960,
+        "hospital": 17,
+        "deaths": 22
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Drenthe",
+        "cases": 163,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Flevoland",
+        "cases": 71,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Friesland",
+        "cases": 218,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Gelderland",
+        "cases": 381,
+        "hospital": 8,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Groningen",
+        "cases": 139,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Limburg",
+        "cases": 293,
+        "hospital": 6,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Noord-Brabant",
+        "cases": 802,
+        "hospital": 10,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Noord-Holland",
+        "cases": 1019,
+        "hospital": 9,
+        "deaths": 12
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Overijssel",
+        "cases": 249,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Utrecht",
+        "cases": 293,
+        "hospital": 5,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Zeeland",
+        "cases": 107,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-19",
+        "region": "Zuid-Holland",
+        "cases": 948,
+        "hospital": 23,
+        "deaths": 14
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Drenthe",
+        "cases": 156,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Flevoland",
+        "cases": 86,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Friesland",
+        "cases": 196,
+        "hospital": 6,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Gelderland",
+        "cases": 466,
+        "hospital": 1,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Groningen",
+        "cases": 170,
+        "hospital": 1,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Limburg",
+        "cases": 337,
+        "hospital": 4,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Noord-Brabant",
+        "cases": 815,
+        "hospital": 12,
+        "deaths": 10
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Noord-Holland",
+        "cases": 847,
+        "hospital": 8,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Overijssel",
+        "cases": 246,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Utrecht",
+        "cases": 278,
+        "hospital": 8,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Zeeland",
+        "cases": 105,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-20",
+        "region": "Zuid-Holland",
+        "cases": 815,
+        "hospital": 40,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Drenthe",
+        "cases": 114,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Flevoland",
+        "cases": 68,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Friesland",
+        "cases": 241,
+        "hospital": -1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Gelderland",
+        "cases": 425,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Groningen",
+        "cases": 190,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Limburg",
+        "cases": 389,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Noord-Brabant",
+        "cases": 861,
+        "hospital": 5,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Noord-Holland",
+        "cases": 959,
+        "hospital": 11,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Overijssel",
+        "cases": 172,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Utrecht",
+        "cases": 324,
+        "hospital": 5,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Zeeland",
+        "cases": 79,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-21",
+        "region": "Zuid-Holland",
+        "cases": 814,
+        "hospital": 15,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Drenthe",
+        "cases": 99,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Flevoland",
+        "cases": 66,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Friesland",
+        "cases": 205,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Gelderland",
+        "cases": 308,
+        "hospital": 1,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Groningen",
+        "cases": 200,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Limburg",
+        "cases": 328,
+        "hospital": 4,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Noord-Brabant",
+        "cases": 744,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Noord-Holland",
+        "cases": 821,
+        "hospital": 12,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Overijssel",
+        "cases": 197,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Utrecht",
+        "cases": 291,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Zeeland",
+        "cases": 77,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-22",
+        "region": "Zuid-Holland",
+        "cases": 802,
+        "hospital": 26,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Drenthe",
+        "cases": 88,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Flevoland",
+        "cases": 89,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Friesland",
+        "cases": 137,
+        "hospital": 3,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Gelderland",
+        "cases": 350,
+        "hospital": 6,
+        "deaths": 13
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Groningen",
+        "cases": 141,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Limburg",
+        "cases": 224,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Noord-Brabant",
+        "cases": 680,
+        "hospital": 4,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Noord-Holland",
+        "cases": 840,
+        "hospital": 10,
+        "deaths": 18
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Overijssel",
+        "cases": 155,
+        "hospital": 2,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Utrecht",
+        "cases": 270,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Zeeland",
+        "cases": 82,
+        "hospital": 0,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-23",
+        "region": "Zuid-Holland",
+        "cases": 711,
+        "hospital": 23,
+        "deaths": 23
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Drenthe",
+        "cases": 85,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Flevoland",
+        "cases": 68,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Friesland",
+        "cases": 155,
+        "hospital": 1,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Gelderland",
+        "cases": 399,
+        "hospital": 4,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Groningen",
+        "cases": 128,
+        "hospital": 0,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Limburg",
+        "cases": 250,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Noord-Brabant",
+        "cases": 811,
+        "hospital": 6,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Noord-Holland",
+        "cases": 886,
+        "hospital": 4,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Overijssel",
+        "cases": 286,
+        "hospital": 1,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Utrecht",
+        "cases": 333,
+        "hospital": 5,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Zeeland",
+        "cases": 117,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-24",
+        "region": "Zuid-Holland",
+        "cases": 804,
+        "hospital": 19,
+        "deaths": 15
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Drenthe",
+        "cases": 169,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Flevoland",
+        "cases": 58,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Friesland",
+        "cases": 194,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Gelderland",
+        "cases": 485,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Groningen",
+        "cases": 124,
+        "hospital": -1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Limburg",
+        "cases": 258,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Noord-Brabant",
+        "cases": 937,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Noord-Holland",
+        "cases": 922,
+        "hospital": 8,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Overijssel",
+        "cases": 223,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Utrecht",
+        "cases": 350,
+        "hospital": 12,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Zeeland",
+        "cases": 90,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-25",
+        "region": "Zuid-Holland",
+        "cases": 1140,
+        "hospital": 15,
+        "deaths": 11
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Drenthe",
+        "cases": 142,
+        "hospital": 3,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Flevoland",
+        "cases": 108,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Friesland",
+        "cases": 258,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Gelderland",
+        "cases": 323,
+        "hospital": 5,
+        "deaths": 8
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Groningen",
+        "cases": 182,
+        "hospital": 0,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Limburg",
+        "cases": 311,
+        "hospital": 1,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Noord-Brabant",
+        "cases": 861,
+        "hospital": 8,
+        "deaths": 6
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Noord-Holland",
+        "cases": 1079,
+        "hospital": 10,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Overijssel",
+        "cases": 317,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Utrecht",
+        "cases": 464,
+        "hospital": 1,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Zeeland",
+        "cases": 120,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-26",
+        "region": "Zuid-Holland",
+        "cases": 924,
+        "hospital": 20,
+        "deaths": 19
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Drenthe",
+        "cases": 155,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Flevoland",
+        "cases": 81,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Friesland",
+        "cases": 165,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Gelderland",
+        "cases": 504,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Groningen",
+        "cases": 273,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Limburg",
+        "cases": 293,
+        "hospital": 4,
+        "deaths": 9
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Noord-Brabant",
+        "cases": 751,
+        "hospital": 6,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Noord-Holland",
+        "cases": 1027,
+        "hospital": 16,
+        "deaths": 7
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Overijssel",
+        "cases": 240,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Utrecht",
+        "cases": 334,
+        "hospital": 14,
+        "deaths": 5
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Zeeland",
+        "cases": 84,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-27",
+        "region": "Zuid-Holland",
+        "cases": 997,
+        "hospital": 29,
+        "deaths": 11
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Drenthe",
+        "cases": 113,
+        "hospital": -1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Flevoland",
+        "cases": 73,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Friesland",
+        "cases": 170,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Gelderland",
+        "cases": 392,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Groningen",
+        "cases": 147,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Limburg",
+        "cases": 276,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Noord-Brabant",
+        "cases": 700,
+        "hospital": 8,
+        "deaths": 3
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Noord-Holland",
+        "cases": 1235,
+        "hospital": 12,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Overijssel",
+        "cases": 159,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Utrecht",
+        "cases": 353,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Zeeland",
+        "cases": 71,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-02-28",
+        "region": "Zuid-Holland",
+        "cases": 953,
+        "hospital": 22,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Drenthe",
+        "cases": 86,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Flevoland",
+        "cases": 75,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Friesland",
+        "cases": 137,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Gelderland",
+        "cases": 307,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Groningen",
+        "cases": 139,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Limburg",
+        "cases": 233,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Noord-Brabant",
+        "cases": 534,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Noord-Holland",
+        "cases": 811,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Overijssel",
+        "cases": 209,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Utrecht",
+        "cases": 302,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Zeeland",
+        "cases": 62,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-01",
+        "region": "Zuid-Holland",
+        "cases": 863,
+        "hospital": 35,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Drenthe",
+        "cases": 162,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Flevoland",
+        "cases": 76,
+        "hospital": 1,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Friesland",
+        "cases": 131,
+        "hospital": 2,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Gelderland",
+        "cases": 417,
+        "hospital": 1,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Groningen",
+        "cases": 107,
+        "hospital": 1,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Limburg",
+        "cases": 201,
+        "hospital": 1,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Noord-Brabant",
+        "cases": 554,
+        "hospital": 6,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Noord-Holland",
+        "cases": 766,
+        "hospital": 14,
+        "deaths": 10
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Overijssel",
+        "cases": 264,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Utrecht",
+        "cases": 302,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Zeeland",
+        "cases": 94,
+        "hospital": 0,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-02",
+        "region": "Zuid-Holland",
+        "cases": 886,
+        "hospital": 17,
+        "deaths": 17
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Drenthe",
+        "cases": 130,
+        "hospital": 1,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Flevoland",
+        "cases": 89,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Friesland",
+        "cases": 136,
+        "hospital": 0,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Gelderland",
+        "cases": 422,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Groningen",
+        "cases": 147,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Limburg",
+        "cases": 279,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Noord-Brabant",
+        "cases": 860,
+        "hospital": 6,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Noord-Holland",
+        "cases": 1258,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Overijssel",
+        "cases": 219,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Utrecht",
+        "cases": 274,
+        "hospital": 1,
+        "deaths": 11
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Zeeland",
+        "cases": 115,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-03",
+        "region": "Zuid-Holland",
+        "cases": 1041,
+        "hospital": 20,
+        "deaths": 12
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Drenthe",
+        "cases": 137,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Flevoland",
+        "cases": 79,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Friesland",
+        "cases": 162,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Gelderland",
+        "cases": 449,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Groningen",
+        "cases": 123,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Limburg",
+        "cases": 200,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Noord-Brabant",
+        "cases": 548,
+        "hospital": 5,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Noord-Holland",
+        "cases": 716,
+        "hospital": 15,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Overijssel",
+        "cases": 235,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Utrecht",
+        "cases": 364,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Zeeland",
+        "cases": 92,
+        "hospital": 8,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-04",
+        "region": "Zuid-Holland",
+        "cases": 964,
+        "hospital": 13,
+        "deaths": 9
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Drenthe",
+        "cases": 117,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Flevoland",
+        "cases": 77,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Friesland",
+        "cases": 171,
+        "hospital": 0,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Gelderland",
+        "cases": 468,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Groningen",
+        "cases": 135,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Limburg",
+        "cases": 264,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Noord-Brabant",
+        "cases": 785,
+        "hospital": 7,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Noord-Holland",
+        "cases": 995,
+        "hospital": 23,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Overijssel",
+        "cases": 206,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Utrecht",
+        "cases": 292,
+        "hospital": 6,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Zeeland",
+        "cases": 79,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-05",
+        "region": "Zuid-Holland",
+        "cases": 1040,
+        "hospital": 20,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Drenthe",
+        "cases": 126,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Flevoland",
+        "cases": 118,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Friesland",
+        "cases": 179,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Gelderland",
+        "cases": 450,
+        "hospital": 1,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Groningen",
+        "cases": 148,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Limburg",
+        "cases": 345,
+        "hospital": 2,
+        "deaths": 11
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Noord-Brabant",
+        "cases": 908,
+        "hospital": 6,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Noord-Holland",
+        "cases": 1241,
+        "hospital": 6,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Overijssel",
+        "cases": 281,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Utrecht",
+        "cases": 341,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Zeeland",
+        "cases": 125,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-06",
+        "region": "Zuid-Holland",
+        "cases": 1080,
+        "hospital": 18,
+        "deaths": 10
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Drenthe",
+        "cases": 101,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Flevoland",
+        "cases": 81,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Friesland",
+        "cases": 140,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Gelderland",
+        "cases": 407,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Groningen",
+        "cases": 109,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Limburg",
+        "cases": 218,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Noord-Brabant",
+        "cases": 755,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Noord-Holland",
+        "cases": 1093,
+        "hospital": 13,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Overijssel",
+        "cases": 239,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Utrecht",
+        "cases": 254,
+        "hospital": 16,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Zeeland",
+        "cases": 100,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-07",
+        "region": "Zuid-Holland",
+        "cases": 996,
+        "hospital": 25,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Drenthe",
+        "cases": 85,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Flevoland",
+        "cases": 79,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Friesland",
+        "cases": 164,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Gelderland",
+        "cases": 414,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Groningen",
+        "cases": 58,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Limburg",
+        "cases": 269,
+        "hospital": 7,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Noord-Brabant",
+        "cases": 523,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Noord-Holland",
+        "cases": 740,
+        "hospital": 13,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Overijssel",
+        "cases": 198,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Utrecht",
+        "cases": 280,
+        "hospital": 7,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Zeeland",
+        "cases": 95,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-08",
+        "region": "Zuid-Holland",
+        "cases": 933,
+        "hospital": 21,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Drenthe",
+        "cases": 117,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Flevoland",
+        "cases": 62,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Friesland",
+        "cases": 144,
+        "hospital": 0,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Gelderland",
+        "cases": 461,
+        "hospital": 2,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Groningen",
+        "cases": 133,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Limburg",
+        "cases": 275,
+        "hospital": 1,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Noord-Brabant",
+        "cases": 668,
+        "hospital": 8,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Noord-Holland",
+        "cases": 825,
+        "hospital": 8,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Overijssel",
+        "cases": 268,
+        "hospital": 0,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Utrecht",
+        "cases": 258,
+        "hospital": 37,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Zeeland",
+        "cases": 77,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-09",
+        "region": "Zuid-Holland",
+        "cases": 970,
+        "hospital": 23,
+        "deaths": 14
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Drenthe",
+        "cases": 169,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Flevoland",
+        "cases": 99,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Friesland",
+        "cases": 206,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Gelderland",
+        "cases": 524,
+        "hospital": 7,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Groningen",
+        "cases": 89,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Limburg",
+        "cases": 247,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Noord-Brabant",
+        "cases": 807,
+        "hospital": 6,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Noord-Holland",
+        "cases": 1079,
+        "hospital": 7,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Overijssel",
+        "cases": 315,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Utrecht",
+        "cases": 461,
+        "hospital": 6,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Zeeland",
+        "cases": 149,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-10",
+        "region": "Zuid-Holland",
+        "cases": 1041,
+        "hospital": 27,
+        "deaths": 11
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Drenthe",
+        "cases": 149,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Flevoland",
+        "cases": 85,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Friesland",
+        "cases": 173,
+        "hospital": 0,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Gelderland",
+        "cases": 563,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Groningen",
+        "cases": 240,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Limburg",
+        "cases": 230,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Noord-Brabant",
+        "cases": 825,
+        "hospital": 6,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Noord-Holland",
+        "cases": 850,
+        "hospital": 11,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Overijssel",
+        "cases": 323,
+        "hospital": 6,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Utrecht",
+        "cases": 420,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Zeeland",
+        "cases": 121,
+        "hospital": 22,
+        "deaths": 10
+    },
+    {
+        "date": "2021-03-11",
+        "region": "Zuid-Holland",
+        "cases": 1284,
+        "hospital": 15,
+        "deaths": 14
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Drenthe",
+        "cases": 127,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Flevoland",
+        "cases": 97,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Friesland",
+        "cases": 157,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Gelderland",
+        "cases": 598,
+        "hospital": 7,
+        "deaths": -1
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Groningen",
+        "cases": 152,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Limburg",
+        "cases": 359,
+        "hospital": 3,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Noord-Brabant",
+        "cases": 967,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Noord-Holland",
+        "cases": 1285,
+        "hospital": 11,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Overijssel",
+        "cases": 316,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Utrecht",
+        "cases": 428,
+        "hospital": 8,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Zeeland",
+        "cases": 126,
+        "hospital": 21,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-12",
+        "region": "Zuid-Holland",
+        "cases": 1342,
+        "hospital": 16,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Drenthe",
+        "cases": 167,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Flevoland",
+        "cases": 90,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Friesland",
+        "cases": 224,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Gelderland",
+        "cases": 690,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Groningen",
+        "cases": 123,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Limburg",
+        "cases": 380,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Noord-Brabant",
+        "cases": 943,
+        "hospital": 5,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Noord-Holland",
+        "cases": 1261,
+        "hospital": 13,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Overijssel",
+        "cases": 361,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Utrecht",
+        "cases": 482,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Zeeland",
+        "cases": 167,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-13",
+        "region": "Zuid-Holland",
+        "cases": 1405,
+        "hospital": 20,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Drenthe",
+        "cases": 122,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Flevoland",
+        "cases": 110,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Friesland",
+        "cases": 320,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Gelderland",
+        "cases": 566,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Groningen",
+        "cases": 156,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Limburg",
+        "cases": 319,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Noord-Brabant",
+        "cases": 1038,
+        "hospital": 6,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Noord-Holland",
+        "cases": 973,
+        "hospital": 13,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Overijssel",
+        "cases": 333,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Utrecht",
+        "cases": 400,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Zeeland",
+        "cases": 131,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-14",
+        "region": "Zuid-Holland",
+        "cases": 1473,
+        "hospital": 24,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Drenthe",
+        "cases": 178,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Flevoland",
+        "cases": 74,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Friesland",
+        "cases": 208,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Gelderland",
+        "cases": 508,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Groningen",
+        "cases": 93,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Limburg",
+        "cases": 358,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Noord-Brabant",
+        "cases": 834,
+        "hospital": 8,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Noord-Holland",
+        "cases": 1119,
+        "hospital": 7,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Overijssel",
+        "cases": 263,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Utrecht",
+        "cases": 313,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Zeeland",
+        "cases": 142,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-15",
+        "region": "Zuid-Holland",
+        "cases": 1368,
+        "hospital": 18,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Drenthe",
+        "cases": 162,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Flevoland",
+        "cases": 74,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Friesland",
+        "cases": 192,
+        "hospital": -1,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Gelderland",
+        "cases": 548,
+        "hospital": 6,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Groningen",
+        "cases": 120,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Limburg",
+        "cases": 255,
+        "hospital": 2,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Noord-Brabant",
+        "cases": 841,
+        "hospital": 10,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Noord-Holland",
+        "cases": 952,
+        "hospital": 18,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Overijssel",
+        "cases": 241,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Utrecht",
+        "cases": 236,
+        "hospital": 6,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Zeeland",
+        "cases": 97,
+        "hospital": 2,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-16",
+        "region": "Zuid-Holland",
+        "cases": 1155,
+        "hospital": 10,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Drenthe",
+        "cases": 180,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Flevoland",
+        "cases": 121,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Friesland",
+        "cases": 238,
+        "hospital": 1,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Gelderland",
+        "cases": 646,
+        "hospital": 8,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Groningen",
+        "cases": 98,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Limburg",
+        "cases": 287,
+        "hospital": 3,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Noord-Brabant",
+        "cases": 880,
+        "hospital": 6,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Noord-Holland",
+        "cases": 1084,
+        "hospital": 9,
+        "deaths": 9
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Overijssel",
+        "cases": 247,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Utrecht",
+        "cases": 438,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Zeeland",
+        "cases": 153,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-17",
+        "region": "Zuid-Holland",
+        "cases": 1510,
+        "hospital": 26,
+        "deaths": 13
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Drenthe",
+        "cases": 137,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Flevoland",
+        "cases": 124,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Friesland",
+        "cases": 267,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Gelderland",
+        "cases": 583,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Groningen",
+        "cases": 208,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Limburg",
+        "cases": 356,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Noord-Brabant",
+        "cases": 880,
+        "hospital": 8,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Noord-Holland",
+        "cases": 1041,
+        "hospital": 17,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Overijssel",
+        "cases": 438,
+        "hospital": 0,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Utrecht",
+        "cases": 500,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Zeeland",
+        "cases": 146,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-18",
+        "region": "Zuid-Holland",
+        "cases": 1403,
+        "hospital": 18,
+        "deaths": 16
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Drenthe",
+        "cases": 142,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Flevoland",
+        "cases": 116,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Friesland",
+        "cases": 236,
+        "hospital": 2,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Gelderland",
+        "cases": 815,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Groningen",
+        "cases": 221,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Limburg",
+        "cases": 304,
+        "hospital": 8,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Noord-Brabant",
+        "cases": 1080,
+        "hospital": 9,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Noord-Holland",
+        "cases": 1401,
+        "hospital": 12,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Overijssel",
+        "cases": 320,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Utrecht",
+        "cases": 596,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Zeeland",
+        "cases": 127,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-19",
+        "region": "Zuid-Holland",
+        "cases": 1950,
+        "hospital": 26,
+        "deaths": 24
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Drenthe",
+        "cases": 208,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Flevoland",
+        "cases": 92,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Friesland",
+        "cases": 240,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Gelderland",
+        "cases": 832,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Groningen",
+        "cases": 166,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Limburg",
+        "cases": 628,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Noord-Brabant",
+        "cases": 1366,
+        "hospital": 14,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Noord-Holland",
+        "cases": 1384,
+        "hospital": 10,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Overijssel",
+        "cases": 384,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Utrecht",
+        "cases": 476,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Zeeland",
+        "cases": 198,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-20",
+        "region": "Zuid-Holland",
+        "cases": 1615,
+        "hospital": 24,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Drenthe",
+        "cases": 216,
+        "hospital": 5,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Flevoland",
+        "cases": 142,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Friesland",
+        "cases": 237,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Gelderland",
+        "cases": 671,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Groningen",
+        "cases": 111,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Limburg",
+        "cases": 440,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Noord-Brabant",
+        "cases": 1142,
+        "hospital": 6,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Noord-Holland",
+        "cases": 1287,
+        "hospital": 10,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Overijssel",
+        "cases": 375,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Utrecht",
+        "cases": 464,
+        "hospital": 6,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Zeeland",
+        "cases": 143,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-21",
+        "region": "Zuid-Holland",
+        "cases": 1720,
+        "hospital": 25,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Drenthe",
+        "cases": 187,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Flevoland",
+        "cases": 150,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Friesland",
+        "cases": 175,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Gelderland",
+        "cases": 623,
+        "hospital": 8,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Groningen",
+        "cases": 79,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Limburg",
+        "cases": 451,
+        "hospital": 4,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Noord-Brabant",
+        "cases": 960,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Noord-Holland",
+        "cases": 1031,
+        "hospital": 11,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Overijssel",
+        "cases": 297,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Utrecht",
+        "cases": 495,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Zeeland",
+        "cases": 140,
+        "hospital": 6,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-22",
+        "region": "Zuid-Holland",
+        "cases": 1648,
+        "hospital": 16,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Drenthe",
+        "cases": 189,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Flevoland",
+        "cases": 114,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Friesland",
+        "cases": 214,
+        "hospital": 2,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Gelderland",
+        "cases": 639,
+        "hospital": 9,
+        "deaths": 10
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Groningen",
+        "cases": 129,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Limburg",
+        "cases": 363,
+        "hospital": 4,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Noord-Brabant",
+        "cases": 862,
+        "hospital": 4,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Noord-Holland",
+        "cases": 944,
+        "hospital": 13,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Overijssel",
+        "cases": 237,
+        "hospital": 1,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Utrecht",
+        "cases": 438,
+        "hospital": 7,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Zeeland",
+        "cases": 123,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-23",
+        "region": "Zuid-Holland",
+        "cases": 1298,
+        "hospital": 22,
+        "deaths": 6
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Drenthe",
+        "cases": 200,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Flevoland",
+        "cases": 151,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Friesland",
+        "cases": 298,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Gelderland",
+        "cases": 820,
+        "hospital": 8,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Groningen",
+        "cases": 182,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Limburg",
+        "cases": 524,
+        "hospital": 7,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Noord-Brabant",
+        "cases": 1090,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Noord-Holland",
+        "cases": 1283,
+        "hospital": 10,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Overijssel",
+        "cases": 420,
+        "hospital": 2,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Utrecht",
+        "cases": 560,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Zeeland",
+        "cases": 230,
+        "hospital": 27,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-25",
+        "region": "Zuid-Holland",
+        "cases": 1902,
+        "hospital": 25,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Drenthe",
+        "cases": 188,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Flevoland",
+        "cases": 116,
+        "hospital": 4,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Friesland",
+        "cases": 253,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Gelderland",
+        "cases": 957,
+        "hospital": 7,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Groningen",
+        "cases": 146,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Limburg",
+        "cases": 420,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Noord-Brabant",
+        "cases": 1082,
+        "hospital": 9,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Noord-Holland",
+        "cases": 1264,
+        "hospital": 12,
+        "deaths": 8
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Overijssel",
+        "cases": 368,
+        "hospital": 0,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Utrecht",
+        "cases": 709,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Zeeland",
+        "cases": 187,
+        "hospital": 12,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-26",
+        "region": "Zuid-Holland",
+        "cases": 1824,
+        "hospital": 22,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Drenthe",
+        "cases": 204,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Flevoland",
+        "cases": 176,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Friesland",
+        "cases": 270,
+        "hospital": 6,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Gelderland",
+        "cases": 959,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Groningen",
+        "cases": 249,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Limburg",
+        "cases": 510,
+        "hospital": 5,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Noord-Brabant",
+        "cases": 1483,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Noord-Holland",
+        "cases": 1595,
+        "hospital": 17,
+        "deaths": 15
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Overijssel",
+        "cases": 460,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Utrecht",
+        "cases": 491,
+        "hospital": 2,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Zeeland",
+        "cases": 182,
+        "hospital": 2,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-27",
+        "region": "Zuid-Holland",
+        "cases": 2196,
+        "hospital": 21,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Drenthe",
+        "cases": 249,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Flevoland",
+        "cases": 137,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Friesland",
+        "cases": 275,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Gelderland",
+        "cases": 681,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Groningen",
+        "cases": 129,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Limburg",
+        "cases": 600,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Noord-Brabant",
+        "cases": 1260,
+        "hospital": 11,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Noord-Holland",
+        "cases": 1240,
+        "hospital": 15,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Overijssel",
+        "cases": 360,
+        "hospital": 7,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Utrecht",
+        "cases": 399,
+        "hospital": 11,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Zeeland",
+        "cases": 188,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-28",
+        "region": "Zuid-Holland",
+        "cases": 1894,
+        "hospital": 21,
+        "deaths": 5
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Drenthe",
+        "cases": 194,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Flevoland",
+        "cases": 136,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Friesland",
+        "cases": 216,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Gelderland",
+        "cases": 651,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Groningen",
+        "cases": 123,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Limburg",
+        "cases": 527,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Noord-Brabant",
+        "cases": 1070,
+        "hospital": 11,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Noord-Holland",
+        "cases": 1191,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Overijssel",
+        "cases": 311,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Utrecht",
+        "cases": 477,
+        "hospital": 8,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Zeeland",
+        "cases": 214,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-29",
+        "region": "Zuid-Holland",
+        "cases": 1607,
+        "hospital": 18,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Drenthe",
+        "cases": 151,
+        "hospital": 0,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Flevoland",
+        "cases": 134,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Friesland",
+        "cases": 175,
+        "hospital": 4,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Gelderland",
+        "cases": 688,
+        "hospital": 3,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Groningen",
+        "cases": 103,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Limburg",
+        "cases": 417,
+        "hospital": 4,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Noord-Brabant",
+        "cases": 953,
+        "hospital": 8,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Noord-Holland",
+        "cases": 861,
+        "hospital": 14,
+        "deaths": 11
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Overijssel",
+        "cases": 245,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Utrecht",
+        "cases": 382,
+        "hospital": 8,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Zeeland",
+        "cases": 98,
+        "hospital": 1,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-30",
+        "region": "Zuid-Holland",
+        "cases": 1604,
+        "hospital": 22,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Drenthe",
+        "cases": 159,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Flevoland",
+        "cases": 111,
+        "hospital": 0,
+        "deaths": 0
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Friesland",
+        "cases": 203,
+        "hospital": 2,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Gelderland",
+        "cases": 806,
+        "hospital": 10,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Groningen",
+        "cases": 139,
+        "hospital": 1,
+        "deaths": 3
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Limburg",
+        "cases": 525,
+        "hospital": 4,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Noord-Brabant",
+        "cases": 1173,
+        "hospital": 10,
+        "deaths": 4
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Noord-Holland",
+        "cases": 1266,
+        "hospital": 14,
+        "deaths": 7
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Overijssel",
+        "cases": 427,
+        "hospital": 6,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Utrecht",
+        "cases": 556,
+        "hospital": 7,
+        "deaths": 2
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Zeeland",
+        "cases": 172,
+        "hospital": 3,
+        "deaths": 1
+    },
+    {
+        "date": "2021-03-31",
+        "region": "Zuid-Holland",
+        "cases": 2025,
+        "hospital": 37,
+        "deaths": 5
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Drenthe",
+        "cases": 171,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Flevoland",
+        "cases": 165,
+        "hospital": 1,
+        "deaths": 1
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Friesland",
+        "cases": 258,
+        "hospital": 3,
+        "deaths": 3
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Gelderland",
+        "cases": 847,
+        "hospital": 7,
+        "deaths": 3
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Groningen",
+        "cases": 176,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Limburg",
+        "cases": 530,
+        "hospital": 3,
+        "deaths": 0
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Noord-Brabant",
+        "cases": 1222,
+        "hospital": 9,
+        "deaths": 1
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Noord-Holland",
+        "cases": 1231,
+        "hospital": 11,
+        "deaths": 4
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Overijssel",
+        "cases": 422,
+        "hospital": 5,
+        "deaths": 0
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Utrecht",
+        "cases": 502,
+        "hospital": 6,
+        "deaths": 3
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Zeeland",
+        "cases": 193,
+        "hospital": 1,
+        "deaths": 0
+    },
+    {
+        "date": "2021-04-01",
+        "region": "Zuid-Holland",
+        "cases": 2074,
+        "hospital": 17,
+        "deaths": 6
     }
 ]

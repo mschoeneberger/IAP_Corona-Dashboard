@@ -2,6 +2,7 @@ import retrieveData as rd
 import json
 import requests
 import os
+import math
 import copy
 import pandas as pd
 from datetime import datetime
@@ -36,7 +37,7 @@ def createWorldData():
 
 def createDenmarkData():
     # download data
-    rd.getZippedCsvData('denmark', 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologiske-rapport-18122020-py43')
+    rd.getZippedCsvData('denmark', 'https://files.ssi.dk/covid19/overvagning/data/data-epidemiologisk-rapport-02032021-2bak')
 
     path = CURRENT_DIR + '/../storage/denmark/'
 
@@ -54,7 +55,7 @@ def createDenmarkData():
 
     for index, df_row in cases.iterrows():
         row = {}
-        row['date'] = df_row["date_sample"]  # Date
+        row['date'] = df_row["SampleDate"]  # Date
         for column in cases.columns:
             if column == "date_sample":
                 continue
@@ -65,16 +66,69 @@ def createDenmarkData():
                 except:
                     row['deaths'] = 0
             else:
-                row['tested'] = "na"
-                row['deaths'] = "na"
+                row['tested'] = 0
+                row['deaths'] = 0
             row['region'] = column # region
             row['cases'] = df_row[column] # cases
-            output.append(copy.deepcopy(row))
+
+            if isinstance(row["cases"], int):
+                output.append(copy.deepcopy(row))
+
+        
     
     with open(CURRENT_DIR + '/../api_files/denmark.json', 'w') as outfile:
         json.dump(output, outfile, indent=4)
 
 
+def reformatDenmarkData():
+    # date
+    # tested
+    # deaths
+    # region
+    # cases
+
+    with open(CURRENT_DIR + '/../api_files/denmark.json', 'r') as infile:
+        denmark = json.load(infile)
+
+        output = []
+        country = "denmark"
+
+        totalDeaths = {}
+        totalCases = {}
+        cases21Days = {}
+        new_feature = {}
+
+        for feature in denmark:
+
+            if feature["region"] not in totalDeaths:
+                totalDeaths[feature["region"]] = 0
+            if feature["region"] not in totalCases:
+                totalCases[feature["region"]] = 0
+
+            totalDeaths[feature["region"]] += feature["deaths"]
+            totalCases[feature["region"]] += feature["cases"]
+
+            if feature["region"] not in cases21Days:
+                cases21Days[feature["region"]] = []
+
+            cases21Days[feature["region"]].append(feature["cases"])
+            if len(cases21Days[feature["region"]]) == 22:
+                cases21Days[feature["region"]].pop(0)
+
+            new_feature["region"] = feature["region"]
+            new_feature["country"] = country
+            new_feature["date"] = feature["date"]
+            new_feature["totalCases"] = totalCases[feature["region"]]
+            new_feature["newCases7Days"] = sum(cases21Days[feature["region"]][-7:])
+            new_feature["newCases21Days"] = sum(cases21Days[feature["region"]])
+            new_feature["totalDeaths"] = totalDeaths[feature["region"]]
+
+            output.append(copy.deepcopy(new_feature))
+
+        with open(CURRENT_DIR + '/../api_files/denmark_new.json', 'w') as outfile:
+            json.dump(output, outfile, indent=4)
+
+            
 def createNetherlandsData():
     # download data
     rd.getJsonData("netherlands/data", 'https://raw.github.com/J535D165/CoronaWatchNL/master/data-json/data-provincial/RIVM_NL_provincial.json')
@@ -91,10 +145,19 @@ def createNetherlandsData():
         row = {}
         row["date"] = element["Datum"]
         row["region"] = element["Provincienaam"]  # region
-        row["cases"] = element["totaalAantal"]  # cases
-        row["hospital"] = element["ziekenhuisopnameAantal"]  # hospital
-        row["deaths"] = element["overledenAantal"]  # deaths
-        # row = [float("nan") if e == None else e for e in row]
+        if element["totaalAantal"] is None:
+            row["cases"] = 0
+        else: 
+            row["cases"] = element["totaalAantal"]  # cases
+        if element["ziekenhuisopnameAantal"] is None:
+            row["hospital"] = 0
+        else: 
+            row["hospital"] = element["ziekenhuisopnameAantal"]  # hospital
+        if element["overledenAantal"] is None:
+            row["deaths"] = 0
+        else:
+            row["deaths"] = element["overledenAantal"]  # deaths
+        # row = [0 if e == None else e for e in row]
         output.append(row)
 
     with open(CURRENT_DIR + '/../api_files/netherlands.json', 'w') as outfile:
@@ -120,6 +183,11 @@ def createBelgiumData():
     hospital = pd.read_csv(path + "hospital.csv")
     tested = pd.read_csv(path + "tests.csv")
 
+    cases.fillna(0, inplace=True)
+    deaths.fillna(0, inplace=True)
+    hospital.fillna(0, inplace=True)
+    tested.fillna(0, inplace=True)
+
     row = {}
     olddate = '1970-01-01'
 
@@ -135,24 +203,28 @@ def createBelgiumData():
         row = {}
         row["date"] = df_row["DATE"]
         row["region"] = df_row["PROVINCE"]
+        if row["date"] == 0:
+            row["date"] = None
+        if row["region"] == 0:
+            row["region"] == None
         row["cases"] = df_row["CASES"]
         try:
             row["tested"] = int(tested.loc[(tested["DATE"] == row["date"]) & (tested["PROVINCE"] == row["region"])]["TESTS_ALL"])
         except:
-            row["tested"] = None
+            row["tested"] = 0
         try:
             row["new_hosp"] = int(hospital.loc[(hospital["DATE"] == row["date"]) & (hospital["PROVINCE"] == row["region"])]["NEW_IN"])
             row["current_hosp"] = int(hospital.loc[(hospital["DATE"] == row["date"]) & (hospital["PROVINCE"] == row["region"])]["TOTAL_IN"])
             row["current_icu"] = int(hospital.loc[(hospital["DATE"] == row["date"]) & (hospital["PROVINCE"] == row["region"])]["TOTAL_IN_ICU"])
         except:
-            row["new_hosp"] = None
-            row["current_hosp"] = None
-            row["current_icu"] = None
+            row["new_hosp"] = 0
+            row["current_hosp"] = 0
+            row["current_icu"] = 0
         if row["date"] != olddate:
-            row["deceased"] = int(deaths.loc[deaths["DATE"] == row["date"]]["DEATHS"].sum())
+            row["deaths"] = int(deaths.loc[deaths["DATE"] == row["date"]]["DEATHS"].sum())
             olddate = row["date"]
         else:
-            row["deceased"] = None
+            row["deaths"] = 0
 
     output.append(row)
     
@@ -177,7 +249,7 @@ def createLuxembourgData():
         row["cases"] = dataframe_row["Nb de positifs"]
         row["current_hosp"] = dataframe_row["Soins normaux"]
         row["current_icu"] = dataframe_row["Soins intensifs"]
-        row["deceased"] = dataframe_row["[1.NbMorts]"]
+        row["deaths"] = dataframe_row["[1.NbMorts]"]
 
         for key in row:# TODO: look at read_csv(france), dtype ?!?!
             if row[key] == "-":
@@ -243,11 +315,11 @@ def createSwitzerlandData():
         row["current_hosp"] = dataframe_row["current_hosp"]
         row["current_icu"] = dataframe_row["current_icu"]
         row["recovered"] = dataframe_row["ncumul_released"]
-        row["deceased"] = dataframe_row["ncumul_deceased"]
+        row["deaths"] = dataframe_row["ncumul_deceased"]
 
         for key in row:# TODO: look at read_csv(france), dtype ?!?!
             if row[key] == "-":
-                row[key] = None
+                row[key] = 0
             else:
                 try:
                     row[key] = int(row[key])
@@ -295,7 +367,7 @@ def createAustriaData():
             row["current_hosp"] = None
             row["current_icu"] = None
         row["recovered"] = df_row["AnzahlGeheiltTaeglich"]
-        row["deceased"] = df_row["AnzahlTotTaeglich"]
+        row["deaths"] = df_row["AnzahlTotTaeglich"]
 
         output.append(row)
     
@@ -338,7 +410,7 @@ def createGermanyData():
         row["geschlecht"] = element_dict["Geschlecht"]
         row["altergruppe"] = element_dict["Altersgruppe"]
         row["cases"] = element_dict["AnzahlFall"]
-        row["deceased"] = element_dict["AnzahlTodesfall"]
+        row["deaths"] = element_dict["AnzahlTodesfall"]
         row["recovered"] = element_dict["AnzahlGenesen"]
         output.append(row)
         counter += 1
@@ -408,30 +480,115 @@ def createGermanyVaccData():
     with open(CURRENT_DIR + '/../api_files/germany_vacc.json', 'w') as outfile:
         json.dump(output, outfile, indent=4)
 
+
+def reformatGermanyData():
+
+    country = "germany"
+
+    with open(CURRENT_DIR + '/../api_files/' + country + '.json', 'r') as infile:
+        c_dict = json.load(infile)
+
+        output = []
+
+        totalDeaths = {}
+        totalCases = {}
+        cases21Days = {}
+        new_feature = {}
+
+        for feature in c_dict:
+
+            if feature["landkreis"] not in totalDeaths:
+                totalDeaths[feature["landkreis"]] = 0
+            if feature["landkreis"] not in totalCases:
+                totalCases[feature["landkreis"]] = 0
+
+            totalDeaths[feature["landkreis"]] += feature["deaths"]
+            totalCases[feature["landkreis"]] += feature["cases"]
+
+            if feature["landkreis"] not in cases21Days:
+                cases21Days[feature["landkreis"]] = []
+
+            cases21Days[feature["landkreis"]].append(feature["cases"])
+            if len(cases21Days[feature["landkreis"]]) == 22:
+                cases21Days[feature["landkreis"]].pop(0)
+
+            new_feature["bundesland"] = feature["bundesland"]
+            new_feature["landkreis"] = feature["landkreis"]
+            new_feature["country"] = country
+            new_feature["date"] = feature["date"]
+            new_feature["totalCases"] = totalCases[feature["landkreis"]]
+            new_feature["newCases7Days"] = sum(cases21Days[feature["landkreis"]][-7:])
+            new_feature["newCases21Days"] = sum(cases21Days[feature["landkreis"]])
+            new_feature["totalDeaths"] = totalDeaths[feature["landkreis"]]
+
+            output.append(copy.deepcopy(new_feature))
+
+        with open(CURRENT_DIR + '/../api_files/' + country + '_new.json', 'w') as outfile:
+            json.dump(output, outfile, indent=4)
+
+
+
+
+def reformatData(country):
+
+    with open(CURRENT_DIR + '/../api_files/' + country + '.json', 'r') as infile:
+        c_dict = json.load(infile)
+
+        output = []
+
+        totalDeaths = {}
+        totalCases = {}
+        cases21Days = {}
+        new_feature = {}
+
+        for feature in c_dict:
+
+            if feature["region"] not in totalDeaths:
+                totalDeaths[feature["region"]] = 0
+            if feature["region"] not in totalCases:
+                totalCases[feature["region"]] = 0
+
+            if country != "france":
+                totalDeaths[feature["region"]] += feature["deaths"]
+            totalCases[feature["region"]] += feature["cases"]
+
+            if feature["region"] not in cases21Days:
+                cases21Days[feature["region"]] = []
+
+            cases21Days[feature["region"]].append(feature["cases"])
+            if len(cases21Days[feature["region"]]) == 22:
+                cases21Days[feature["region"]].pop(0)
+
+            new_feature["region"] = feature["region"]
+            new_feature["country"] = country
+            new_feature["date"] = feature["date"]
+            new_feature["totalCases"] = totalCases[feature["region"]]
+            new_feature["newCases7Days"] = sum(cases21Days[feature["region"]][-7:])
+            new_feature["newCases21Days"] = sum(cases21Days[feature["region"]])
+            new_feature["totalDeaths"] = totalDeaths[feature["region"]]
+
+            output.append(copy.deepcopy(new_feature))
+
+        with open(CURRENT_DIR + '/../api_files/' + country + '_new.json', 'w') as outfile:
+            json.dump(output, outfile, indent=4)
+
+
 # TODO:
-# Tschechien
-# Poland
-# Germany Vacc
 # denmark data not up to date ?!?
-
 if __name__ == "__main__":
-    # createAustriaData()
-    # createBelgiumData()
-    # createDenmarkData()
-    # createFranceData()
-    # createLuxembourgData()
-    # createNetherlandsData()
-    # createSwitzerlandData()
-    # createWorldData()
-    # createGermanyData()
+    #createAustriaData()
+    #createBelgiumData()
+    #createDenmarkData()
+    #createFranceData()
+    #createLuxembourgData() TODO link geändert
+    #createNetherlandsData()
+    #createSwitzerlandData()
+    #createWorldData() TODO keine ahnung !?!?
+    #createGermanyData()
+    #reformatGermanyData()
     createGermanyVaccData()
-
-    # with open(CURRENT_DIR + '/../api_files/germany.json', 'r') as outfile:
-    #     a = json.load(outfile)
-    #     summ = 0
-    #     for b in a:
-    #         try:
-    #             summ += b["cases"]
-    #         except:
-    #             pass
-    #     print(summ)
+    createGermanyITSData()
+    #reformatDenmarkData()
+    #countries = ["france", "austria", "belgium", "netherlands", "switzerland"]
+    #for country in countries:
+    #    reformatData(country)
