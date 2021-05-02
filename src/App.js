@@ -60,6 +60,7 @@ const App = () => {
     const [activeCountry, setActiveCountry] = useState("World");
     // State um die kompletten Daten der API zu speichern (ohne Formatierung für die CovidMap) für die Charts
     const [completeData, setCompleteData] = useState();//{World:[]}
+    const [completeRegionData, setCompleteRegionData] = useState();
     const [countryList,setcountryList] = useState();
     const [startDate, setStartDate] = useState();
     const [endDate, setEndDate] = useState();
@@ -72,7 +73,7 @@ const App = () => {
         const loadCountriesTask = new LoadCountriesTask();
         loadCountriesTask.load(setCountries, setLastUpdate, setCompleteData);
         const loadEuropeTask = new LoadEuropeTask();
-        loadEuropeTask.load(setEuropeCountries);
+        loadEuropeTask.load(setEuropeCountries, setCompleteRegionData);
     };
 
     useEffect(load, []);

@@ -55,12 +55,12 @@ const EuropeCovidMap = (props) => {
                 relevantData["Deutsch"].push("");
                 return relevantData;
             case "Cumulative Fatalities":
-                 relevantData = {"English": [region.properties.cumulativeDeaths], "Deutsch": [region.properties.cumulativeDeaths]};
-                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.cumulativeDeaths));
-                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(region.properties.cumulativeRecovered));
+                 relevantData = {"English": [region.properties.fatalities], "Deutsch": [region.properties.fatalities]};
+                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.fatalities));
+                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(region.properties.recovered));
                 relevantData["English"].push("Mortality Rate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
-                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(region.properties.cumulativeDeaths));
-                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(region.properties.cumulativeRecovered));
+                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(region.properties.fatalities));
+                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(region.properties.recovered));
                 relevantData["Deutsch"].push("Sterblichkeitsrate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
@@ -91,13 +91,13 @@ const EuropeCovidMap = (props) => {
                 relevantData["Deutsch"].push("Verhältnis: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
                 return relevantData;
             case "Cumulative Cases":
-                relevantData = {"English": [region.properties.cumulativeCases], "Deutsch": [region.properties.cumulativeCases]};
-                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(region.properties.cumulativeCases));
+                relevantData = {"English": [region.properties.confirmed], "Deutsch": [region.properties.confirmed]};
+                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(region.properties.confirmed));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["English"].push("Ratio: " + (region.properties.cumulativeCases/region.properties.population * 100).toFixed(3) + "%");
-                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(region.properties.cumulativeCases));
+                relevantData["English"].push("Ratio: " + (region.properties.confirmed/region.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(region.properties.confirmed));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.cumulativeCases/region.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.confirmed/region.properties.population * 100).toFixed(3) + "%");
                 return relevantData;
             default:
                 return [0,"","",""];

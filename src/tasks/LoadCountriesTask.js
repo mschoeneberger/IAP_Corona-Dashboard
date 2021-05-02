@@ -15,19 +15,22 @@ class LoadCountriesTask{
         this.setDate = setDate;
         this.setCompleteData = setCompleteData;
         // Fetching the Corona data from backend. This usually takes a while.
-        await fetch("https://fathomless-oasis-85586.herokuapp.com/dataWorld")
+        await fetch("https://banana-cupcake-00146.herokuapp.com/world.json")
         .then(response => response.json())
         .then(data => {
-            this.setCompleteData(data);
             const validKeys = Object.keys(data);
+            const noMatch = [];
             for(let i = 0; i < this.mapCountries.length; i++){
                 // mapCountry yields the Geo-data and some properties for a single country.
                 const mapCountry = this.mapCountries[i];
                 // covidCountry yields the Corona data of a single country.
                 let covidCountry = [];
-                if(validKeys.includes(mapCountry.properties.ADMIN)){
-                    covidCountry = data[mapCountry.properties.ADMIN];
-                }
+                let countryname = "";
+                let uppercase = validKeys.includes(mapCountry.properties.ADMIN);
+                let lowercase = validKeys.includes(mapCountry.properties.ADMIN.toLowerCase());
+                if(uppercase){covidCountry = data[mapCountry.properties.ADMIN]; countryname=mapCountry.properties.ADMIN;}
+                else{ if(lowercase){covidCountry = data[mapCountry.properties.ADMIN.toLowerCase()]; countryname=mapCountry.properties.ADMIN.toLowerCase();}
+                else{noMatch.push(mapCountry.properties.ADMIN);}}
 
                 // Initializing the corona-data we want to save as a property of the geo-data-country.
                 mapCountry.properties.confirmed = 0;
@@ -48,35 +51,29 @@ class LoadCountriesTask{
 
                 // Filling the corona-data of the geo-data-country with the corona-data of the corona-data-country (if there is any).
                 if(covidCountry.length !== 0){
-                    mapCountry.properties.confirmed = Number(covidCountry[(covidCountry.length -1)].confirmed);
-                    mapCountry.properties.fatalities = Number(covidCountry[(covidCountry.length -1)].deaths);
-                    mapCountry.properties.recovered = Number(covidCountry[(covidCountry.length -1)].recovered);
-                    mapCountry.properties.active = Number(covidCountry[(covidCountry.length -1)].active);
-                    for(let j=1; j<8; j++){
-                        mapCountry.properties.incidentRate += Number(covidCountry[(covidCountry.length -8 + j)].delta_confirmed);
+                    let newestindex = 0;
+                    data[countryname][0].population = mapCountry.properties.population;
+                    for(let j=1; j<covidCountry.length; j++){
+                        let newestdate = new Date(covidCountry[newestindex].date);
+                        let thisdate = new Date(covidCountry[j].date);
+                        data[countryname][j].population = mapCountry.properties.population;
+                        if(thisdate > newestdate){newestindex = j;}
                     }
-                    mapCountry.properties.incidentRate = (mapCountry.properties.incidentRate * 100000) / mapCountry.properties.population;
-                    mapCountry.properties.peopleTested = Number(covidCountry[(covidCountry.length -1)].people_tested);
-                    mapCountry.properties.peopleHospitalized = Number(covidCountry[(covidCountry.length -1)].people_hospitalized);
+
+                    mapCountry.properties.confirmed = Number(covidCountry[newestindex].totalCases);
+                    mapCountry.properties.fatalities = Number(covidCountry[newestindex].totalDeaths);
+                    mapCountry.properties.active = Number(covidCountry[newestindex].newCases21Days);
+                    mapCountry.properties.recovered = mapCountry.properties.confirmed - mapCountry.properties.fatalities - mapCountry.properties.active;
+                    mapCountry.properties.incidentRate = Number(covidCountry[newestindex].newCases7Days) * 100000 / mapCountry.properties.population;
+                    mapCountry.properties.mortalityRate = mapCountry.properties.fatalities / mapCountry.properties.confirmed;
                     // For a few countries the pub_date makes trouble.
                     try {
-                        mapCountry.properties.date = covidCountry[(covidCountry.length - 1)].report_date.toString()
+                        mapCountry.properties.date = covidCountry[newestindex].date.toString()
                     }
                     catch(TypeError){
                         console.log("TypeError raised and caught when loading pub_date from: " + mapCountry.properties.ADMIN)
                         mapCountry.properties.date = "Unknown."
                     }
-                    //Some countries are not keeping track of active infections, so we have to approximate them.
-                    if(mapCountry.properties.active === 0){
-                        for(let j=1; j<22; j++){
-                            mapCountry.properties.active += Number(covidCountry[(covidCountry.length -22 + j)].delta_confirmed);
-                        }
-                    }
-                    //Same goes for the amount of recovered people
-                    if(mapCountry.properties.recovered === 0){
-                        mapCountry.properties.recovered = mapCountry.properties.confirmed - mapCountry.properties.active - mapCountry.properties.fatalities;
-                    }
-                    mapCountry.properties.mortalityRate = mapCountry.properties.fatalities / mapCountry.properties.confirmed;
                 }
             }
             // For Debugging:
@@ -92,6 +89,11 @@ class LoadCountriesTask{
             //     if(!hit){noMatch.push(key);}
             // });
             //console.log(noMatch);
+            this.setCompleteData(data);
+            console.log("Countries without match:");
+            console.log(noMatch);
+            this.setDate(this.mapCountries[61].properties.date);
+            this.setState(this.mapCountries);
         })
         ////Loop to find countries that we have no population data for (nonpop) or that we have no corona data for (nocase)
         //
@@ -107,12 +109,7 @@ class LoadCountriesTask{
         //     }
         // }
         // console.log(nonpop);
-        // console.log(nocase);
-
-        // We take germanys update-date for our dashboard.
-        this.setDate(this.mapCountries[61].properties.date);
-        // Geo- and Corona-data combined.
-        this.setState(this.mapCountries);
+        // console.log(nocase);        
     };
 }
 
