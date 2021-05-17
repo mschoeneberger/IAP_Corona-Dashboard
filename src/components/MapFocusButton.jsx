@@ -41,7 +41,7 @@ function MapFocusButton (props) {
                     )
                     }
                 </Button>
-                <FocusMenu focusSelectionOpen={focusSelectionOpen} setActiveFocus={props.setActiveFocus} setOpen={setOpen} activeLanguage={props.activeLanguage}/>
+                <FocusMenu focusSelectionOpen={focusSelectionOpen} setActiveFocus={props.setActiveFocus} setOpen={setOpen} activeLanguage={props.activeLanguage} activeLegend={props.activeLegend} setActiveLegend={props.setActiveLegend}/>
             </>
     );
 };

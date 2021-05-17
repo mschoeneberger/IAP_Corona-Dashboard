@@ -29,6 +29,11 @@ const FocusMenu = (props) => {
     }
     var a = (<div className="FocusMenu" style={{visibility: "visible"}}>
             <Tab onClick={() => {
+                //Since ICU-Occupancy is not defined in world focus
+                if(props.activeLegend === "ICU-Occupancy"){
+                    //We default to cumulative cases view
+                    props.setActiveLegend("Cumulative Cases");
+                }
                 props.setActiveFocus("World")
                 props.setOpen(false)
                 }

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Tab = styled.button`
   padding: calc(min(0.5vh,0.5vw));
-  height: 25%;
+  height: 33.333%;
   width: 20vw;
   cursor: pointer;
   opacity: 1;
@@ -19,35 +19,34 @@ const Tab = styled.button`
 
 const DropdownMenu = (props) => {
     const tabNames = {
-        "English": ["Mobile Mode", "Graphs", "Sources", "About Us"],
-        "Deutsch": ["Mobiler Modus", "Graphen", "Quellen", "Über Uns"]
+        "English": ["Graphs", "Sources", "About Us"],
+        "Deutsch": ["Graphen", "Quellen", "Über Uns"]
     }
     var vis = "hidden";
     if(props.dropdownOpen){
         vis = "visible";
     }
     var a = (<div className="DropdownMenu" style={{visibility: "hidden"}}>
-            <Tab>{tabNames[props.activeLanguage][0]}</Tab>
             <Tab 
             onClick={() => {
                 props.setOpen(false);
                 window.scrollBy({top: 500, left: 0, behavior: "smooth"});
             }}>
-                {tabNames[props.activeLanguage][1]}
+                {tabNames[props.activeLanguage][0]}
             </Tab>
             <Tab
             onClick={() => {
                 props.setOpen(false);
                 props.setInfoWindow("sources");
             }}>
-                {tabNames[props.activeLanguage][2]}
+                {tabNames[props.activeLanguage][1]}
             </Tab>
             <Tab
             onClick={() => {
                 props.setOpen(false);
                 props.setInfoWindow("aboutus");
             }}>
-                {tabNames[props.activeLanguage][3]}
+                {tabNames[props.activeLanguage][2]}
             </Tab>
         </div>);
     a.props.style.visibility = vis;

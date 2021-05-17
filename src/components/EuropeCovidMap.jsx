@@ -36,24 +36,6 @@ const EuropeCovidMap = (props) => {
     function getRelevantData(region, active){
         var relevantData;
         switch(active){
-            case "Vaccinated Population":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                return relevantData;
-            case "Testing Rate":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                return relevantData;
             case "Cumulative Fatalities":
                  relevantData = {"English": [region.properties.fatalities], "Deutsch": [region.properties.fatalities]};
                 relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.fatalities));
@@ -75,11 +57,11 @@ const EuropeCovidMap = (props) => {
             case "7-Day-Incidence":
                 relevantData = {"English": [region.properties.incidentRate], "Deutsch": [region.properties.incidentRate]};
                 relevantData["English"].push("7-Day-Incidence: " + region.properties.incidentRate.toFixed(3));
+                relevantData["English"].push("Cases (7 Days): " + formatNumberWithSpaces(region.properties.last7));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["English"].push("");
                 relevantData["Deutsch"].push("7-Tages-Inzidenz: " + region.properties.incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(region.properties.last7));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["Deutsch"].push("");
                 return relevantData;
             case "New Cases(21 Days)":
                 relevantData = {"English": [region.properties.active], "Deutsch": [region.properties.active]};

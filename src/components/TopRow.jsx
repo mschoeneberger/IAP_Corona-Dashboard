@@ -9,7 +9,7 @@ const TopRow = (props) => {
         <div className="titleArea">
             <h1><b>Yet Another Corona Dashboard</b></h1>
         </div>
-        <MapFocusButton activeFocus={props.activeFocus} setActiveFocus={props.setActiveFocus} activeLanguage={props.activeLanguage}/>
+        <MapFocusButton activeFocus={props.activeFocus} setActiveFocus={props.setActiveFocus} activeLanguage={props.activeLanguage} activeLegend={props.activeLegend} setActiveLegend={props.setActiveLegend}/>
         <UpdatePanel lastUpdate = {props.lastUpdate} activeLanguage={props.activeLanguage}/>
         <DropdownMenuButton activeLanguage={props.activeLanguage} setInfoWindow={props.setInfoWindow}/>
     </div>);

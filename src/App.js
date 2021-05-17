@@ -28,13 +28,14 @@ import InfoWindow from "./components/InfoWindow";
 
 const App = () => {
     // views are the different categories of data we want to display
-    const views = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities", "Testing Rate", "Vaccinated Population"];
+    const worldViews = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "Cumulative Fatalities"];
+    const regionViews = ["Cumulative Cases", "New Cases(21 Days)", "7-Day-Incidence", "ICU-Occupancy", "Cumulative Fatalities"];
     // countries for the world focus
     const [countries, setCountries] = useState([]);
     // "countries" aka regions for the regional focus
     const [europeCountries, setEuropeCountries] = useState([]);
     // hook to display the correct (map)legend for the active view
-    const [activeLegend, setActiveLegend] = useState(views[0]);
+    const [activeLegend, setActiveLegend] = useState(worldViews[0]);
     // hook to display the correct (map)focus: world/regions
     const [activeFocus, setActiveFocus] = useState("World");
     // hook to display the correct Date for the UpdatePanel
@@ -45,14 +46,14 @@ const App = () => {
 
     //Building the legends for the world focus
     const legends = buildLegends(
-        views,
+        worldViews,
         // These numbers are arbitrary, but the coloured map looks cool.
-        [5_000_000, 500_000, 500, 100, 100_000, 500_000, 500_000]
+        [10_000_000, 500_000, 200, 500_000]
     );
     //Doing the same for the region focus, with slightly different values though
     const regionLegends = buildLegends(
-        views,
-        [200_000, 20_000, 150, 100, 10_000, 50_000, 50_000])
+        regionViews,
+        [200_000, 10_000, 200, 75, 10_000])
     /* -------------------------------------------------
     * Tassias Code : 
     * -------------------------------------------------- */
@@ -81,9 +82,9 @@ const App = () => {
     if(infoWindow === "hidden") return (
     <div style={{overflow: "hidden"}}>
         <div className="page">
-            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow}/>
+            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow} activeLegend={activeLegend} setActiveLegend={setActiveLegend}/>
             <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
-                <InfoPanel legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
+                <InfoPanel legends={legends} regionLegends={regionLegends} focus={activeFocus} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
                 <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
                     {/* This div is only there to fix a visual glitch when changing focus */}
                     <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
@@ -101,7 +102,7 @@ const App = () => {
                             </>
                         ))}
                     </div>
-                    <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={views} activeLanguage={activeLanguage}/>
+                    <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={[worldViews,regionViews]} activeLanguage={activeLanguage} focus={activeFocus}/>
                 </div>
             </div>
         </div>

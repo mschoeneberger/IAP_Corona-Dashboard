@@ -36,24 +36,6 @@ const CovidMap = (props) => {
     function getRelevantData(country, active){
         var relevantData;
         switch(active){
-            case "Vaccinated Population":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                return relevantData;
-            case "Testing Rate":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                return relevantData;
             case "Cumulative Fatalities":
                  relevantData = {"English": [country.properties.fatalities], "Deutsch": [country.properties.fatalities]};
                 relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
@@ -63,23 +45,14 @@ const CovidMap = (props) => {
                 relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(country.properties.recovered));
                 relevantData["Deutsch"].push("Sterblichkeitsrate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
-            case "ICU-Occupancy":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                return relevantData;
             case "7-Day-Incidence":
                 relevantData = {"English": [country.properties.incidentRate], "Deutsch": [country.properties.incidentRate]};
                 relevantData["English"].push("7-Day-Incidence: " + country.properties.incidentRate.toFixed(3));
+                relevantData["English"].push("New Cases (7 Days): " + formatNumberWithSpaces(country.properties.last7));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["English"].push("");
                 relevantData["Deutsch"].push("7-Tages-Inzidenz: " + country.properties.incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(country.properties.last7));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["Deutsch"].push("");
                 return relevantData;
             case "New Cases(21 Days)":
                 relevantData = {"English": [country.properties.active], "Deutsch": [country.properties.active]};

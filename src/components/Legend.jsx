@@ -2,8 +2,16 @@ import React from 'react';
 import "./Legend.css";
 
 const Legend = (props) => {
-    var legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
-    const items = props.legends[legendIndex];
+    var legendIndex;
+    var items;
+    if(props.focus === "World"){
+        legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
+        items = props.legends[legendIndex];
+    }
+    else{
+        legendIndex = props.regionLegends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
+        items = props.regionLegends[legendIndex];
+    }
     return (
         <div className="Legend">
            {items.map((item) => (

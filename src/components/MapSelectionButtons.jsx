@@ -34,10 +34,17 @@ function MapSelectionButtons(props) {
       "Testing Rate": "Test Rate",
       "Vaccinated Population": "Geimpfte Bevölkerung"
     }
+    var currentView=props.views[0];
+    if (props.focus === "World"){
+      currentView = props.views[0];
+    }
+    else{
+      currentView = props.views[1];
+    }
     return (<>
         <div style={{flexBasis:"10vh", flexGrow:"0", width:"100%", display:"flex", overflow:"hidden"}}>
           {
-            props.views.map(view=>
+            currentView.map(view=>
                 <Tab
                   key={view}
                   active={props.active === view}

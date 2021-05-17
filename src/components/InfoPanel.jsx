@@ -14,7 +14,7 @@ const InfoPanel = (props) => {
             <div className ="Header">
                 <h2>{languageOptions[props.activeLanguage]}</h2>
             </div>
-            <Legend legends={props.legends} active={props.active} />
+            <Legend legends={props.legends} regionLegends={props.regionLegends} focus={props.focus} active={props.active} />
             <div className = "Header">
                 <h2>Newsticker</h2>
             </div>

@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "@zip.js/zip.js": "github:gildas-lormeau/zip.js",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
     "date-fns": "^2.17.0",

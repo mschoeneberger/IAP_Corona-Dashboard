@@ -24,6 +24,7 @@ function buildLegend (max) {
         legendItems.push(
             new LegendItem(
                 `${newmax} - ${oldmax-0.001}`,
+                "#660000",
                 newmax,
                 oldmax,
                 "white"

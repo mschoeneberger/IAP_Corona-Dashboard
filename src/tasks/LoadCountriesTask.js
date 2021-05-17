@@ -45,9 +45,8 @@ class LoadCountriesTask{
                 mapCountry.properties.recovered = 0;
                 mapCountry.properties.active = 0;
                 mapCountry.properties.incidentRate = 0.0;
-                mapCountry.properties.peopleTested = 0;
-                mapCountry.properties.peopleHospitalized = 0;
                 mapCountry.properties.mortalityRate = 0;
+                mapCountry.properties.last7 = 0;
 
                 // Filling the corona-data of the geo-data-country with the corona-data of the corona-data-country (if there is any).
                 if(covidCountry.length !== 0){
@@ -66,6 +65,7 @@ class LoadCountriesTask{
                     mapCountry.properties.recovered = mapCountry.properties.confirmed - mapCountry.properties.fatalities - mapCountry.properties.active;
                     mapCountry.properties.incidentRate = Number(covidCountry[newestindex].newCases7Days) * 100000 / mapCountry.properties.population;
                     mapCountry.properties.mortalityRate = mapCountry.properties.fatalities / mapCountry.properties.confirmed;
+                    mapCountry.properties.last7 = Number(covidCountry[newestindex].newCases7Days);
                     // For a few countries the pub_date makes trouble.
                     try {
                         mapCountry.properties.date = covidCountry[newestindex].date.toString()
