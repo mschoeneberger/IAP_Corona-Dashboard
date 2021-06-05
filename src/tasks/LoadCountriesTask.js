@@ -90,8 +90,8 @@ class LoadCountriesTask{
             // });
             //console.log(noMatch);
             this.setCompleteData(data);
-            console.log("Countries without match:");
-            console.log(noMatch);
+            // console.log("Countries without match:");
+            // console.log(noMatch);
             this.setDate(this.mapCountries[61].properties.date);
             this.setState(this.mapCountries);
         })

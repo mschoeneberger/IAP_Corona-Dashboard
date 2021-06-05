@@ -25,11 +25,29 @@ const InfoWindow = (props) => {
         head={"English": "Sources", "Deutsch": "Quellen"};
         body={
             "English" : <ul>
-                <li><p>Example source 1: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">www.source.asdf</a></p></li>
+                <li><p>Corona-Data WHO: <a href="https://github.com/mahabub81/covid-19-api" target="blank">https://github.com/mahabub81/covid-19-api</a></p></li>
+                <li><p>Corona-Data Denmark: <a href="https://files.ssi.dk/covid19/overvagning/data/data-epidemiologisk-rapport-02032021-2bak" target="blank">https://files.ssi.dk/covid19/overvagning/data/data-epidemiologisk-rapport-02032021-2bak</a></p></li>
+                <li><p>Corona-Data Netherlands: <a href="https://github.com/J535D165/CoronaWatchNL" target="blank">https://github.com/J535D165/CoronaWatchNL</a></p></li>
+                <li><p>Corona-Data Belgium: <a href="https://github.com/openZH/covid_19" target="blank">https://github.com/openZH/covid_19</a></p></li>
+                <li><p>Corona-Data France: <a href="https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675" target="blank">https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675</a></p></li>
+                <li><p>Corona-Data Switzerland: <a href="https://github.com/openZH/covid_19" target="blank">https://github.com/openZH/covid_19</a></p></li>
+                <li><p>Corona-Data Austria: <a href="https://covid19-dashboard.ages.at" target="blank">https://covid19-dashboard.ages.at</a></p></li>
+                <li><p>Corona-Data Germany: <a href="https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson" target="blank">https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson</a></p></li>
+                <li><p>ICU-Data Germany : <a href="https://diviexchange.blob.core.windows.net/%24web/bundesland-zeitreihe.csv" target="blank">https://diviexchange.blob.core.windows.net/%24web/bundesland-zeitreihe.csv</a></p></li>
+                <li><p>Vaccination-Data Germany: <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile" target="blank">https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile</a></p></li>
             </ul>
             ,
             "Deutsch" : <ul>
-                <li><p>Quellbeispiel 1: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">www.source.asdf</a></p></li>
+                <li><p>Corona-Daten WHO: <a href="https://github.com/mahabub81/covid-19-api" target="blank">https://github.com/mahabub81/covid-19-api</a></p></li>
+                <li><p>Corona-Daten Dänemark: <a href="https://files.ssi.dk/covid19/overvagning/data/data-epidemiologisk-rapport-02032021-2bak" target="blank">https://files.ssi.dk/covid19/overvagning/data/data-epidemiologisk-rapport-02032021-2bak</a></p></li>
+                <li><p>Corona-Daten Niederlande: <a href="https://github.com/J535D165/CoronaWatchNL" target="blank">https://github.com/J535D165/CoronaWatchNL</a></p></li>
+                <li><p>Corona-Daten Belgien: <a href="https://github.com/openZH/covid_19" target="blank">https://github.com/openZH/covid_19</a></p></li>
+                <li><p>Corona-Daten Frankreich: <a href="https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675" target="blank">https://www.data.gouv.fr/fr/datasets/r/406c6a23-e283-4300-9484-54e78c8ae675</a></p></li>
+                <li><p>Corona-Daten Schweiz: <a href="https://github.com/openZH/covid_19" target="blank">https://github.com/openZH/covid_19</a></p></li>
+                <li><p>Corona-Daten Österreich: <a href="https://covid19-dashboard.ages.at" target="blank">https://covid19-dashboard.ages.at</a></p></li>
+                <li><p>Corona-Daten Deutschland: <a href="https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson" target="blank">https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.geojson</a></p></li>
+                <li><p>ITS-Daten Deutschland: <a href="https://diviexchange.blob.core.windows.net/%24web/bundesland-zeitreihe.csv" target="blank">https://diviexchange.blob.core.windows.net/%24web/bundesland-zeitreihe.csv</a></p></li>
+                <li><p>Impfdaten-Daten Deutschland: <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile" target="blank">https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Daten/Impfquotenmonitoring.xlsx?__blob=publicationFile</a></p></li>
             </ul>
         }
     }

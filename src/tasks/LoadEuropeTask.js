@@ -16,8 +16,8 @@ class LoadEuropeTask{
                 //validCountryKeys
                 const validCKeys = Object.keys(data);
                 //Debug-Only
-                const noMatchReg = [];
-                const noMatchCou = [];
+                // const noMatchReg = [];
+                // const noMatchCou = [];
                 //We iterate over the regions of our GeoJSON.
                 for(let i =0; i<this.regions.length; i++){
                     const region = this.regions[i];
@@ -67,16 +67,16 @@ class LoadEuropeTask{
                             region.properties.last7 = covidRegion[newestIndex].newCases7Days;
                         }
                         //Debug
-                        else{noMatchReg.push(region.properties.name);}
+                        // else{noMatchReg.push(region.properties.name);}
                     }
                     //Debug
-                    else{noMatchCou.push(region.properties.name);}
+                    // else{noMatchCou.push(region.properties.name);}
                 }
             //Debug
-            console.log("No Match Region: ");
-            console.log(noMatchReg);
-            console.log("No Match Country: ");
-            console.log(noMatchCou);
+            // console.log("No Match Region: ");
+            // console.log(noMatchReg);
+            // console.log("No Match Country: ");
+            // console.log(noMatchCou);
             //Updating the states.
             this.combinedData.push(data);
             this.setData(this.combinedData);
@@ -86,11 +86,11 @@ class LoadEuropeTask{
             .then(response => response.json())
             .then(data => {
                 //Debug
-                console.log("Bingbang.")
+                console.log(data)
                 let noMatchReg = [];
                 //Debug
-                let oneListKeys = [];
-                let matchedKeys = [];
+                // let oneListKeys = [];
+                // let matchedKeys = [];
                 //Get the keys to iterate through the data
                 const validBunKeys = Object.keys(data);
                 //We can use these to find the Bundesland to a specific region.
@@ -105,11 +105,11 @@ class LoadEuropeTask{
                 }
 
                 //Debug
-                for(let i=0;i<allRegKeys.length; i++){
-                    for(let j=0;j<allRegKeys[i].length; j++){
-                        oneListKeys.push(allRegKeys[i][j]);
-                    }
-                }
+                // for(let i=0;i<allRegKeys.length; i++){
+                //     for(let j=0;j<allRegKeys[i].length; j++){
+                //         oneListKeys.push(allRegKeys[i][j]);
+                //     }
+                // }
 
                 //Again we iterate over the regions of our GeoJSON.
                 for(let i =0; i<this.regions.length; i++){
@@ -142,9 +142,8 @@ class LoadEuropeTask{
                     if(uppercase || lowercase){
                         //For accessing the data correctly, we need to know if the name is upper or lower case.
                         let regname = (uppercase ? region.properties.name : region.properties.name.toLowerCase());
-                        console.log("Matched. " + regname + " : " + bundesland);
                         //Debug
-                        matchedKeys.push(regname);
+                        // matchedKeys.push(regname);
                         //Correct Covid data for this region
                         covidRegion = data[bundesland][regname];
                         //Find latest entry
@@ -162,7 +161,7 @@ class LoadEuropeTask{
                             }
                         }
                         //Debug
-                        console.log(covidRegion[newestIndex].d);
+                        // console.log(covidRegion[newestIndex].d);
                         //extract/calculate relevant data from Covid data.
                         //e is for total Cases.
                         region.properties.confirmed = covidRegion[newestIndex].e;
@@ -181,15 +180,15 @@ class LoadEuropeTask{
                         region.properties.last7 = covidRegion[newestIndex].f;
                     }
                     //Debug
-                    else{noMatchReg.push(region.properties.name);}
+                    // else{noMatchReg.push(region.properties.name);}
                 }
             //Debug
-            console.log("No Match Region(Ger): ");
-            console.log(noMatchReg);
-            for(let i=0;i<oneListKeys.length;i++){
-                if(matchedKeys.includes(oneListKeys[i])){continue;}
-                else{console.log(oneListKeys[i]);}
-            }
+            // console.log("No Match Region(Ger): ");
+            // console.log(noMatchReg);
+            // for(let i=0;i<oneListKeys.length;i++){
+            //     if(matchedKeys.includes(oneListKeys[i])){continue;}
+            //     else{console.log(oneListKeys[i]);}
+            // }
             //Updating the states.
             this.combinedData.push(data);
             this.setData(this.combinedData);

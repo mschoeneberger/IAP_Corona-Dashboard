@@ -53,7 +53,7 @@ const App = () => {
     //Doing the same for the region focus, with slightly different values though
     const regionLegends = buildLegends(
         regionViews,
-        [200_000, 10_000, 200, 75, 10_000])
+        [200_000, 10_000, 200, 85, 10_000])
     /* -------------------------------------------------
     * Tassias Code : 
     * -------------------------------------------------- */

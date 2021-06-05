@@ -29,7 +29,7 @@ function MapSelectionButtons(props) {
       "Cumulative Cases": "Kumulative Fälle",
       "New Cases(21 Days)": "Neue Fälle (21 Tage)",
       "7-Day-Incidence": "7-Tages-Inzidenz",
-      "ICU-Occupancy": "Intensivstation-Belegung",
+      "ICU-Occupancy": "Intensivbetten-Belegung",
       "Cumulative Fatalities": "Kumulative Todesfälle",
       "Testing Rate": "Test Rate",
       "Vaccinated Population": "Geimpfte Bevölkerung"

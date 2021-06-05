@@ -46,13 +46,19 @@ const EuropeCovidMap = (props) => {
                 relevantData["Deutsch"].push("Sterblichkeitsrate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
-                relevantData = {"English": [0], "Deutsch": [0]};
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["English"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
-                relevantData["Deutsch"].push("");
+                // region.properties.its_freie_betten = covidRegion[newestIndex].k;
+                //         region.properties.its_belegt= covidRegion[newestIndex].j;
+                //         region.properties.its_freie_beatmung= covidRegion[newestIndex].l;
+                //         region.properties.its_covid_patienten= covidRegion[newestIndex].i;
+                relevantData = {"English": [100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)], "Deutsch": [100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)]};
+                relevantData["English"].push("ICU-Occupancy: " + (100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)).toFixed(3) + "%");
+                relevantData["English"].push("Covid patients in ICU: " + formatNumberWithSpaces(region.properties.its_covid_patienten));
+                relevantData["English"].push("Unoccupied ICU beds: " + formatNumberWithSpaces(region.properties.its_freie_betten));
+                relevantData["English"].push("Unoccupied ventilators: " + formatNumberWithSpaces(region.properties.its_freie_betten));
+                relevantData["Deutsch"].push("Intensivbettenbelegung: " + (100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Coronapatienten auf Intensivstation: " + formatNumberWithSpaces(region.properties.its_covid_patienten));
+                relevantData["Deutsch"].push("Freie Intensivbetten: " + formatNumberWithSpaces(region.properties.its_freie_betten));
+                relevantData["Deutsch"].push("Freie Beatmungsgeräte: " + formatNumberWithSpaces(region.properties.its_freie_betten));
                 return relevantData;
             case "7-Day-Incidence":
                 relevantData = {"English": [region.properties.incidentRate], "Deutsch": [region.properties.incidentRate]};

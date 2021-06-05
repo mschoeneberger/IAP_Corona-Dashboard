@@ -23,7 +23,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${newmax} - ${oldmax-0.001}`,
+                `${newmax} - ${oldmax}`,
                 "#660000",
                 newmax,
                 oldmax,
@@ -34,7 +34,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${newmax} - ${oldmax-0.001}`,
+                `${newmax} - ${oldmax}`,
                 "#990000",
                 newmax,
                 oldmax
@@ -44,7 +44,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${newmax} - ${oldmax-0.001}`,
+                `${newmax} - ${oldmax}`,
                 "#e60000",
                 newmax,
                 oldmax
@@ -54,7 +54,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${newmax} - ${oldmax-0.001}`,
+                `${newmax} - ${oldmax}`,
                 "#ff5544",
                 newmax,
                 oldmax
@@ -62,7 +62,7 @@ function buildLegend (max) {
         );
         legendItems.push(
             new LegendItem(
-                `0.001 - ${newmax-0.001}`,
+                `0.001 - ${newmax}`,
                 "#ff8080",
                 0.001,
                 newmax
@@ -88,7 +88,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax)}`,
                 "#660000",
                 newmax,
                 oldmax,
@@ -99,7 +99,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax)}`,
                 "#990000",
                 newmax,
                 oldmax
@@ -109,7 +109,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax)}`,
                 "#e60000",
                 newmax,
                 oldmax
@@ -119,7 +119,7 @@ function buildLegend (max) {
         newmax = calcNewMax(newmax);
         legendItems.push(
             new LegendItem(
-                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax-1)}`,
+                `${formatNumberWithSpaces(newmax)} - ${formatNumberWithSpaces(oldmax)}`,
                 "#ff5544",
                 newmax,
                 oldmax
@@ -127,7 +127,7 @@ function buildLegend (max) {
         );
         legendItems.push(
             new LegendItem(
-                `1 - ${formatNumberWithSpaces(newmax-1)}`,
+                `1 - ${formatNumberWithSpaces(newmax)}`,
                 "#ff8080",
                 1,
                 newmax
