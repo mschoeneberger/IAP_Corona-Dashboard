@@ -1,11 +1,11 @@
 .FocusMenu {
   z-index: 200;
   height: 10vh;
-  width: 20vw;
+  width: 20.1vw;
   align-items: center;
   border: 2px inset #222222;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   top: 10vh;
-  right: 30vw;
+  right: 29.1vw;
 }

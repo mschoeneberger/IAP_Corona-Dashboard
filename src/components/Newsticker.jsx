@@ -22,6 +22,17 @@ const Newsticker = (props) => {
     }
 
     if(props.activeLanguage === "English"){
+        if(news[1].titles[0] === undefined){
+            return(
+                <div className="Newsticker">
+            <ul>
+                <li><p>News could not be loaded.</p></li>
+                <li><p>This is most likely due to a CORS-Error.</p></li>
+                <li><p>Nothing to be worried about.</p></li>
+                {sourceListItems[1]}
+            </ul>
+        </div>
+        )}
         return (
             <div className="Newsticker">
             <ul>
@@ -35,6 +46,17 @@ const Newsticker = (props) => {
     }
 
     else{
+        if(news[0].titles[0] === undefined){
+            return(
+            <div className="Newsticker">
+            <ul>
+                <li><p>Nachrichten konnten nicht geladen werden</p></li>
+                <li><p>Es handelt sich vermutlich um einen CORS-Fehler.</p></li>
+                <li><p>Das ist nicht weiter schlimm...</p></li>
+                {sourceListItems[0]}
+            </ul>
+        </div>
+        )}
         return (
             <div className="Newsticker">
             <ul>

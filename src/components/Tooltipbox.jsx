@@ -37,11 +37,11 @@ const tooltipText = {
     "ICU-Occupancy": {
         "English": (<>
             <h5>ICU-Occupancy<FaInfoCircle style={{float:"right"}}/></h5>
-            <p>Percentage value of how many Intensive-Care-Units are currently occupied.</p>
+            <p>Percentage value of how many Intensive-Care-Units are currently occupied. For German countries only.</p>
         </>),
         "Deutsch": (<>
             <h5>Intensivstation-Belegung<FaInfoCircle style={{float:"right"}}/></h5>
-            <p>Prozentualer Wert, der angibt wie viele Intensivbetten aktuell belegt sind.</p>
+            <p>Prozentualer Wert, der angibt wie viele Intensivbetten aktuell belegt sind. Nur für deutsche Bundesländer.</p>
         </>)
     },
     "Cumulative Fatalities": {
