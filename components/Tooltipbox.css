@@ -1,0 +1,11 @@
+.Tooltipbox {
+  z-index: 200;
+  height: 20vh;
+  width: 30vw;
+  align-items: center;
+  border: 2px inset #222222;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 10vh;
+  right: 0px;
+}

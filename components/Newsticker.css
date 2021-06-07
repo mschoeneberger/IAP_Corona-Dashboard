@@ -1,0 +1,6 @@
+.Newsticker {
+  width: 100%;
+  flex-grow: 7;
+  font-size: calc(min(1.6vh, 1.6vw));
+  overflow: "hidden";
+}

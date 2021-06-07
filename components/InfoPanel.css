@@ -1,0 +1,23 @@
+.InfoStructure {
+  height: 100%;
+  flex-basis: 20%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px inset #222222;
+}
+
+.Header {
+  flex-grow: 1;
+  width: 100%;
+  border-bottom: 2px inset #222222;
+  align-items: center;
+  text-align: center;
+}
+
+.Header h2 {
+  text-align: center;
+  font-size: calc(min(2.5vh, 2.5vw));
+  text-justify: center;
+  padding: calc(min(0.7vh, 0.7vw));
+}

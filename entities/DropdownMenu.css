@@ -1,0 +1,11 @@
+.DropdownMenu {
+  z-index: 200;
+  height: 25vh;
+  width: 20vw;
+  align-items: center;
+  border: 2px inset #222222;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 10vh;
+  right: 0;
+}
