@@ -20,8 +20,8 @@ const Tab = styled.button`
 
 const FocusMenu = (props) => {
     const buttonNames= {
-        "English": ["World", "Regions"],
-        "Deutsch": ["Welt", "Regionen"]
+        "English": ["World", "Regions", "German Vaccination"],
+        "Deutsch": ["Welt", "Regionen", "Deutsche Impfungen"],
     }
     var vis = "hidden";
     if(props.focusSelectionOpen){
@@ -46,6 +46,13 @@ const FocusMenu = (props) => {
                 }
             }>
                 {buttonNames[props.activeLanguage][1]}
+            </Tab>
+            <Tab onClick={() => {
+                props.setActiveFocus("Vaccination")
+                props.setOpen(false)
+                }
+            }>
+                {buttonNames[props.activeLanguage][2]}
             </Tab>
         </div>);
     a.props.style.visibility = vis;

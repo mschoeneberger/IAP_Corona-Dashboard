@@ -59,7 +59,11 @@ var config = {
                     drawBorder: true,
                     drawOnChartArea: true,
                     drawTicks: false,
-                }
+                },
+                scaleLabel: {
+                    display: false,
+                    labelString: 'percent [%]',
+                  }
             }]
         }
     },
@@ -82,7 +86,7 @@ var config = {
                 ctx.textBaseline = 'middle';
                 ctx.font = "2rem 'Helvetica Nueue'";
                 ctx.fillStyle = "white";
-                ctx.fillText('No data to display for this category', width / 2, height / 2);
+                ctx.fillText('Please Select a Country', width / 2, height / 2);
                 ctx.restore();
                 }
             }
@@ -112,7 +116,7 @@ else        showing = 0
 var number_of_colors = chartColors.length
 
 
-function getRelevantData(CountryData, activeLegend, startDate, endDate, step, lastUpdated){
+function getRelevantData(CountryData, activeLegend, startDate, endDate, step, lastUpdated, relative){
 
     // ignore countries with no data
     if(CountryData === undefined) {
@@ -130,7 +134,13 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
     var right_index = CountryData.length - diffDaysStart + NumberDays
     var relevantData = CountryData.slice(left_index,right_index)
 
-    function data_sorting(case_name){
+    function roundToTwo(num) {
+        return +(Math.round(num + "e+2")  + "e-2");
+    }
+    function roundTo4(num) {
+        return +(Math.round(num + "e+4")  + "e-4");
+    }
+    function data_sorting(f){
         var labels = []
         var data = []
         var sum_array = []
@@ -139,28 +149,28 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
                             "July", "August", "September", "October", "November", "December"
                             ];
 
-        const sum = (accumulator, currentValue) => accumulator + currentValue;
+        const sum = (accumulator, currentValue) => Number(accumulator) + Number(currentValue);
 
         for (var i=0; i<relevantData.length; i++){
             var elem = relevantData[i]
-            var date = new Date(elem.report_date)
+            var date = new Date(elem.date)
             if(step.label === "Day"){
-                data.push(elem[case_name])
+                data.push(roundToTwo(f(elem)))
                 labels.push(date.toLocaleDateString())
             }
             else if(step.label === "Week"){
-                sum_array.push(elem[case_name])
+                sum_array.push(f(elem))
                 if(date.getDay() === 0 || i === relevantData.length-1){
-                    data.push(sum_array.reduce(sum)/sum_array.length)
+                    data.push(roundToTwo(sum_array.reduce(sum)/sum_array.length))
                     sum_array = []
                     if (date.getDay() === 0) labels.push(date.toDateString())
                     else                    labels.push("last Week")
                 }
             }
             else {
-                sum_array.push(elem[case_name])
+                sum_array.push(f(elem))
                 if(date.getDate() === 1 || i === relevantData.length-1){
-                    data.push(sum_array.reduce(sum)/sum_array.length)
+                    data.push(roundToTwo(sum_array.reduce(sum)/sum_array.length))
                     sum_array = []
                     if (date.getDate() === 1)    labels.push(monthNames[date.getMonth()])
                     else                         labels.push("last Month")
@@ -172,30 +182,26 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
 
     switch(activeLegend){
         
-        // !!! 
-        case "Vaccinated Population":
-            return [[],[]];
-
-        // !!! 
-            case "Testing Rate":
-            return [[],[]];
-
         case "Cumulative Fatalities":
-            return data_sorting("deaths")
-
-        // !!!     
-        case "ICU-Occupancy":
-            return [[],[]];
+            return data_sorting(x => {
+                if(relative) return roundTo4(x["totalDeaths"]/x.population)*100
+                else return x["totalDeaths"]
+            })
+   
+        case "New Cases(21 Days)":
+            return data_sorting(x => {
+                if(relative) return roundTo4(x["newCases21Days"]/x.population)*100
+                else return x["newCases21Days"]
+            })
 
         case "7-Day-Incidence":
-            return data_sorting("incident_rate")
-
-        // !!! 
-        case "New Cases(21 Days)":
-            return [[],[]];
+            return data_sorting(x => roundToTwo(x["newCases7Days"]/x["population"]*100000))
 
         case "Cumulative Cases":
-            return data_sorting("confirmed")
+            return data_sorting(x => {
+                if(relative) return roundTo4(x["totalCases"]/x.population)*100
+                else return x["totalCases"]
+            })
 
         default:
             return [[],[]];
@@ -240,7 +246,10 @@ function chart_deleteDataset(chart,country){
         if(datasets[i].label === country){
             datasets.splice(i,1)
         }
-    }   
+    }
+    if( datasets.length === 0 ) {
+        chart.data.labels = []
+    }
 }
 
 /* --------------------------------------------------------------------------------
@@ -252,6 +261,7 @@ const Charts = (props) => {
     // States
     // tracks the stepsize selected in the options panel
     const [step, setStep] = useState({ value: 'd', label: 'Day' });
+    const [relativeState, setRelativeState] = useState(false);
     
     /* --------------------------------------------------------------------------------
     | Init Chart
@@ -286,7 +296,9 @@ const Charts = (props) => {
                 if(showing.length >= number_of_colors)   return props.alert.show("Maximum number of countries reached")
                 else                                     props.setSelectedCountries(x => [...x,{value:props.activeCountry,label:props.activeCountry}])
             }
-    },[props])
+    
+    // !!! effect has to run only if activeCountry changes:
+    },[props.activeCountry])
 
     /* --------------------------------------------------------------------------------
     | Manage Datasets
@@ -297,12 +309,9 @@ const Charts = (props) => {
     useEffect(() => {
         // Chart Data rendering
         if(chart){
-            var activeCountry = props.activeCountry
+            //var activeCountry = props.activeCountry
             var activeLegend = props.activeLegend
-            var CountryData = completeData[activeCountry]
-
-            // Update Chart Title
-            chart.options.title.text = activeLegend
+            var CountryData ;
 
             // Compare addedCountries and selectedCountries
             //get added Countries
@@ -330,9 +339,9 @@ const Charts = (props) => {
                 if(country.label === "World"){ 
                     CountryData = props.WorldData
                 } else {
-                    CountryData = completeData[country.label]
+                    CountryData = completeData[country.label.toLowerCase()]
                 }
-                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate))
+                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState)
                 chart_addDataset(chart,data,labels,country.label)
 
             }
@@ -342,7 +351,7 @@ const Charts = (props) => {
             }
             chart.update()
         }
-    },[props, completeData, step])
+    },[props.selectedCountries, completeData])
 
     /* --------------------------------------------------------------------------------
     | Range Update
@@ -352,22 +361,27 @@ const Charts = (props) => {
     */
     useEffect(() => {
         if(chart){
+            
+            // Update Chart Title
+            chart.options.title.text = props.activeLegend
+
             for(var chart_data of chart.data.datasets){
                 var country_name = chart_data.label
                 var CountryData;
                 if(country_name === "World"){ 
-                    if(props.activeLegend === "7-Day-Incidence") return props.alert.info("not implemented for World yet") // 7-Day-Incidence is not correct implemented for WorldData
+                    //if(props.activeLegend === "7-Day-Incidence") return props.alert.info("not implemented for World yet") // 7-Day-Incidence is not correct implemented for WorldData
                     CountryData = props.WorldData
                 } else {
-                    CountryData = completeData[country_name]
+                    CountryData = completeData[country_name.toLowerCase()]
                 }
-                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate))
+                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState)
                 chart_data.data = data
             }
             chart.data.labels = labels
+            if(chart.options.scales.yAxes[0].scaleLabel)chart.options.scales.yAxes[0].scaleLabel.display = relativeState
             chart.update()
         }
-    },[props, completeData, step])
+    },[props.startDate, props.endDate, step, props.activeLegend, relativeState])
 
 
     /* --------------------------------------------------------------------------------
@@ -379,7 +393,6 @@ const Charts = (props) => {
     | While the data is not loaded, display the loading screen
     */
     if(completeData){
-        console.log("data, ", completeData)
         
         // init_States to avoid looping (only execute once)
         if(props.lastUpdate && init_States){
@@ -405,15 +418,21 @@ const Charts = (props) => {
             var array_length = completeData[country_list[1].label].length
             for(var i=0; i<array_length; i++){
                 var obj = {
-                    "deaths":   0,
-                    "confirmed":0
+                    "totalDeaths":   0,
+                    "totalCases":0,
+                    "newCases21Days":0,
+                    "newCases7Days":0,
+                    "population":0
                 }
                 for(var country in completeData){
                     if(completeData[country].length <= i) continue
-                    obj.deaths = obj.deaths + completeData[country][i].deaths
-                    obj.confirmed = obj.confirmed + completeData[country][i].confirmed
-                    obj.report_date = completeData[country][i].report_date
+                    obj.totalDeaths = obj.totalDeaths + completeData[country][i].totalDeaths
+                    obj.totalCases = obj.totalCases + completeData[country][i].totalCases
+                    obj.newCases21Days = obj.newCases21Days + completeData[country][i].newCases21Days
+                    obj.newCases7Days = obj.newCases7Days + completeData[country][i].newCases7Days
+                    obj.population = obj.population + completeData[country][i].population
                 }
+                obj.date = completeData[country][i].date
                 WorldData.push(obj)
             }
             props.setWorldData(WorldData)
@@ -435,10 +454,14 @@ const Charts = (props) => {
                         setStartDate={props.setStartDate} 
                         lastUpdate={props.lastUpdate}
                         country_list={props.countryList}
+                        region_list={props.RegionList}
                         selectedCountries={props.selectedCountries}
                         setSelectedCountries={props.setSelectedCountries}
                         showing={showing} number_of_colors={number_of_colors}
                         alert={props.alert}
+                        activeFocus={props.activeFocus}
+                        relativeState={relativeState}
+                        setRelativeState={setRelativeState}
                         />
                 </div>    
             </div>
