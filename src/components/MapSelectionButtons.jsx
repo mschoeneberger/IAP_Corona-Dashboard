@@ -14,7 +14,7 @@ const Tab = styled.button`
   outline: 0;
   border: 1px solid #222222;
   border-top: 2px solid #222222;
-  font-size: calc(min(1.6vh,1.6vw));
+  font-size: calc(min(2vh,2vw));
   ${({ active }) =>
     active &&
     `

@@ -33,9 +33,9 @@ function NewstickerLanguage(props) {
                 active={props.activeLanguage === lang}
                 onClick={() => props.setActiveLanguage(lang)}>
                 {lang === "Deutsch" ? (
-                  <img src="https://www.countryflags.io/DE/flat/64.png" alt="Deutsch" width="70%" height="70%"/>
+                  <img src="https://www.countryflags.io/DE/flat/64.png" alt="Deutsch"/>
                 ) : (
-                  <img src="https://www.countryflags.io/GB/flat/64.png" alt ="English" width="70%" height="70%"/>
+                  <img src="https://www.countryflags.io/GB/flat/64.png" alt ="English"/>
                 )} 
               </Tab>
           )

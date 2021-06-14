@@ -27,7 +27,7 @@ const Newsticker = (props) => {
                 <div className="Newsticker">
             <ul>
                 <li><p>News could not be loaded.</p></li>
-                <li><p>This is most likely due to a CORS-Error.</p></li>
+                <li><p>This is most likely due to a SOP-Error.</p></li>
                 <li><p>Nothing to be worried about.</p></li>
                 {sourceListItems[1]}
             </ul>

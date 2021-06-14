@@ -69,7 +69,7 @@ function buildLegend (max) {
             )
         );
         legendItems.push(
-            new LegendItem("No Data", "#ffff4d", 0, 0.001)
+            new LegendItem("No Data or below 0.001", "#ffff4d", 0, 0.001)
         );
     }
     //building the array for ints
@@ -134,7 +134,7 @@ function buildLegend (max) {
             )
         );
         legendItems.push(
-            new LegendItem("No Data", "#ffff4d", 0, 1)
+            new LegendItem("No Data or below 1", "#ffff4d", 0, 1)
         );
     }
     return legendItems;
