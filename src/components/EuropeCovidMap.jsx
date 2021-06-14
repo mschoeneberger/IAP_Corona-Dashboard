@@ -13,17 +13,30 @@ import {v4 as uuidv4} from "uuid";
 //Testing Rate: Tests/week, Population, Tests/week/population-Ratio
 //Vaccinated Pop: Vaccinated, Population, Vaccinated/Population-Ratio
 
-const EuropeCovidMap = (props) => {
-    const mapStyle = {
-        fillColor: "white",
-        weight: 1,
-        color: "black",
-        fillOpacity: 0.7,
-    };
 
-    function colorRegion (key) {
-        var legendIndex = props.legends[0].findIndex((legendName)=>{return legendName === props.active;}) + 1;
-        const legend = props.legends[legendIndex];
+export default class EuropeCovidMap extends React.Component {
+        constructor(props) {
+            super(props);
+        
+            this.mapStyle = {
+                fillColor: "white",
+                weight: 1,
+                color: "black",
+                fillOpacity: 0.7,
+            };
+        }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if(nextProps.active == this.props.active && nextProps.activeLanguage == this.props.activeLanguage && nextProps.rerenderMap.length == this.props.rerenderMap.length){
+            return false;
+            } else {
+            return true;
+            }
+        }
+
+    colorRegion(key) {
+        var legendIndex = this.props.legends[0].findIndex((legendName)=>{return legendName === this.props.active;}) + 1;
+        const legend = this.props.legends[legendIndex];
         for(let i=0; i<legend.length; i++){
             if(key >= legend[i].from &&
                 key < legend[i].to
@@ -32,8 +45,9 @@ const EuropeCovidMap = (props) => {
                 }
         }
     }
-//[key, item1string, item2string, item3string]
-    function getRelevantData(region, active){
+
+    //[key, item1string, item2string, item3string]
+    getRelevantData(region, active){
         var relevantData;
         switch(active){
             case "Cumulative Fatalities":
@@ -92,28 +106,36 @@ const EuropeCovidMap = (props) => {
         }
     }
 
-    const onEachRegion = (region, layer) => {
-        const relevantData = getRelevantData(region,props.active);
-        layer.options.fillColor = colorRegion(relevantData[props.activeLanguage][0]);
-        const item1 = relevantData[props.activeLanguage][1];
-        const item2 = relevantData[props.activeLanguage][2];
-        const item3 = relevantData[props.activeLanguage][3];
+    onEachRegion = (region, layer) => {
+        const relevantData = this.getRelevantData(region,this.props.active);
+        layer.options.fillColor = this.colorRegion(relevantData[this.props.activeLanguage][0]);
+        const item1 = relevantData[this.props.activeLanguage][1];
+        const item2 = relevantData[this.props.activeLanguage][2];
+        const item3 = relevantData[this.props.activeLanguage][3];
+
+        // Charts: set state activeRegion
+        layer.on({
+            click: (e) => {
+                this.props.setActiveRegion({country: region.properties.origin, region: region.properties.name})
+            }
+        })
+
         layer.bindPopup(
                 `${region.properties.name}
                 <br/> ${item1}
                 <br/> ${item2}
                 <br/> ${item3}
             `
-            );
+        );
     };
 
-    return <MapContainer zoom={5} center={[50, 9]}>
-        <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-        />
-        <GeoJSON key={uuidv4()} style={mapStyle} data={props.regions} onEachFeature={onEachRegion}/>
-    </MapContainer>;
-};
- 
-export default EuropeCovidMap;
+    render() {
+        return <MapContainer zoom={5} center={[50, 9]}>
+            <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            />
+            <GeoJSON key={uuidv4()} style={this.mapStyle} data={this.props.regions} onEachFeature={this.onEachRegion}/>
+        </MapContainer>;
+    }
+}

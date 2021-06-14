@@ -3,14 +3,18 @@ import './App.css';
 import TopRow from "./components/TopRow";
 import InfoPanel from "./components/InfoPanel";
 import LoadingMap from "./components/LoadingMap";
-import CovidMap from "./components/CovidMap";
+// Neue Implementierung von CovidMap als Klasse. 
+// Das ermöglicht das Zeigen der Popups und Selektieren der Länder für den Chart.
+// Genaueres in Kommentaren in CovidMap_Class.xjs
+import CovidMap from "./components/CovidMap_Class";
 import MapSelectionButtons from "./components/MapSelectionButtons";
 import LoadCountriesTask from "./tasks/LoadCountriesTask";
 import buildLegends from "./tasks/BuildLegendsTask";
 import LoadEuropeTask from "./tasks/LoadEuropeTask.js";
 import EuropeCovidMap from "./components/EuropeCovidMap";
-import Charts from "./components/Charts";
+import ChartsWrapper from "./components/ChartsWrapper";
 import InfoWindow from "./components/InfoWindow";
+import Charts_Vacc from './components/Vacc';
 
 // TODO: 
 // Code für Präsentation auskommentieren
@@ -22,9 +26,6 @@ import InfoWindow from "./components/InfoWindow";
 // Generelles Styling überarbeiten
 // Map-Translation: Gebietsnamen übersetzen?
 // Map/Legend Anpassungen: Tilelayer-OSM? Farbkorrektur aufgrund von Transparenz?
-
-
- import { useAlert } from 'react-alert';
 
 const App = () => {
     // views are the different categories of data we want to display
@@ -54,20 +55,15 @@ const App = () => {
     const regionLegends = buildLegends(
         regionViews,
         [200_000, 10_000, 200, 85, 10_000])
-    /* -------------------------------------------------
-    * Tassias Code : 
-    * -------------------------------------------------- */
+    
+    // states for the charts:
     // Sate um nachzuvollziehen, welche Country auf der CovidMap ausgewählt wurde
     const [activeCountry, setActiveCountry] = useState("World");
+    const [activeRegion, setActiveRegion] = useState();
     // State um die kompletten Daten der API zu speichern (ohne Formatierung für die CovidMap) für die Charts
     const [completeData, setCompleteData] = useState();//{World:[]}
+    // hook to save the list of all countries once the data is acquired. This list is needed for the country select box 
     const [completeRegionData, setCompleteRegionData] = useState();
-    const [countryList,setcountryList] = useState();
-    const [startDate, setStartDate] = useState();
-    const [endDate, setEndDate] = useState();
-    const [selectedCountries,setSelectedCountries] = useState([{ value: 'World', label: 'World'}]);
-    const [WorldData, setWorldData] = useState([]);
-    const alert = useAlert();
 
     //Function to load the Geo- & Coronadata for both focuses
     const load = () => {
@@ -77,42 +73,56 @@ const App = () => {
         loadEuropeTask.load(setEuropeCountries, setCompleteRegionData);
     };
 
+
     useEffect(load, []);
       
-    if(infoWindow === "hidden") return (
-    <div style={{overflow: "hidden"}}>
-        <div className="page">
-            <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow} activeLegend={activeLegend} setActiveLegend={setActiveLegend}/>
-            <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
-                <InfoPanel legends={legends} regionLegends={regionLegends} focus={activeFocus} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
-                <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
-                    {/* This div is only there to fix a visual glitch when changing focus */}
-                    <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
-                        {/* Depending on the activeFocus either the CovidMap or the EuropeCovidMap is displayed. */}
-                        {activeFocus === "World" ? (countries.length === 0 ? (
-                            // If the background loading of the data is not quite done yet, display a loading symbol.
-                           <LoadingMap/>
-                        ) : (<>
-                                <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveCountry={setActiveCountry}/>
-                            </>
-                        )) : (europeCountries.length === 0 ? (
-                           <LoadingMap/>
-                        ) : (<>
-                                <EuropeCovidMap regions={europeCountries} legends={regionLegends} active={activeLegend} activeLanguage={activeLanguage}/>
-                            </>
-                        ))}
+    if (activeFocus === "Vaccination") return (
+        <div style={{overflow: "hidden"}}>
+            <div className="page">
+                <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow} activeLegend={activeLegend} setActiveLegend={setActiveLegend}/>
+                <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
+                    <InfoPanel legends={legends} regionLegends={regionLegends} focus={activeFocus} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
+                    <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
+                        {/* This div is only there to fix a visual glitch when changing focus */}
+                        <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
+                            <Charts_Vacc completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate} activeLanguage={activeLanguage}/>
+                        </div>
                     </div>
-                    <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={[worldViews,regionViews]} activeLanguage={activeLanguage} focus={activeFocus}/>
                 </div>
             </div>
         </div>
-        <Charts  activeLegend={activeLegend} activeCountry={activeCountry} completeData={completeData} lastUpdate={lastUpdate}
-            startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}
-            countryList={countryList} setcountryList={setcountryList} 
-            selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries} WorldData={WorldData} setWorldData={setWorldData}
-            alert={alert}/>
-    </div>   
     );
+    else if(infoWindow === "hidden") return (
+        <div style={{overflow: "hidden"}}>
+            <div className="page">
+                <TopRow lastUpdate={lastUpdate} activeFocus={activeFocus} setActiveFocus={setActiveFocus} activeLanguage={activeLanguage} setInfoWindow={setInfoWindow} activeLegend={activeLegend} setActiveLegend={setActiveLegend}/>
+                <div style={{height:"90%", width:"100%", display:"flex", flexDirection:"row"}}>
+                    <InfoPanel legends={legends} regionLegends={regionLegends} focus={activeFocus} active={activeLegend} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage}/>
+                    <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
+                        {/* This div is only there to fix a visual glitch when changing focus */}
+                        <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
+                            {/* Depending on the activeFocus either the CovidMap or the EuropeCovidMap is displayed. */}
+                            {activeFocus === "World" ? (countries.length === 0 ? (
+                                // If the background loading of the data is not quite done yet, display a loading symbol.
+                               <LoadingMap/>
+                            ) : (<>
+                                    <CovidMap countries={countries} legends={legends} active={activeLegend} activeLanguage={activeLanguage} setActiveCountry={setActiveCountry}/>
+                                </>
+                                  
+                            )) : (europeCountries.length === 0 ? (
+                               <LoadingMap/>
+                            ) : (<>
+                                    <EuropeCovidMap rerenderMap={completeRegionData} regions={europeCountries} legends={regionLegends} active={activeLegend} activeLanguage={activeLanguage} setActiveRegion={setActiveRegion}/>
+                                </>
+                            ))}
+                        </div>
+                        <MapSelectionButtons active={activeLegend} setActiveLegend={setActiveLegend} views={[worldViews,regionViews]} activeLanguage={activeLanguage} focus={activeFocus}/>
+                    </div>
+                </div>
+            </div>
+            <ChartsWrapper activeLanguage={activeLanguage} activeLegend={activeLegend} activeCountry={activeCountry} activeRegion={activeRegion} completeData={completeData} completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate}/>
+        </div>   
+        );
     else return (
         <div className="page">
             <InfoWindow infoWindow={infoWindow} setInfoWindow={setInfoWindow} activeLanguage={activeLanguage}/>

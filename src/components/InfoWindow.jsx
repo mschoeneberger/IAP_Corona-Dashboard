@@ -96,33 +96,73 @@ const InfoWindow = (props) => {
     else{
         head={"English": "About Us", "Deutsch": "Über Uns"};
         body={
-            "English" : <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+            "English" : <div>
+                <p> Welcome to our Website!
+                We are Maximilian, Larry and Tassia - computer science students from the university of Heidelberg, Germany. 
+                This Corona-Dashboard was created as a beginners practical during the Corona pandemic. </p>
+                <br/>
+                <p>The Dashboard aimed to present data on Corona clearly, while being intuitive yet precise 
+                    and is supposed to show as much information as possible at least for our geographically near regions and make data
+                    from one region comparable to the data from another.</p>
+                <br/>
+                <p>It consists of two parts:</p>
+                <ul>
+                    <li>
+                        <p>The map gives a plain overview of the current situation on the world as a whole and smaller regions. 
+                            It shows a popup with additional, relevant data on-click.</p>
+                        <p>A newsticker keeps you up to date. You can choose the language of the website between English and German.</p>
+                        <p>Below you can choose different aspects, which you want to be shown on the map and the charts. 
+                            A tooltip box explains the meaning of the aspects.</p>
+                        <p>Furthermore you can choose between a world- and a regionview at the top of the map.</p>
+                    </li>
+                    <li>
+                        <p>The chart gives you a more detailled view and enables the comparison between different countries and regions. 
+                            You can choose the timerange and stepsize.</p>
+                        <p>In addition it shows some vaccination data for Germany.</p>
+                    </li>
+                </ul>
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</p>
+            <p>important tools we used:</p>
+                <ul>
+                    <li><p>bootstrap</p></li>
+                    <li><p>react</p></li>
+                    <li><p>leaflet</p></li>
+                    <li><p>chart.js</p></li>
+                </ul>
+            
+            </div>
             ,
             "Deutsch" : <div>
-                <p>Wir sind Maximilian (Informatik), Larry (Informatik) und Tassia (Informatik) von der Universität Heidelberg. Im Rahmen des Anfängerpraktikums für Bachelorstudent*innen entstand bei uns dieses Corona-Dashboard während der COVID-19-Pandemie.</p>
+                <p>Wir sind Maximilian (Informatik), Larry (Informatik) und Tassia (Informatik) von der Universität Heidelberg. 
+                    Im Rahmen des Anfängerpraktikums für Bachelorstudent*innen entstand bei uns dieses Corona-Dashboard während der COVID-19-Pandemie.</p>
                 <br/>
-                <p>Unser Ziel war es, ein übersichtliches Dashboard zu kreieren, das sich intuitiv und einfach bedienen lässt, und zugleich möglichst viele relevante Informationen zu transportieren, grafisch darzustellen und leicht vergleichbar zu machen.</p>
-                <p>Weiter wollten wir (wie bei manch anderes Dashboards üblich) uns bei der Darstellung nicht nur auf die deutschen Landkreise beschränken, sondern auch die Unterregionen der deutschen Nachbarn miteinbeziehen, da auch das Virus an den Grenzen nicht Halt macht.</p>
+                <p>Unser Ziel war es, ein übersichtliches Dashboard zu kreieren, das sich intuitiv und einfach bedienen lässt, 
+                    und zugleich möglichst viele relevante Informationen zu transportieren, grafisch darzustellen und leicht vergleichbar zu machen.</p>
+                <p>Weiter wollten wir (wie bei manch anderes Dashboards üblich) uns bei der Darstellung nicht nur auf die deutschen Landkreise beschränken, 
+                    sondern auch die Unterregionen der deutschen Nachbarn miteinbeziehen, da auch das Virus an den Grenzen nicht Halt macht.</p>
                 <br/>
                 <p>Unser Dashboard lässt sich grob in zwei Teile gliedern:</p>
                 <ul>
                     <li>
-                        <p>Der Kartenteil verschafft einen leicht verständlichen, aktuellen Überblick über die aktuelle Lage der Welt bzw. den einzelnen Regionen rund um Deutschland. Bei Klick auf ein Land bzw. eine Region werden zusätzliche, relevante Daten mittels Popup angezeigt.</p>
-                        <p>Während man sich mit dem Newsticker auf dem Laufenden halten kann, lässt sich die Sprache der gesamten Seite zwischen Englisch und Deutsch umschalten mit einem Klick auf die entsprechende Landesflagge.</p>
-                        <p>Unter der Karte ermöglichen die Tabs es, verschiedene Aspekte der Pandemie grafisch auf der Karte darzustellen. Eine Tooltipbox informiert über die Bedeutung der Aspekte.</p>
-                        <p>Das Umschalten zwischen Weltansicht und Regionsansicht erfolgt über einen Button auf der oberen Leiste. Dort finden sich auch der Name unseres Dashboards, das Datum der letzten Aktualisierung, sowie ein Knopf für das Menü.</p>
+                        <p>Der Kartenteil verschafft einen leicht verständlichen, aktuellen Überblick über die aktuelle Lage der Welt bzw. den einzelnen 
+                            Regionen rund um Deutschland. Bei Klick auf ein Land bzw. eine Region werden zusätzliche, relevante Daten mittels Popup angezeigt.</p>
+                        <p>Während man sich mit dem Newsticker auf dem Laufenden halten kann, lässt sich die Sprache der gesamten Seite zwischen Englisch und 
+                            Deutsch umschalten mit einem Klick auf die entsprechende Landesflagge.</p>
+                        <p>Unter der Karte ermöglichen die Tabs es, verschiedene Aspekte der Pandemie grafisch auf der Karte darzustellen. 
+                            Eine Tooltipbox informiert über die Bedeutung der Aspekte.</p>
+                        <p>Das Umschalten zwischen Weltansicht und Regionsansicht erfolgt über einen Button auf der oberen Leiste. 
+                            Dort finden sich auch der Name unseres Dashboards, das Datum der letzten Aktualisierung, sowie ein Knopf für das Menü.</p>
                     </li>
                     <li>
-                        <p>Der Graphenteil ermöglicht einen detaillierten Vergleich unterschiedlicher Coronadaten mehrerer Länder bzw. Regionen auch über einen (frei wählbaren) zeitlichen Verlauf.</p>
+                        <p>Der Graphenteil ermöglicht einen detaillierten Vergleich unterschiedlicher Coronadaten mehrerer Länder bzw. Regionen auch über 
+                            einen (frei wählbaren) zeitlichen Verlauf.</p>
                         <p>Desweiteren werden hier auch die deutschen Impfstatistiken angezeigt.</p>
                     </li>
                 </ul>
                 <br/>
                 <p>Verwendete Werkzeuge:</p>
                 <ul>
-                    <li><p>bootsrap</p></li>
+                    <li><p>bootstrap</p></li>
                     <li><p>react</p></li>
                     <li><p>leaflet</p></li>
                     <li><p>chart.js</p></li>

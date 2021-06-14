@@ -8,10 +8,17 @@ const options = [
   { value: 'm', label: 'Month' }
 ]
 
+const optionsGer = [
+  { value: 'd', label: 'Tag' },
+  { value: 'w', label: 'Woche' },
+  { value: 'm', label: 'Monat' }
+]
+
+
 const Stepsize = (props) => {
   
   return (
-    <Select options={options} 
+    <Select options={props.activeLanguage === "English" ? (options) : (optionsGer)}
     className="StepSelect"
     defaultValue={options[0]}
     onChange={props.setStep}

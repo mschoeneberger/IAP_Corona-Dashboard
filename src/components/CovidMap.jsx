@@ -1,5 +1,6 @@
 import React from 'react';
 import {MapContainer, GeoJSON, TileLayer} from "react-leaflet";
+import {popup} from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./CovidMap.css";
 import formatNumberWithSpaces from "../tasks/formatNumberWithSpaces";
@@ -14,6 +15,7 @@ import {v4 as uuidv4} from "uuid";
 //Vaccinated Pop: Vaccinated, Population, Vaccinated/Population-Ratio
 
 const CovidMap = (props) => {
+    console.log("rerendering")
     const mapStyle = {
         fillColor: "white",
         weight: 1,
@@ -83,14 +85,17 @@ const CovidMap = (props) => {
         const item1 = relevantData[props.activeLanguage][1];
         const item2 = relevantData[props.activeLanguage][2];
         const item3 = relevantData[props.activeLanguage][3];
-        layer.bindPopup(
-                `${country.properties.ADMIN}
-                <br/> ${item1}
-                <br/> ${item2} 
-                <br/> ${item3}
-            `
-            );
-             /* ----------------------------------------------------------------------------------------------------
+/*
+        var pop = popup({autoClose:false,closeOnClick:false})
+        pop.setContent(`${country.properties.ADMIN}
+        <br/> ${item1}
+        <br/> ${item2} 
+        <br/> ${item3}`)
+        layer.bindPopup(pop)
+        */
+           
+
+/* ----------------------------------------------------------------------------------------------------
              * Tassias Code : Setzt den ActiveCountry State auf die Country, die in der CovidMap selektiert wird
              * ---------------------------------------------------------------------------------------------------- */
             layer.on({
@@ -100,6 +105,13 @@ const CovidMap = (props) => {
                     props.setActiveCountry(country_name)
                 }
             })
+            layer.bindPopup(
+                `${country.properties.ADMIN}
+                <br/> ${item1}
+                <br/> ${item2} 
+                <br/> ${item3}
+            `,{autoClose:false,closeOnClick:false}
+            );
         };
         // function func (oEvent){
         //     console.log(oEvent)
@@ -114,4 +126,4 @@ const CovidMap = (props) => {
     </MapContainer>;
 };
  
-export default CovidMap;
+export default  React.memo( CovidMap );

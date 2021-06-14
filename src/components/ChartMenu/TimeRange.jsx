@@ -13,7 +13,7 @@ const TimeRange = (props) => {
    
   return (
     <form>
-      <label className="margin">from:  </label>
+    {props.activeLanguage === "English" ? (<label className="margin">from: </label>) : (<label className="margin">von: </label>)}
     <DatePicker
     selected={props.startDate}
     onChange={date => props.setStartDate(date)}
@@ -23,12 +23,10 @@ const TimeRange = (props) => {
     maxDate={props.endDate}
     minDate={new Date("01/22/2020")}
     className="DatePicker"
-    // Larry-Code:
     popperPlacement="left"
-    //
   />
   <br/>
-  <label className="margin2">to:  </label>
+  {props.activeLanguage === "English" ? (<label className="margin2">to: </label>) : (<label className="margin2">bis: </label>)}
   <DatePicker
     selected={props.endDate}
     onChange={date => props.setEndDate(date)}
@@ -38,9 +36,7 @@ const TimeRange = (props) => {
     minDate={props.startDate}
     maxDate={lastUpdate}
     className="DatePicker"
-    // Larry-Code:
     popperPlacement="left"
-    //
   />
   
   </form>

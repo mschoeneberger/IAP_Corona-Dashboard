@@ -21,7 +21,7 @@ const Tab = styled.button`
 const FocusMenu = (props) => {
     const buttonNames= {
         "English": ["World", "Regions"],
-        "Deutsch": ["Welt", "Regionen"]
+        "Deutsch": ["Welt", "Regionen"],
     }
     var vis = "hidden";
     if(props.focusSelectionOpen){
