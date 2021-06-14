@@ -169,11 +169,11 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
             var elem = relevantData[i]
             if(Ger) var date = new Date(elem.d)
             else var date = new Date(elem.date)
-            if(step.label === "Day"){
+            if(step.value === "d"){
                 data.push(roundTo2(f(elem)))
                 labels.push(date.toLocaleDateString())
             }
-            else if(step.label === "Week"){
+            else if(step.value === "w"){
                 sum_array.push(f(elem))
                 if(date.getDay() === 0 || i === relevantData.length-1){
                     data.push(roundTo2(sum_array.reduce(sum)/sum_array.length))
@@ -195,18 +195,48 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
         return [data,labels]
     }
 
+    function data_sorting_cum(f){
+        var labels = []
+        var data = []
+        var sum_array = []
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"
+                            ];
+
+        for (var i=0; i<relevantData.length; i++){
+            var elem = relevantData[i]
+            if(Ger) var date = new Date(elem.d)
+            else var date = new Date(elem.date)
+            if(step.value === "d"){
+                data.push(roundTo2(f(elem)))
+                labels.push(date.toLocaleDateString())
+            }
+            else if(step.value === "w"){
+                if(date.getDay() === 0 ){
+                    data.push(roundTo2(f(elem)))
+                    if (date.getDay() === 0) labels.push(date.toDateString())
+                    else                    labels.push("today")
+                }
+            }
+            else {
+                if(date.getDate() === 1 ){
+                    data.push(roundTo2(f(elem)))
+                    if (date.getDate() === 1)    labels.push(monthNames[date.getMonth()])
+                    else                         labels.push("today")
+                }
+            }
+        }
+        return [data,labels]
+    }
+    
     if (activeLegend === "Cumulative Fatalities"){
         if(Ger){
-            if(relative) return data_sorting(
-                    x => {
-                        var result = roundTo4(x["h"]/x.population)*100
-                        return result
-                    }
-                )
-            else return data_sorting(x => x["h"])
+            if(relative) return data_sorting(x => {return roundTo4(x["h"]/x.population)*100})
+            else return data_sorting_cum(x =>  x["h"])
         } else {
             if(relative) return data_sorting(x => {return roundTo4(x["totalDeaths"]/x.population)*100})
-            else return data_sorting(x => {return x["totalDeaths"]})
+            else return data_sorting_cum(x =>  x["totalDeaths"])
         }
     }
     else if (activeLegend === "New Cases(21 Days)"){
@@ -214,7 +244,7 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
             if(relative) return data_sorting(x => roundTo4(x["g"]/x.population)*100)
             else return data_sorting(x => x["g"])
         } else {
-            if(relative) return data_sorting(x => roundTo4(x["newCases21Days"]/x.population)*100)
+            if(relative) return data_sorting(x => {return roundTo4(x["newCases21Days"]/x.population)*100})
             else return data_sorting(x => x["newCases21Days"])
         }
     }
@@ -235,10 +265,10 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
     else if (activeLegend === "Cumulative Cases"){
         if(Ger){
             if(relative) return data_sorting(x => roundTo4(x["e"]/x.population)*100)
-            else return data_sorting(x => x["e"])
+            else return data_sorting_cum(x => x["e"])
         } else {
             if(relative) return data_sorting(x => roundTo4(x["totalCases"]/x.population)*100)
-            else return data_sorting(x => x["totalCases"])
+            else return data_sorting_cum(x => x["totalCases"])
         }
     }  
     else {
@@ -297,8 +327,7 @@ function chart_deleteDataset(chart,country){
 const Charts_Region = (props) => {
     // States
     // tracks the stepsize selected in the options panel
-    const [step, setStep] = useState({ value: 'd', label: 'Day' });
-    const [relativeState, setRelativeState] = useState(false);
+
     
     /* --------------------------------------------------------------------------------
     | Init Chart
@@ -404,7 +433,7 @@ const Charts_Region = (props) => {
                     CountryData = props.completeRegionData[0][selected.value][selected.label]
                 }
                 
-                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState, Ger)
+                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, props.step, new Date(props.lastUpdate), props.relativeState, Ger)
                 chart_addDataset(chart,data,labels,selected.value + "/" + selected.label)
 
             }
@@ -428,9 +457,9 @@ const Charts_Region = (props) => {
             // Update Chart Title
             chart.options.title.text = props.activeLegend
 
-            var Ger = false;
 
             for(var chart_data of chart.data.datasets){
+                var Ger = false;
                 var country_name = chart_data.label
                 var CountryData;
                 var str_arr  = country_name.split("/")
@@ -441,15 +470,15 @@ const Charts_Region = (props) => {
                     CountryData = props.completeRegionData[0][str_arr[0]][str_arr[1]]
                 }
 
-                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState, Ger)
+                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, props.step, new Date(props.lastUpdate), props.relativeState, Ger)
                 chart_data.data = data
             }
             chart.data.labels = labels
-            if(chart.options.scales.yAxes[0].scaleLabel)chart.options.scales.yAxes[0].scaleLabel.display = relativeState
+            if(chart.options.scales.yAxes[0].scaleLabel)chart.options.scales.yAxes[0].scaleLabel.display = props.relativeState
             chart.update()
             // change chart axis label on relative
         }
-    },[props.startDate, props.endDate, step, props.activeLegend, relativeState])
+    },[props.startDate, props.endDate, props.step, props.activeLegend, props.relativeState])
 
     /* --------------------------------------------------------------------------------
     | RegionList
@@ -503,7 +532,8 @@ const Charts_Region = (props) => {
                 </div>
                 <div style={styles2}>
                     <ChartMenu 
-                        setStep={setStep} 
+                        activeLanguage={props.activeLanguage}
+                        setStep={props.setStep} 
                         startDate={props.startDate} 
                         endDate={props.endDate} 
                         setEndDate={props.setEndDate} 
@@ -516,8 +546,11 @@ const Charts_Region = (props) => {
                         showing={showing} number_of_colors={number_of_colors}
                         alert={props.alert}
                         activeFocus={props.activeFocus}
-                        relativeState={relativeState}
-                        setRelativeState={setRelativeState}
+                        relativeState={props.relativeState}
+                        setRelativeState={props.setRelativeState}
+                        showVac={props.showVac} 
+                        setShowVac={props.setShowVac}
+                        setVacCumulative={props.setVacCumulative} vacCumulative={props.vacCumulative}
                         />
                 </div>    
             </div>

@@ -3,7 +3,6 @@ import "./Charts.css"
 import Chart, { plugins } from 'chart.js'
 import ChartMenu from "./ChartMenu.jsx"
 import LoadingMap from "./LoadingMap";
-
 // colors for the charts
 var chartColors = [
 	{name:'red',    value: 'rgb(255, 99, 132)'},
@@ -96,17 +95,18 @@ var config = {
 
 // chart size
 const styles = {
-    width: '85%',
+    width: '80%',
     height: "500px",
     overflow: "hidden"
 }
+
 // chart options size
 const styles2 = {
     width: '15%'
 }
 
 // States
-const id = {id:"ChartID_1"}
+const id = {id:"ChartID_1",id2:"ChartID_2"}
 var init_Chart = true
 var init_States= true
 var chart;
@@ -134,7 +134,7 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
     var right_index = CountryData.length - diffDaysStart + NumberDays
     var relevantData = CountryData.slice(left_index,right_index)
 
-    function roundToTwo(num) {
+    function roundTo2(num) {
         return +(Math.round(num + "e+2")  + "e-2");
     }
     function roundTo4(num) {
@@ -154,14 +154,14 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
         for (var i=0; i<relevantData.length; i++){
             var elem = relevantData[i]
             var date = new Date(elem.date)
-            if(step.label === "Day"){
-                data.push(roundToTwo(f(elem)))
+            if(step.value === "d"){
+                data.push(roundTo2(f(elem)))
                 labels.push(date.toLocaleDateString())
             }
-            else if(step.label === "Week"){
+            else if(step.value === "w"){
                 sum_array.push(f(elem))
                 if(date.getDay() === 0 || i === relevantData.length-1){
-                    data.push(roundToTwo(sum_array.reduce(sum)/sum_array.length))
+                    data.push(roundTo2(sum_array.reduce(sum)/sum_array.length))
                     sum_array = []
                     if (date.getDay() === 0) labels.push(date.toDateString())
                     else                    labels.push("last Week")
@@ -170,7 +170,7 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
             else {
                 sum_array.push(f(elem))
                 if(date.getDate() === 1 || i === relevantData.length-1){
-                    data.push(roundToTwo(sum_array.reduce(sum)/sum_array.length))
+                    data.push(roundTo2(sum_array.reduce(sum)/sum_array.length))
                     sum_array = []
                     if (date.getDate() === 1)    labels.push(monthNames[date.getMonth()])
                     else                         labels.push("last Month")
@@ -180,28 +180,56 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
         return [data,labels]
     }
 
+    function data_sorting_cum(f){
+        var labels = []
+        var data = []
+        var sum_array = []
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"
+                            ];
+
+        for (var i=0; i<relevantData.length; i++){
+            var elem = relevantData[i]
+            var date = new Date(elem.date)
+            if(step.value === "d"){
+                data.push(roundTo2(f(elem)))
+                labels.push(date.toLocaleDateString())
+            }
+            else if(step.value === "w"){
+                if(date.getDay() === 0 ){
+                    data.push(roundTo2(f(elem)))
+                    if (date.getDay() === 0) labels.push(date.toDateString())
+                    else                    labels.push("today")
+                }
+            }
+            else {
+                if(date.getDate() === 1 ){
+                    data.push(roundTo2(f(elem)))
+                    if (date.getDate() === 1)    labels.push(monthNames[date.getMonth()])
+                    else                         labels.push("today")
+                }
+            }
+        }
+        return [data,labels]
+    }
+
     switch(activeLegend){
         
         case "Cumulative Fatalities":
-            return data_sorting(x => {
-                if(relative) return roundTo4(x["totalDeaths"]/x.population)*100
-                else return x["totalDeaths"]
-            })
+            if(relative) return data_sorting(x => {return roundTo4(x["totalDeaths"]/x.population)*100})
+            else return data_sorting_cum(x =>  x["totalDeaths"])
    
         case "New Cases(21 Days)":
-            return data_sorting(x => {
-                if(relative) return roundTo4(x["newCases21Days"]/x.population)*100
-                else return x["newCases21Days"]
-            })
+            if(relative) return data_sorting(x => {return roundTo4(x["newCases21Days"]/x.population)*100})
+            else return data_sorting(x => x["newCases21Days"])
 
         case "7-Day-Incidence":
-            return data_sorting(x => roundToTwo(x["newCases7Days"]/x["population"]*100000))
+            return data_sorting(x => roundTo2(x["newCases7Days"]/x["population"]*100000))
 
         case "Cumulative Cases":
-            return data_sorting(x => {
-                if(relative) return roundTo4(x["totalCases"]/x.population)*100
-                else return x["totalCases"]
-            })
+            if(relative) return data_sorting( x => { return roundTo4(x["totalCases"]/x.population)*100})
+            else return data_sorting_cum( x => x["totalCases"])
 
         default:
             return [[],[]];
@@ -260,8 +288,6 @@ const Charts = (props) => {
     var completeData = props.completeData
     // States
     // tracks the stepsize selected in the options panel
-    const [step, setStep] = useState({ value: 'd', label: 'Day' });
-    const [relativeState, setRelativeState] = useState(false);
     
     /* --------------------------------------------------------------------------------
     | Init Chart
@@ -341,7 +367,7 @@ const Charts = (props) => {
                 } else {
                     CountryData = completeData[country.label.toLowerCase()]
                 }
-                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState)
+                var [data,labels] = getRelevantData(CountryData,activeLegend, props.startDate, props.endDate, props.step, new Date(props.lastUpdate), props.relativeState)
                 chart_addDataset(chart,data,labels,country.label)
 
             }
@@ -374,14 +400,14 @@ const Charts = (props) => {
                 } else {
                     CountryData = completeData[country_name.toLowerCase()]
                 }
-                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, step, new Date(props.lastUpdate), relativeState)
+                var [data,labels] = getRelevantData(CountryData,props.activeLegend, props.startDate, props.endDate, props.step, new Date(props.lastUpdate), props.relativeState)
                 chart_data.data = data
             }
             chart.data.labels = labels
-            if(chart.options.scales.yAxes[0].scaleLabel)chart.options.scales.yAxes[0].scaleLabel.display = relativeState
+            if(chart.options.scales.yAxes[0].scaleLabel)chart.options.scales.yAxes[0].scaleLabel.display = props.relativeState
             chart.update()
         }
-    },[props.startDate, props.endDate, step, props.activeLegend, relativeState])
+    },[props.startDate, props.endDate, props.step, props.activeLegend, props.relativeState])
 
 
     /* --------------------------------------------------------------------------------
@@ -437,34 +463,36 @@ const Charts = (props) => {
             }
             props.setWorldData(WorldData)
         }
-
-        
-
         return (
-            <div className="chartContainer">
-                <div style={styles}>
-                    <canvas style={{width:'100%',height:'500px'}} id={id.id}/>
-                </div>
-                <div style={styles2}>
-                    <ChartMenu 
-                        setStep={setStep} 
-                        startDate={props.startDate} 
-                        endDate={props.endDate} 
-                        setEndDate={props.setEndDate} 
-                        setStartDate={props.setStartDate} 
-                        lastUpdate={props.lastUpdate}
-                        country_list={props.countryList}
-                        region_list={props.RegionList}
-                        selectedCountries={props.selectedCountries}
-                        setSelectedCountries={props.setSelectedCountries}
-                        showing={showing} number_of_colors={number_of_colors}
-                        alert={props.alert}
-                        activeFocus={props.activeFocus}
-                        relativeState={relativeState}
-                        setRelativeState={setRelativeState}
+                <div className="chartContainer">
+                    <div style={styles}>
+                        <canvas style={{width:'100%',height:'500px'}} id={id.id}/>
+                    </div>
+                    <div style={styles2}>
+                        <ChartMenu 
+                            activeLanguage={props.activeLanguage}
+                            setStep={props.setStep} 
+                            startDate={props.startDate} 
+                            endDate={props.endDate} 
+                            setEndDate={props.setEndDate} 
+                            setStartDate={props.setStartDate} 
+                            lastUpdate={props.lastUpdate}
+                            country_list={props.countryList}
+                            region_list={props.RegionList}
+                            selectedCountries={props.selectedCountries}
+                            setSelectedCountries={props.setSelectedCountries}
+                            showing={showing} number_of_colors={number_of_colors}
+                            alert={props.alert}
+                            activeFocus={props.activeFocus}
+                            relativeState={props.relativeState}
+                            setRelativeState={props.setRelativeState}
+                            showVac={props.showVac} 
+                            setShowVac={props.setShowVac}
+                            setVacCumulative={props.setVacCumulative} vacCumulative={props.vacCumulative}
                         />
-                </div>    
-            </div>
+                    </div>
+                </div>
+                
         );
     } else {
         return (

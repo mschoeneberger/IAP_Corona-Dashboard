@@ -99,10 +99,10 @@ const styles2 = {
 }
 
 // States
-const id = {id:"ChartID_1"}
+const id = {id:"ChartID_3"}
 var chart;
 
-function getRelevantData(CountryData, activeLegend, startDate, endDate, step, lastUpdated,relative){
+function getRelevantData(CountryData, activeLegend, startDate, endDate, step, lastUpdated,relative, cumulative){
 
     // ignore countries with no data
     if(CountryData === undefined) {
@@ -119,6 +119,7 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
     var left_index = CountryData.length - 1 - diffDaysStart
     var right_index = CountryData.length - diffDaysStart + NumberDays
     var relevantData = CountryData.slice(left_index,right_index)
+    var Accumulator = 0
 
     function roundTo2(num) {
         return +(Math.round(num + "e+2")  + "e-2");
@@ -166,16 +167,17 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
         return [data,labels]
     }
 
-    if (activeLegend === "first vacc"){
-        if(relative) return data_sorting( x => x["first vacc"]/German_population*100)
-        else return data_sorting(x => x["first vacc"])
-    }
-    else if (activeLegend === "second vacc"){
-        if(relative) return data_sorting( x => x["second vacc"]/German_population*100)
-        else return data_sorting(x => x["second vacc"])
+    if (cumulative){
+        if(relative) return data_sorting( x => {
+            Accumulator = Accumulator + x[activeLegend]
+            return Accumulator/German_population*100})
+        else return data_sorting(x => {
+            Accumulator = Accumulator + x[activeLegend]
+            return Accumulator})
     }
     else {
-        return [[],[]];
+        if(relative) return data_sorting( x => x[activeLegend]/German_population*100)
+        else return data_sorting(x => x[activeLegend])
     }
 }
 
@@ -186,10 +188,7 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
 const Charts_Vacc = (props) => {
     // States
     // tracks the stepsize selected in the options panel
-    const [step, setStep] = useState({ value: 'd', label: 'Day' });
-    const [startDate, setStartDate] = useState();
-    const [endDate, setEndDate] = useState();
-    const [relativeState, setRelativeState] = useState(false);
+
     
 
     /* --------------------------------------------------------------------------------
@@ -200,12 +199,7 @@ const Charts_Vacc = (props) => {
     useEffect(() => {
         if(props.completeRegionData){
             if(props.completeRegionData.length > 1){
-                // Set States
-                var now = new Date(props.lastUpdate)
-                var lastWeek = new Date(props.lastUpdate)
-                lastWeek.setDate(now.getDate() - 7)
-                setStartDate(lastWeek)
-                setEndDate(now)
+
                 // Set Chart
                 var ctx = document.getElementById(id.id).getContext("2d");
                 chart = new Chart(ctx, config);
@@ -230,8 +224,7 @@ const Charts_Vacc = (props) => {
     useEffect(() => {
         if(props.completeRegionData){
             if(props.completeRegionData.length > 1){
-                startDate = new Date("1/1/21")
-                endDate = new Date("1/2/21")
+
                 // Language Support
                 var labels_names = {
                     dataset:{
@@ -244,10 +237,11 @@ const Charts_Vacc = (props) => {
                     }
                 }
                 //First Vacc
+                var dataArray = []
                 var VaccData = props.completeRegionData[1].vacc
-                var [data,labels] = getRelevantData(VaccData,"first vacc", startDate, endDate, step, new Date(props.lastUpdate),relativeState)
+                var [data,labels] = getRelevantData(VaccData,"first vacc", props.startDate, props.endDate, props.step, new Date(props.lastUpdate),props.relativeState,props.vacCumulative)
                 var color = "rgb(75, 192, 192)"
-                chart.data.datasets.push({
+                dataArray.push({
                     label: labels_names.dataset[props.activeLanguage][0],
                     data: data,
                     //color
@@ -258,9 +252,9 @@ const Charts_Vacc = (props) => {
                     borderWidth: 1
                 })
                 //Second Vacc
-                var [data,labels] = getRelevantData(VaccData,"second vacc", startDate, endDate, step, new Date(props.lastUpdate),relativeState)
+                var [data,labels] = getRelevantData(VaccData,"second vacc", props.startDate, props.endDate, props.step, new Date(props.lastUpdate),props.relativeState,props.vacCumulative)
                 var color = "rgb(75, 192, 150)"
-                chart.data.datasets.push({
+                dataArray.push({
                     label: labels_names.dataset[props.activeLanguage][1],
                     data: data,
                     //color
@@ -271,12 +265,13 @@ const Charts_Vacc = (props) => {
                     borderWidth: 1
                 })
                 // Chart Labels
+                chart.data.datasets = dataArray
                 chart.options.title.text = labels_names.title[props.activeLanguage]
                 chart.data.labels = labels
                 chart.update()
             }
         }
-    },[props.startDate, props.endDate, step, relativeState])
+    },[props.startDate, props.endDate, props.step, props.relativeState, props.vacCumulative])
 
     /* --------------------------------------------------------------------------------
     | Loading Indicator
@@ -290,19 +285,6 @@ const Charts_Vacc = (props) => {
                     <div style={styles}>
                         <canvas style={{width:'100%',height:'500px'}} id={id.id}/>
                     </div>
-                    <div style={styles2}>
-                        <ChartMenu_Vacc
-                            setStep={setStep} 
-                            startDate={startDate} 
-                            endDate={endDate} 
-                            setEndDate={setEndDate} 
-                            setStartDate={setStartDate} 
-                            lastUpdate={props.lastUpdate}
-                            alert={props.alert}
-                            relativeState={relativeState}
-                            setRelativeState={setRelativeState}
-                            />
-                    </div>    
                 </div>
             );
         }

@@ -85,7 +85,7 @@ const App = () => {
                     <div style={{height:"100%", flexBasis:"70%", flexGrow:"2", display:"flex", flexDirection:"column"}}>
                         {/* This div is only there to fix a visual glitch when changing focus */}
                         <div style={{flexGrow:"16", flexBasis:"80%", width:"100%", display:"flex"}}>
-                            <Charts_Vacc completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate}/>
+                            <Charts_Vacc completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate} activeLanguage={activeLanguage}/>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <ChartsWrapper  activeLegend={activeLegend} activeCountry={activeCountry} activeRegion={activeRegion} completeData={completeData} completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate}/>
+            <ChartsWrapper activeLanguage={activeLanguage} activeLegend={activeLegend} activeCountry={activeCountry} activeRegion={activeRegion} completeData={completeData} completeRegionData={completeRegionData} activeFocus={activeFocus} lastUpdate={lastUpdate}/>
         </div>   
         );
     else return (
