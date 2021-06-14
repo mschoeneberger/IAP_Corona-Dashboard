@@ -141,11 +141,13 @@ function getRelevantData(CountryData, activeLegend, startDate, endDate, step, la
         for (var i=0; i<relevantData.length; i++){
             var elem = relevantData[i]
             var date = new Date(elem.date)
-            if(step.label === "Day"){
+            console.log(step.label)
+            if(step.value === "d"){
+                console.log(roundTo2(f(elem)))
                 data.push(roundTo2(f(elem)))
                 labels.push(date.toLocaleDateString())
             }
-            else if(step.label === "Week"){
+            else if(step.value === "w"){
                 sum_array.push(f(elem))
                 if(date.getDay() === 0 || i === relevantData.length-1){
                     data.push(roundTo2(sum_array.reduce(sum)/sum_array.length))
@@ -239,6 +241,7 @@ const Charts_Vacc = (props) => {
                 //First Vacc
                 var dataArray = []
                 var VaccData = props.completeRegionData[1].vacc
+                console.log(props)
                 var [data,labels] = getRelevantData(VaccData,"first vacc", props.startDate, props.endDate, props.step, new Date(props.lastUpdate),props.relativeState,props.vacCumulative)
                 var color = "rgb(75, 192, 192)"
                 dataArray.push({

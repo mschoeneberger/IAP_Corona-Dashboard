@@ -47,6 +47,7 @@ const ChartsWrapper = (props) => {
                       showVac={showVac} setShowVac={setShowVac} 
                       setVacCumulative={setVacCumulative} vacCumulative={vacCumulative}/>
           )}
+          {console.log(showVac)}
           {showVac ? (
               <Charts_Vacc 
                       step={step} 

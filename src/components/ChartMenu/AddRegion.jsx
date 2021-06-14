@@ -51,7 +51,7 @@ const AddRegion = (props) => {
         break;
     }
     value = orderOptions(value);
-    if(props.showing.length >= props.number_of_colors && check_count) return props.alert.show("Maximum number of regions reached")
+    //if(props.showing.length >= props.number_of_colors && check_count) return props.alert.show("Maximum number of regions reached")
     props.setSelectedRegions(value);//x => [...x,{country:value[0].value,region:value[0].label}]
   };
 
