@@ -5,6 +5,14 @@ import 'rc-slider/assets/index.css';
 const MapScrollbar = (props) => {
     var date;
     var max;
+    var datetext;
+    if(props.activeLanguage === "English"){
+        datetext = "Displayed Date: ";
+    }
+    else{
+        datetext = "Dargestelltes Datum: ";
+    }
+    
     if(props.alldates.length === 0){
         date = "Loading";
         max = 365;
@@ -19,7 +27,7 @@ const MapScrollbar = (props) => {
                 <p style={{padding:"2px"}}>Loading</p>
             </>
         ) : (<>
-                <p>Date: {date}</p>
+                <p>{datetext}{date}</p>
                 <Slider dots step={7} min={0} max={max} value={props.mapDate} onChange={props.setMapDate} reverse="true" disabled={(props.focus === "World") ? (props.countries.length === 0) : (props.regions.length ===0)}/>
             </>
         )}
