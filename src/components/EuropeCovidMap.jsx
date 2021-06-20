@@ -27,7 +27,7 @@ export default class EuropeCovidMap extends React.Component {
         }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if(nextProps.active == this.props.active && nextProps.activeLanguage == this.props.activeLanguage && nextProps.rerenderMap.length == this.props.rerenderMap.length){
+        if(nextProps.active === this.props.active && nextProps.activeLanguage === this.props.activeLanguage && nextProps.rerenderMap.length === this.props.rerenderMap.length && nextProps.mapDate === this.props.mapDate){
             return false;
             } else {
             return true;
@@ -47,59 +47,55 @@ export default class EuropeCovidMap extends React.Component {
     }
 
     //[key, item1string, item2string, item3string]
-    getRelevantData(region, active){
+    getRelevantData(region, active, mapDate){
         var relevantData;
         switch(active){
             case "Cumulative Fatalities":
-                 relevantData = {"English": [region.properties.fatalities], "Deutsch": [region.properties.fatalities]};
-                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.fatalities));
-                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(region.properties.recovered));
-                relevantData["English"].push("Mortality Rate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
-                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(region.properties.fatalities));
-                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(region.properties.recovered));
-                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (region.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData = {"English": [region.properties.coronadata[mapDate].fatalities], "Deutsch": [region.properties.coronadata[mapDate].fatalities]};
+                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].fatalities));
+                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].recovered));
+                relevantData["English"].push("Mortality Rate: " + (region.properties.coronadata[mapDate].mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].fatalities));
+                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].recovered));
+                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (region.properties.coronadata[mapDate].mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "ICU-Occupancy":
-                // region.properties.its_freie_betten = covidRegion[newestIndex].k;
-                //         region.properties.its_belegt= covidRegion[newestIndex].j;
-                //         region.properties.its_freie_beatmung= covidRegion[newestIndex].l;
-                //         region.properties.its_covid_patienten= covidRegion[newestIndex].i;
-                relevantData = {"English": [100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)], "Deutsch": [100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)]};
-                relevantData["English"].push("ICU-Occupancy: " + (100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)).toFixed(3) + "%");
-                relevantData["English"].push("Covid patients in ICU: " + formatNumberWithSpaces(region.properties.its_covid_patienten));
-                relevantData["English"].push("Unoccupied ICU beds: " + formatNumberWithSpaces(region.properties.its_freie_betten));
-                relevantData["English"].push("Unoccupied ventilators: " + formatNumberWithSpaces(region.properties.its_freie_betten));
-                relevantData["Deutsch"].push("Intensivbettenbelegung: " + (100 * region.properties.its_belegt / (region.properties.its_belegt + region.properties.its_freie_betten)).toFixed(3) + "%");
-                relevantData["Deutsch"].push("Coronapatienten auf Intensivstation: " + formatNumberWithSpaces(region.properties.its_covid_patienten));
-                relevantData["Deutsch"].push("Freie Intensivbetten: " + formatNumberWithSpaces(region.properties.its_freie_betten));
-                relevantData["Deutsch"].push("Freie Beatmungsgeräte: " + formatNumberWithSpaces(region.properties.its_freie_betten));
+                relevantData = {"English": [100 * region.properties.coronadata[mapDate].its_belegt / (region.properties.coronadata[mapDate].its_belegt + region.properties.coronadata[mapDate].its_freie_betten)], "Deutsch": [100 * region.properties.coronadata[mapDate].its_belegt / (region.properties.coronadata[mapDate].its_belegt + region.properties.coronadata[mapDate].its_freie_betten)]};
+                relevantData["English"].push("ICU-Occupancy: " + (100 * region.properties.coronadata[mapDate].its_belegt / (region.properties.coronadata[mapDate].its_belegt + region.properties.coronadata[mapDate].its_freie_betten)).toFixed(3) + "%");
+                relevantData["English"].push("Covid patients in ICU: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_covid_patienten));
+                relevantData["English"].push("Unoccupied ICU beds: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_freie_betten));
+                relevantData["English"].push("Unoccupied ventilators: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_freie_betten));
+                relevantData["Deutsch"].push("Intensivbettenbelegung: " + (100 * region.properties.coronadata[mapDate].its_belegt / (region.properties.coronadata[mapDate].its_belegt + region.properties.coronadata[mapDate].its_freie_betten)).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Coronapatienten auf Intensivstation: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_covid_patienten));
+                relevantData["Deutsch"].push("Freie Intensivbetten: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_freie_betten));
+                relevantData["Deutsch"].push("Freie Beatmungsgeräte: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].its_freie_betten));
                 return relevantData;
             case "7-Day-Incidence":
-                relevantData = {"English": [region.properties.incidentRate], "Deutsch": [region.properties.incidentRate]};
-                relevantData["English"].push("7-Day-Incidence: " + region.properties.incidentRate.toFixed(3));
-                relevantData["English"].push("Cases (7 Days): " + formatNumberWithSpaces(region.properties.last7));
+                relevantData = {"English": [region.properties.coronadata[mapDate].incidentRate], "Deutsch": [region.properties.coronadata[mapDate].incidentRate]};
+                relevantData["English"].push("7-Day-Incidence: " + region.properties.coronadata[mapDate].incidentRate.toFixed(3));
+                relevantData["English"].push("Cases (7 Days): " + formatNumberWithSpaces(region.properties.coronadata[mapDate].last7));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + region.properties.incidentRate.toFixed(3));
-                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(region.properties.last7));
+                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + region.properties.coronadata[mapDate].incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(region.properties.coronadata[mapDate].last7));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
                 return relevantData;
             case "New Cases(21 Days)":
-                relevantData = {"English": [region.properties.active], "Deutsch": [region.properties.active]};
-                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(region.properties.active));
+                relevantData = {"English": [region.properties.coronadata[mapDate].active], "Deutsch": [region.properties.coronadata[mapDate].active]};
+                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(region.properties.coronadata[mapDate].active));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["English"].push("Ratio: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
-                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(region.properties.active));
+                relevantData["English"].push("Ratio: " + (region.properties.coronadata[mapDate].active/region.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(region.properties.coronadata[mapDate].active));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.active/region.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.coronadata[mapDate].active/region.properties.population * 100).toFixed(5) + "%");
                 return relevantData;
             case "Cumulative Cases":
-                relevantData = {"English": [region.properties.confirmed], "Deutsch": [region.properties.confirmed]};
-                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(region.properties.confirmed));
+                relevantData = {"English": [region.properties.coronadata[mapDate].confirmed], "Deutsch": [region.properties.coronadata[mapDate].confirmed]};
+                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].confirmed));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["English"].push("Ratio: " + (region.properties.confirmed/region.properties.population * 100).toFixed(3) + "%");
-                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(region.properties.confirmed));
+                relevantData["English"].push("Ratio: " + (region.properties.coronadata[mapDate].confirmed/region.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(region.properties.coronadata[mapDate].confirmed));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(region.properties.population));
-                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.confirmed/region.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Verhältnis: " + (region.properties.coronadata[mapDate].confirmed/region.properties.population * 100).toFixed(3) + "%");
                 return relevantData;
             default:
                 return [0,"","",""];
@@ -107,7 +103,9 @@ export default class EuropeCovidMap extends React.Component {
     }
 
     onEachRegion = (region, layer) => {
-        const relevantData = this.getRelevantData(region,this.props.active);
+        var relevantData;
+        if(region.properties.coronadata[this.props.alldates[this.props.mapDate].toLocaleDateString()] === undefined){relevantData = this.getRelevantData(region,this.props.active,"default");}
+        else{relevantData = this.getRelevantData(region,this.props.active,this.props.alldates[this.props.mapDate].toLocaleDateString());}
         layer.options.fillColor = this.colorRegion(relevantData[this.props.activeLanguage][0]);
         const item1 = relevantData[this.props.activeLanguage][1];
         const item2 = relevantData[this.props.activeLanguage][2];

@@ -34,7 +34,7 @@ export default class CovidMap extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if(nextProps.active == this.props.active && nextProps.activeLanguage == this.props.activeLanguage){
+        if(nextProps.active === this.props.active && nextProps.activeLanguage === this.props.activeLanguage && nextProps.mapDate === this.props.mapDate){
           return false;
         } else {
           return true;
@@ -54,44 +54,44 @@ export default class CovidMap extends React.Component {
     }
 
     //[key, item1string, item2string, item3string]
-    getRelevantData = (country, active) => {
+    getRelevantData = (country, active, mapDate) => {
         var relevantData;
         switch(active){
             case "Cumulative Fatalities":
-                 relevantData = {"English": [country.properties.fatalities], "Deutsch": [country.properties.fatalities]};
-                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(country.properties.fatalities));
-                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(country.properties.recovered));
-                relevantData["English"].push("Mortality Rate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
-                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(country.properties.fatalities));
-                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(country.properties.recovered));
-                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (country.properties.mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData = {"English": [country.properties.coronadata[mapDate].fatalities], "Deutsch": [country.properties.coronadata[mapDate].fatalities]};
+                relevantData["English"].push("Fatalities: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].fatalities));
+                relevantData["English"].push("Recovered: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].recovered));
+                relevantData["English"].push("Mortality Rate: " + (country.properties.coronadata[mapDate].mortalityRate * 100).toFixed(3).toString() + "%");
+                relevantData["Deutsch"].push("Todesfälle: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].fatalities));
+                relevantData["Deutsch"].push("Genesen: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].recovered));
+                relevantData["Deutsch"].push("Sterblichkeitsrate: " + (country.properties.coronadata[mapDate].mortalityRate * 100).toFixed(3).toString() + "%");
                 return relevantData;
             case "7-Day-Incidence":
-                relevantData = {"English": [country.properties.incidentRate], "Deutsch": [country.properties.incidentRate]};
-                relevantData["English"].push("7-Day-Incidence: " + country.properties.incidentRate.toFixed(3));
-                relevantData["English"].push("New Cases (7 Days): " + formatNumberWithSpaces(country.properties.last7));
+                relevantData = {"English": [country.properties.coronadata[mapDate].incidentRate], "Deutsch": [country.properties.coronadata[mapDate].incidentRate]};
+                relevantData["English"].push("7-Day-Incidence: " + country.properties.coronadata[mapDate].incidentRate.toFixed(3));
+                relevantData["English"].push("New Cases (7 Days): " + formatNumberWithSpaces(country.properties.coronadata[mapDate].last7));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + country.properties.incidentRate.toFixed(3));
-                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(country.properties.last7));
+                relevantData["Deutsch"].push("7-Tages-Inzidenz: " + country.properties.coronadata[mapDate].incidentRate.toFixed(3));
+                relevantData["Deutsch"].push("Neue Fälle (7 Tage): " + formatNumberWithSpaces(country.properties.coronadata[mapDate].last7));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
                 return relevantData;
             case "New Cases(21 Days)":
-                relevantData = {"English": [country.properties.active], "Deutsch": [country.properties.active]};
-                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(country.properties.active));
+                relevantData = {"English": [country.properties.coronadata[mapDate].active], "Deutsch": [country.properties.coronadata[mapDate].active]};
+                relevantData["English"].push("New Cases(21 Days): " + formatNumberWithSpaces(country.properties.coronadata[mapDate].active));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["English"].push("Ratio: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
-                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(country.properties.active));
+                relevantData["English"].push("Ratio: " + (country.properties.coronadata[mapDate].active/country.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Neue Fälle (21 Tage): " + formatNumberWithSpaces(country.properties.coronadata[mapDate].active));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.active/country.properties.population * 100).toFixed(5) + "%");
+                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.coronadata[mapDate].active/country.properties.population * 100).toFixed(5) + "%");
                 return relevantData;
             case "Cumulative Cases":
-                relevantData = {"English": [country.properties.confirmed], "Deutsch": [country.properties.confirmed]};
-                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(country.properties.confirmed));
+                relevantData = {"English": [country.properties.coronadata[mapDate].confirmed], "Deutsch": [country.properties.coronadata[mapDate].confirmed]};
+                relevantData["English"].push("Total Cases: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].confirmed));
                 relevantData["English"].push("Population: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["English"].push("Ratio: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
-                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(country.properties.confirmed));
+                relevantData["English"].push("Ratio: " + (country.properties.coronadata[mapDate].confirmed/country.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Fälle Gesamt: " + formatNumberWithSpaces(country.properties.coronadata[mapDate].confirmed));
                 relevantData["Deutsch"].push("Einwohner: " + formatNumberWithSpaces(country.properties.population));
-                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.confirmed/country.properties.population * 100).toFixed(3) + "%");
+                relevantData["Deutsch"].push("Verhältnis: " + (country.properties.coronadata[mapDate].confirmed/country.properties.population * 100).toFixed(3) + "%");
                 return relevantData;
             default:
                 return [0,"","",""];
@@ -99,7 +99,9 @@ export default class CovidMap extends React.Component {
     }
 
     onEachCountry = (country, layer) => {
-        const relevantData = this.getRelevantData(country,this.props.active);
+        var relevantData;
+        if(country.properties.coronadata[this.props.alldates[this.props.mapDate].toLocaleDateString()] === undefined){relevantData = this.getRelevantData(country,this.props.active,"default");}
+        else{relevantData = this.getRelevantData(country,this.props.active,this.props.alldates[this.props.mapDate].toLocaleDateString());}
         layer.options.fillColor = this.colorCountry(relevantData[this.props.activeLanguage][0]);
         const item1 = relevantData[this.props.activeLanguage][1];
         const item2 = relevantData[this.props.activeLanguage][2];

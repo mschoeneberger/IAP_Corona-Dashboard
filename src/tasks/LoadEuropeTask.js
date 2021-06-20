@@ -18,15 +18,16 @@ class LoadEuropeTask{
                 //We iterate over the regions of our GeoJSON.
                 for(let i =0; i<this.regions.length; i++){
                     const region = this.regions[i];
-
-                    //Initializing for regions without data.
-                    region.properties.confirmed=0;
-                    region.properties.recovered=0;
-                    region.properties.fatalities=0;
-                    region.properties.active=0;
-                    region.properties.mortalityRate=0;
-                    region.properties.incidentRate=0;
-                    region.properties.last7 =0;
+                    region.properties.coronadata = {};
+                    region.properties.coronadata["default"] = {};
+                    //Initializing for regions with default values.
+                    region.properties.coronadata["default"].confirmed=0;
+                    region.properties.coronadata["default"].recovered=0;
+                    region.properties.coronadata["default"].fatalities=0;
+                    region.properties.coronadata["default"].active=0;
+                    region.properties.coronadata["default"].mortalityRate=0;
+                    region.properties.coronadata["default"].incidentRate=0;
+                    region.properties.coronadata["default"].last7=0;
 
                     let covidRegion = [];
                     //Matching origin of region (e.g. austria for Burgenland)
@@ -41,27 +42,22 @@ class LoadEuropeTask{
                             let regname = (uppercase ? region.properties.name : region.properties.name.toLowerCase());
                             //Correct Covid data for this region
                             covidRegion = data[region.properties.origin.toLowerCase()][regname];
-                            //Find latest entry
-                            let newestIndex=0;
-                            //Since Charts.jsx uses the data as a whole, we add the population of the region
-                            data[region.properties.origin.toLowerCase()][regname][newestIndex].population = region.properties.population;
-                            for(let j = 1; j<covidRegion.length; j++){
-                                let newestdate = new Date(covidRegion[newestIndex].date);
-                                let thisdate = new Date(covidRegion[j].date);
-                                //In every entry.
+
+                            for(let j = 0; j<covidRegion.length; j++){
+                                let dateString = new Date(covidRegion[j].date);
+                                dateString = dateString.toLocaleDateString();
+                                //Since Charts.jsx uses the data as a whole, we add the population of the region in every entry.
                                 data[region.properties.origin.toLowerCase()][regname][j].population = region.properties.population;
-                                if(thisdate > newestdate){
-                                    newestIndex = j;
-                                }
+                                region.properties.coronadata[dateString] = {};
+                                //extract/calculate relevant data from Covid data.
+                                region.properties.coronadata[dateString].confirmed = covidRegion[j].totalCases;
+                                region.properties.coronadata[dateString].fatalities = covidRegion[j].totalDeaths;
+                                region.properties.coronadata[dateString].active = covidRegion[j].newCases21Days;
+                                region.properties.coronadata[dateString].incidentRate = (covidRegion[j].newCases7Days*100000)/region.properties.population;
+                                region.properties.coronadata[dateString].recovered = region.properties.coronadata[dateString].confirmed - region.properties.coronadata[dateString].fatalities - region.properties.coronadata[dateString].active;
+                                region.properties.coronadata[dateString].mortalityRate = region.properties.coronadata[dateString].fatalities/region.properties.coronadata[dateString].confirmed;
+                                region.properties.coronadata[dateString].last7 = covidRegion[j].newCases7Days;
                             }
-                            //extract/calculate relevant data from Covid data.
-                            region.properties.confirmed = covidRegion[newestIndex].totalCases;
-                            region.properties.fatalities = covidRegion[newestIndex].totalDeaths;
-                            region.properties.active = covidRegion[newestIndex].newCases21Days;
-                            region.properties.incidentRate = (covidRegion[newestIndex].newCases7Days*100000)/region.properties.population;
-                            region.properties.recovered = region.properties.confirmed - region.properties.fatalities - region.properties.active;
-                            region.properties.mortalityRate = region.properties.fatalities/region.properties.confirmed;
-                            region.properties.last7 = covidRegion[newestIndex].newCases7Days;
                         }
                     }
                 }
@@ -89,19 +85,20 @@ class LoadEuropeTask{
                     //We already have every region except the german ones.
                     if(this.regions[i].properties.origin!=="Germany"){continue;}
                     const region = this.regions[i];
-
-                    //Initializing for regions without data.
-                    region.properties.confirmed=0;
-                    region.properties.recovered=0;
-                    region.properties.fatalities=0;
-                    region.properties.active=0;
-                    region.properties.mortalityRate=0;
-                    region.properties.its_freie_betten=0;
-                    region.properties.its_belegt=0;
-                    region.properties.its_freie_beatmung=0;
-                    region.properties.its_covid_patienten=0;
-                    region.properties.incidentRate=0;
-                    region.properties.last7=0;
+                    region.properties.coronadata = {};
+                    region.properties.coronadata["default"] = {};
+                    //Initializing for regions with default values.
+                    region.properties.coronadata["default"].confirmed=0;
+                    region.properties.coronadata["default"].recovered=0;
+                    region.properties.coronadata["default"].fatalities=0;
+                    region.properties.coronadata["default"].active=0;
+                    region.properties.coronadata["default"].mortalityRate=0;
+                    region.properties.coronadata["default"].incidentRate=0;
+                    region.properties.coronadata["default"].last7=0;
+                    region.properties.coronadata["default"].its_freie_betten=0;
+                    region.properties.coronadata["default"].its_belegt=0;
+                    region.properties.coronadata["default"].its_freie_beatmung=0;
+                    region.properties.coronadata["default"].its_covid_patienten=0;
 
                     let covidRegion = [];
                     //Matching region names.
@@ -115,40 +112,31 @@ class LoadEuropeTask{
                     if(uppercase || lowercase){
                         //For accessing the data correctly, we need to know if the name is upper or lower case.
                         let regname = (uppercase ? region.properties.name : region.properties.name.toLowerCase());
-                        console.log("Matched. " + regname + " : " + bundesland);
-                        covidRegion = data[bundesland][regname];
-                        //Find latest entry
-                        let newestIndex=0;
-                        //Since Charts.jsx uses the data as a whole, we add the population of the region...
-                        data[bundesland][regname][newestIndex].population = region.properties.population;
-                        for(let j = 1; j<covidRegion.length; j++){
+                        covidRegion = data[bundesland][regname];;
+                        for(let j = 0; j<covidRegion.length; j++){
                             //d is for date.
-                            let newestdate = new Date(covidRegion[newestIndex].d);
-                            let thisdate = new Date(covidRegion[j].d);
-                            //...in every entry.
+                            let dateString = new Date(covidRegion[j].d);
+                            dateString = dateString.toLocaleDateString();
+                            //Since Charts.jsx uses the data as a whole, we add the population of the region in every entry.
                             data[bundesland][regname][j].population = region.properties.population;
-                            if(thisdate > newestdate){
-                                newestIndex = j;
-                            }
+                            region.properties.coronadata[dateString] = {};
+                            //e is for total Cases.
+                            region.properties.coronadata[dateString].confirmed = covidRegion[j].e;
+                            //h is for cumulative fatalities
+                            region.properties.coronadata[dateString].fatalities = covidRegion[j].h;
+                            //g is for new cases in the last 21 days
+                            region.properties.coronadata[dateString].active = covidRegion[j].g;
+                            //f is for new cases in the last 7 days
+                            region.properties.coronadata[dateString].incidentRate = (covidRegion[j].f*100000)/region.properties.population;
+                            region.properties.coronadata[dateString].recovered = region.properties.coronadata[dateString].confirmed - region.properties.coronadata[dateString].fatalities - region.properties.coronadata[dateString].active;
+                            region.properties.coronadata[dateString].mortalityRate = region.properties.coronadata[dateString].fatalities/region.properties.coronadata[dateString].confirmed;
+                            region.properties.coronadata[dateString].its_freie_betten = covidRegion[j].k;
+                            region.properties.coronadata[dateString].its_belegt= covidRegion[j].j;
+                            region.properties.coronadata[dateString].its_freie_beatmung= covidRegion[j].l;
+                            region.properties.coronadata[dateString].its_covid_patienten= covidRegion[j].i;
+                            region.properties.coronadata[dateString].last7 = covidRegion[j].f;
                         }
-                        
-                        //e is for total Cases.
-                        region.properties.confirmed = covidRegion[newestIndex].e;
-                        //h is for cumulative fatalities
-                        region.properties.fatalities = covidRegion[newestIndex].h;
-                        //g is for new cases in the last 21 days
-                        region.properties.active = covidRegion[newestIndex].g;
-                        //f is for new cases in the last 7 days
-                        region.properties.incidentRate = (covidRegion[newestIndex].f*100000)/region.properties.population;
-                        region.properties.recovered = region.properties.confirmed - region.properties.fatalities - region.properties.active;
-                        region.properties.mortalityRate = region.properties.fatalities/region.properties.confirmed;
-                        region.properties.its_freie_betten = covidRegion[newestIndex].k;
-                        region.properties.its_belegt= covidRegion[newestIndex].j;
-                        region.properties.its_freie_beatmung= covidRegion[newestIndex].l;
-                        region.properties.its_covid_patienten= covidRegion[newestIndex].i;
-                        region.properties.last7 = covidRegion[newestIndex].f;
                     }
-
                 }
 
             //Updating the states.

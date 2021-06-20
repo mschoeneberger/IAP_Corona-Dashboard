@@ -1,6 +1,7 @@
 .leaflet-container {
   background-color: rgb(150, 200, 255);
-  flex-grow: 16;
-  width: 100%;
+  height: 72.5vh;
+  flex-grow: 1;
+  width: 70vw;
   z-index: 50;
 }

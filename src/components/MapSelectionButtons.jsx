@@ -6,7 +6,7 @@ const Tab = styled.button`
   padding: calc(min(0.8vh,0.8vw));
   height: 100%;
   flex-grow: 1;
-  flex-basis: 15%;
+  flex-basis: 20%;
   cursor: pointer;
   opacity: 0.6;
   background: black;
@@ -42,7 +42,7 @@ function MapSelectionButtons(props) {
       currentView = props.views[1];
     }
     return (<>
-        <div style={{flexBasis:"10vh", flexGrow:"0", width:"100%", display:"flex", overflow:"hidden"}}>
+        <div style={{flexBasis:"10vh", flexGrow:"0", width:"100%", display:"flex", overflow:"hidden", flexDirection:"row"}}>
           {
             currentView.map(view=>
                 <Tab
